@@ -36,6 +36,34 @@ async function saveError(errorMsg) {
     });
 }
 
+async function saveLog(log, type) {
+    // Tentukan zona waktu Makassar
+    const time = getTime();
+
+    let errorData = fs.readFileSync(`app/logs/error.json`, 'utf-8');
+    errorData = JSON.parse(errorData);
+
+    const data = {
+        type: type,
+        date: time,
+        message: errorMsg instanceof Error ? `${errorMsg.message}\n${errorMsg.stack}` : errorMsg
+    }
+
+    errorData.push(data);
+
+    if(errorData.length > 50) errorData.splice(0, 1);
+
+    // Mengubah data JSON menjadi string
+    const jsonData = JSON.stringify(errorData, null, 2);
+
+    // Menulis data ke file 'error.json'
+    fs.writeFile('app/logs/error.json', jsonData, 'utf8', (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+        }
+    });
+}
+
 function getTime() {
     // Tentukan zona waktu Makassar
     const time = moment().tz('Asia/Makassar');
