@@ -10,6 +10,15 @@ async function getValue(msg) {
     return text;
 }
 
+function sleep(ms) {
+    return new Promise(resolve => {
+        const intervalId = setInterval(() => {
+            clearInterval(intervalId);
+            resolve();
+        }, ms);
+    });
+}
+
 async function setVersion(id, version, bot) {
     let userData = readJSONFileSync(`database/data_user/${ id }`);
 
@@ -17,7 +26,7 @@ async function setVersion(id, version, bot) {
 
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
-    console.log(`User @${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`, 'info');
+    console.log(`User @${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`, 'function');
     return bot.sendMessage(id, `Versi minecraft telah diatur ke ${ version }`);
 }
 
@@ -80,5 +89,5 @@ function writeJSONFileSync(filePath, data) {
 }
 
 module.exports = {
-    getValue, getTime, setVersion, setUsername, readJSONFileSync, writeJSONFileSync
+    getValue, getTime, setVersion, setUsername, readJSONFileSync, writeJSONFileSync, sleep
 }

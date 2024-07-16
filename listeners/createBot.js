@@ -10,7 +10,7 @@ module.exports = (function() {
             const value = await getValue(msg);
 
             // await cekUsername(chatId, bot);
-            const response = await cekVersion(chatId, bot);
+            if(!await cekVersion(chatId, bot)) return;
             await cekUsername(chatId, bot);
         });
     };

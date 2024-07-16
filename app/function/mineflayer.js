@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { setVersion, readJSONFileSync, getValue, setUsername } = require('./function');
+const { setVersion, readJSONFileSync, getValue, setUsername, sleep } = require('./function');
 const console = require('./console');
 const lockfile = require('proper-lockfile');
 
@@ -77,14 +77,14 @@ async function cekUsername(id, bot) {
             return;
         };
 
-        const message = bot.sendMessage(id, 'Masukkan username anda:');
+        await sleep(1000)
+        const message = await bot.sendMessage(id, 'Masukkan username anda:');
 
         prompt = async (msg) => {
             bot.deleteMessage(message.chat.id, message.message_id)
             .then(() => {
                 clearTimeout(timer);
-                const value = getValue(msg);
-                setUsername(message.chat.id, value, bot);
+                setUsername(message.chat.id, msg.text, bot);
                 bot.removeListener('message', prompt);
                 resolve(true);
                 return;
