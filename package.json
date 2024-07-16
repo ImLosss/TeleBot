@@ -1,7 +1,14 @@
 {
+  "author": "Ryan_Syah",
+  "scripts": {
+    "start": "nodemon index.js",
+    "restart": "nodemon index.js"
+  },
   "dependencies": {
     "mineflayer": "^4.20.1",
     "moment-timezone": "^0.5.45",
-    "node-telegram-bot-api": "^0.66.0"
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.4",
+    "proper-lockfile": "^4.1.2"
   }
 }

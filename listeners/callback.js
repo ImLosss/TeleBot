@@ -1,21 +1,23 @@
 // listeners/commandListeners.js
 
+const console = require("../app/function/console");
+const { saveError, setVersion } = require("../app/function/function");
+
 module.exports = (function() {
     return function(bot) {
         // Event untuk menangani callback dari tombol
         bot.on('callback_query', (callbackQuery) => {
             const message = callbackQuery.message;
             const data = JSON.parse(callbackQuery.data);
-            console.log(message);
 
             if (data.action === 'button_click') {
                 // Hapus pesan setelah tombol ditekan
                 bot.deleteMessage(message.chat.id, message.message_id)
                 .then(() => {
-                    bot.sendMessage(message.chat.id, `Tombol  telah ditekan dan pesan telah dihapus! Versi yang dipilih: ${data.data}`);
+                    if(data.cmd == 'version') setVersion(message.chat.id, data.data, bot);
                 })
                 .catch(err => {
-                    console.error('Error deleting message:', err);
+                    console.error(err)
                 });
             }
 

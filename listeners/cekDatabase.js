@@ -1,4 +1,6 @@
-// listeners/commandListeners.js
+const fs = require('fs');
+const { getTime } = require('../app/function/function');
+const console = require('../app/function/console');
 
 module.exports = (function() {
     return function(bot) {
@@ -7,12 +9,15 @@ module.exports = (function() {
             const dir_data_user = `./database/data_user/${ msg.chat.id }`
             if(!fs.existsSync(dir_data_user)) {
                 let data_user = [{
+                    teleUsername: msg.chat.username,
                     chatPublic: true,
                     chatPrivate: true,
                     status: "offline"
                 }]
-                fs.writeFileSync(dir_data_user, JSON.stringify(data_user));
-            } 
+                fs.writeFileSync(dir_data_user, JSON.stringify(data_user, null, 2));
+
+                console.log(`membuat data_user untuk @${ msg.chat.username }`, 'cekDatabase', 'new_user');
+            }
         });
     };
 })();

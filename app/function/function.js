@@ -1,5 +1,7 @@
 const moment = require('moment-timezone');
-const fs = require('fs')
+const fs = require('fs');
+const console = require('./console');
+const lockfile = require('proper-lockfile');
 
 async function getValue(msg) {
     let text = msg.text;
@@ -8,60 +10,26 @@ async function getValue(msg) {
     return text;
 }
 
-async function saveError(errorMsg) {
-    // Tentukan zona waktu Makassar
-    const time = getTime();
+async function setVersion(id, version, bot) {
+    let userData = readJSONFileSync(`database/data_user/${ id }`);
 
-    let errorData = fs.readFileSync(`app/logs/error.json`, 'utf-8');
-    errorData = JSON.parse(errorData);
+    userData[0].version = version;
 
-    const data = {
-        type: 'Error',
-        date: time,
-        errorMessage: errorMsg instanceof Error ? `${errorMsg.message}\n${errorMsg.stack}` : errorMsg
-    }
+    writeJSONFileSync(`database/data_user/${ id }`, userData);
 
-    errorData.push(data);
-
-    if(errorData.length > 50) errorData.splice(0, 1);
-
-    // Mengubah data JSON menjadi string
-    const jsonData = JSON.stringify(errorData, null, 2);
-
-    // Menulis data ke file 'error.json'
-    fs.writeFile('app/logs/error.json', jsonData, 'utf8', (err) => {
-        if (err) {
-            console.error('Error writing file:', err);
-        }
-    });
+    console.log(`User @${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`, 'info');
+    return bot.sendMessage(id, `Versi minecraft telah diatur ke ${ version }`);
 }
 
-async function saveLog(log, type) {
-    // Tentukan zona waktu Makassar
-    const time = getTime();
+async function setUsername(id, username, bot) {
+    let userData = readJSONFileSync(`database/data_user/${ id }`);
 
-    let errorData = fs.readFileSync(`app/logs/error.json`, 'utf-8');
-    errorData = JSON.parse(errorData);
-
-    const data = {
-        type: type,
-        date: time,
-        message: errorMsg instanceof Error ? `${errorMsg.message}\n${errorMsg.stack}` : errorMsg
-    }
-
-    errorData.push(data);
-
-    if(errorData.length > 50) errorData.splice(0, 1);
-
-    // Mengubah data JSON menjadi string
-    const jsonData = JSON.stringify(errorData, null, 2);
+    userData[0].username = username;
 
     // Menulis data ke file 'error.json'
-    fs.writeFile('app/logs/error.json', jsonData, 'utf8', (err) => {
-        if (err) {
-            console.error('Error writing file:', err);
-        }
-    });
+    writeJSONFileSync(`database/data_user/${ id }`, userData);
+
+    return bot.sendMessage(id, `Username anda telah diatur ke ${ username }`);
 }
 
 function getTime() {
@@ -76,6 +44,41 @@ function getTime() {
     return `${ tanggal } / ${ jam }:${ menit }`;
 }
 
+function readJSONFileSync(filePath) {
+    let release;
+    try {
+        // Lock the file for reading
+        release = lockfile.lockSync(filePath);
+        
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.error('error');
+    } finally {
+        if (release) {
+            release();
+        }
+    }
+}
+
+function writeJSONFileSync(filePath, data) {
+    let release;
+    try {
+        // Lock the file for writing
+        release = lockfile.lockSync(filePath);
+        
+        const jsonData = JSON.stringify(data, null, 2);
+        fs.writeFileSync(filePath, jsonData, 'utf-8');
+    } catch (error) {
+        console.error('Error writing file:', error);
+    } finally {
+        if (release) {
+            release();
+        }
+    }
+}
+
 module.exports = {
-    getValue, saveError, getTime
+    getValue, getTime, setVersion, setUsername, readJSONFileSync, writeJSONFileSync
 }

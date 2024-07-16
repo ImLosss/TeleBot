@@ -1,0 +1,6 @@
+{
+    "events": {
+      "crash": "npm run restart"
+    },
+    "ignore": ["*.json"]
+}
