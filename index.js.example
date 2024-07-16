@@ -18,5 +18,5 @@ bot.on('polling_error', (err) => {
 
     console.log(`[${ time } / Error] ${ err.message }`);
 
-    fungsi.saveError(err);
+    fungsi.saveError(err)
 })
