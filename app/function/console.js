@@ -1,5 +1,6 @@
 const fs = require('fs');
 const moment = require('moment-timezone');
+const lockfile = require('proper-lockfile');
 
 async function error(errorMsg) {
     try {
@@ -8,8 +9,7 @@ async function error(errorMsg) {
 
         console.log(`[${ time } / error] ${ errorMsg.message }`);
 
-        let errorData = fs.readFileSync(`app/logs/error.json`, 'utf-8');
-        errorData = JSON.parse(errorData);
+        let errorData = readJSONFileSync('app/logs/error.json')
 
         const stackLines = errorMsg.stack.split('\n');
 
@@ -25,17 +25,9 @@ async function error(errorMsg) {
 
         if(errorData.length > 50) errorData.splice(0, 1);
 
-        // Mengubah data JSON menjadi string
-        const jsonData = JSON.stringify(errorData, null, 2);
-
-        // Menulis data ke file 'error.json'
-        fs.writeFile('app/logs/error.json', jsonData, 'utf8', (err) => {
-            if (err) {
-                console.error(err);
-            }
-        });
+        writeJSONFileSync('app/logs/error.json', errorData);
     } catch (error) {
-        
+        console.log('error saat menulis log: ', error.message);
     }
 }
 
@@ -46,9 +38,8 @@ async function log(log, file = 'none', type = 'info') {
         if(typeof(log) == 'object') log = JSON.stringify(log);
         console.log(`[${ time } / ${ type } / ${ file }] ${ log }`);
 
-        let logData = fs.readFileSync(`app/logs/log.json`, 'utf-8');
-        logData = JSON.parse(logData);
-
+        let logData = readJSONFileSync(`app/logs/log.json`);
+         
         const data = {
             type: type,
             date: time,
@@ -60,17 +51,9 @@ async function log(log, file = 'none', type = 'info') {
 
         if(logData.length > 100) logData.splice(0, 1);
 
-        // Mengubah data JSON menjadi string
-        const jsonData = JSON.stringify(logData, null, 2);
-
-        // Menulis data ke file 'error.json'
-        fs.writeFile('app/logs/log.json', jsonData, 'utf8', (err) => {
-            if (err) {
-                console.error(err);
-            }
-        });
+        writeJSONFileSync('app/logs/log.json', logData);
     } catch (error) {
-        
+        console.log('error saat menulis log: ', error.message);
     }
 }
 
@@ -90,14 +73,16 @@ function readJSONFileSync(filePath) {
     let release;
     try {
         // Lock the file for reading
-        release = lockfile.lockSync(filePath, { retries: 10, retryWait: 500 });
+        release = lockfile.lockSync(filePath);
         
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let fileContent = fs.readFileSync(filePath, 'utf-8');
 
-        console.log(fileContent);
-        return JSON.parse(fileContent);
+        if(fileContent == '') fileContent = [];
+        else fileContent = JSON.parse(fileContent);
+
+        return fileContent;
     } catch (error) {
-        console.error('Error reading or parsing file:', error);
+        return [];
     } finally {
         if (release) {
             release();
@@ -109,7 +94,7 @@ function writeJSONFileSync(filePath, data) {
     let release;
     try {
         // Lock the file for writing
-        release = lockfile.lockSync(filePath, { retries: 10, retryWait: 500 });
+        release = lockfile.lockSync(filePath);
         
         const jsonData = JSON.stringify(data, null, 2);
         fs.writeFileSync(filePath, jsonData, 'utf-8');

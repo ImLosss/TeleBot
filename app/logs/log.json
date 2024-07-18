@@ -1,0 +1,26 @@
+[
+  {
+    "type": "new_user",
+    "date": "2024-07-19 / 00:20",
+    "location": "cekDatabase",
+    "message": "membuat data_user untuk @ryan_syahh"
+  },
+  {
+    "type": "new_user",
+    "date": "2024-07-19 / 00:24",
+    "location": "cekDatabase",
+    "message": "membuat data_user untuk @ryan_syahh"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-19 / 00:26",
+    "location": "function",
+    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-19 / 00:26",
+    "location": "function",
+    "message": "@ryan_syahh telah mengatur username: Losss"
+  }
+]

@@ -29,11 +29,11 @@ async function cekVersion(id, bot) {
 
         const options = {
             reply_markup: {
-                inline_keyboard: [data, [{ text: 'Auto', callback_data: JSON.stringify({ action: 'button_click', data: 'auto' }) }]]
+                inline_keyboard: [data, [{ text: 'Auto', callback_data: JSON.stringify({ action: 'button_click_await', cmd: 'version', data: 'auto' }) }]]
             }            
         }
 
-        const message = await bot.sendMessage(id, 'Pilih versi Minecraft anda: ', options);
+        const messageToDel = await bot.sendMessage(id, 'Pilih versi Minecraft anda: ', options);
 
         prompt = async (callbackQuery) => {
             const message = callbackQuery.message;
@@ -43,7 +43,7 @@ async function cekVersion(id, bot) {
                 // Hapus pesan setelah tombol ditekan
                 clearTimeout(timer);
                 bot.removeListener('callback_query', prompt);
-                bot.deleteMessage(message.chat.id, message.message_id)
+                bot.deleteMessage(messageToDel.chat.id, messageToDel.message_id)
                 .then(() => {
                     if(data.cmd == 'version') setVersion(message.chat.id, data.data, bot);
                     resolve(true);
@@ -59,7 +59,7 @@ async function cekVersion(id, bot) {
 
         timer = setTimeout(() => {
             bot.removeListener('callback_query', prompt);
-            bot.deleteMessage(message.chat.id, message.message_id);
+            bot.deleteMessage(messageToDel.chat.id, messageToDel.message_id);
             resolve(false);
             return;
         }, 5000);
