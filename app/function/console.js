@@ -36,7 +36,7 @@ async function log(log, file = 'none', type = 'info') {
         // Tentukan zona waktu Makassar
         const time = getTime();
         if(typeof(log) == 'object') log = JSON.stringify(log);
-        console.log(`[${ time } / ${ type } / ${ file }] ${ log }`);
+        console.log(`[${ time } / ${ type }] ${ log }`);
 
         let logData = readJSONFileSync(`app/logs/log.json`);
          
