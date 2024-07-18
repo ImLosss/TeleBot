@@ -1,6 +1,7 @@
 const fs = require('fs');
 const moment = require('moment-timezone');
 const lockfile = require('proper-lockfile');
+const { getLocation } = require('../function/utils');
 
 async function error(errorMsg) {
     try {
@@ -31,9 +32,11 @@ async function error(errorMsg) {
     }
 }
 
-async function log(log, file = 'none', type = 'info') {
+async function log(log, type = 'info') {
     try {
         // Tentukan zona waktu Makassar
+        const file = getLocation();
+
         const time = getTime();
         if(typeof(log) == 'object') log = JSON.stringify(log);
         console.log(`[${ time } / ${ type }] ${ log }`);

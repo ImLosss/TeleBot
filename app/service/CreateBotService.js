@@ -1,7 +1,6 @@
 const fs = require('fs');
-const { setVersion, readJSONFileSync, getValue, setUsername, sleep } = require('../function/function');
+const { setVersion, readJSONFileSync, setUsername, sleep } = require('../function/function');
 const console = require('../logs/console');
-const lockfile = require('proper-lockfile');
 
 async function cekVersion(id, bot) {
     return new Promise(async (resolve) => {
@@ -79,6 +78,42 @@ async function cekUsername(id, bot) {
 
         await sleep(1000)
         const message = await bot.sendMessage(id, 'Masukkan username anda:');
+
+        prompt = async (msg) => {
+            bot.deleteMessage(message.chat.id, message.message_id)
+            .then(() => {
+                clearTimeout(timer);
+                setUsername(message.chat.id, msg.text, bot);
+                bot.removeListener('message', prompt);
+                resolve(true);
+                return;
+            })
+        };
+
+        bot.addListener('message', prompt);
+
+        timer = setTimeout(() => {
+            bot.removeListener('message', prompt);
+            bot.deleteMessage(message.chat.id, message.message_id);
+            resolve(false);
+            return;
+        }, 5000);
+    })
+}
+
+async function cekIp(id, bot) {
+    return new Promise(async (resolve) => {
+        let timer, prompt;
+
+        let userData = readJSONFileSync(`database/data_user/${ id }`);
+
+        if(userData[0].ip != undefined) {
+            resolve(true);
+            return;
+        };
+
+        await sleep(1000)
+        const message = await bot.sendMessage(id, 'Masukkan ip anda:');
 
         prompt = async (msg) => {
             bot.deleteMessage(message.chat.id, message.message_id)

@@ -26,7 +26,7 @@ async function setVersion(id, version, bot) {
 
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
-    console.log(`@${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`, 'function');
+    console.log(`@${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`);
     return bot.sendMessage(id, `Versi minecraft telah diatur ke ${ version }`);
 }
 
@@ -38,7 +38,7 @@ async function setUsername(id, username, bot) {
     // Menulis data ke file 'error.json'
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
-    console.log(`@${ userData[0].teleUsername } telah mengatur username: ${ username }`, 'function');
+    console.log(`@${ userData[0].teleUsername } telah mengatur username: ${ username }`);
     return bot.sendMessage(id, `Username anda telah diatur ke ${ username }`);
 }
 
