@@ -1,6 +1,6 @@
 const fs = require('fs');
 const { getTime } = require('../app/function/function');
-const console = require('../app/function/console');
+const console = require('../app/logs/console');
 
 module.exports = (function() {
     return function(bot) {

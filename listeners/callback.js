@@ -1,6 +1,6 @@
 // listeners/commandListeners.js
 
-const console = require("../app/function/console");
+const console = require("../app/logs/console");
 const { saveError, setVersion } = require("../app/function/function");
 
 module.exports = (function() {

@@ -1,5 +1,5 @@
-const console = require("../app/function/console");
-const { mineflayer } = require("../app/function/createBot");
+const console = require("../app/logs/console");
+const { mineflayer } = require("../app/controller/CreateBotController");
 const { getValue } = require("../app/function/function");
 
 module.exports = (function() {

@@ -22,5 +22,29 @@
     "date": "2024-07-19 / 00:26",
     "location": "function",
     "message": "@ryan_syahh telah mengatur username: Losss"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-19 / 01:10",
+    "location": "none",
+    "message": "tess"
+  },
+  {
+    "type": "new_user",
+    "date": "2024-07-19 / 01:12",
+    "location": "cekDatabase",
+    "message": "membuat data_user untuk @ryan_syahh"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-19 / 01:12",
+    "location": "function",
+    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-19 / 01:12",
+    "location": "function",
+    "message": "@ryan_syahh telah mengatur username: Losss"
   }
 ]

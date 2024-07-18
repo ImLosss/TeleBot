@@ -1,5 +1,4 @@
-const console = require('./console');
-const { cekUsername, cekVersion } = require('./mineflayer');
+const { cekUsername, cekVersion } = require("../service/CreateBotService");
 
 async function mineflayer(bot, chatId, value) {
     if(!await cekVersion(chatId, bot)) return;

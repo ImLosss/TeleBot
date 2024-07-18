@@ -1,6 +1,6 @@
 const fs = require('fs');
-const { setVersion, readJSONFileSync, getValue, setUsername, sleep } = require('./function');
-const console = require('./console');
+const { setVersion, readJSONFileSync, getValue, setUsername, sleep } = require('../function/function');
+const console = require('../logs/console');
 const lockfile = require('proper-lockfile');
 
 async function cekVersion(id, bot) {

@@ -1,6 +1,6 @@
 const moment = require('moment-timezone');
 const fs = require('fs');
-const console = require('./console');
+const console = require('../logs/console');
 const lockfile = require('proper-lockfile');
 
 async function getValue(msg) {
