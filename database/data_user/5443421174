@@ -4,7 +4,8 @@
     "chatPublic": true,
     "chatPrivate": true,
     "status": "offline",
-    "version": "auto",
-    "username": "Losss"
+    "version": false,
+    "username": "shencx",
+    "ip": "kalwi.id"
   }
 ]

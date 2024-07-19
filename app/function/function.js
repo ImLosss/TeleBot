@@ -19,17 +19,6 @@ function sleep(ms) {
     });
 }
 
-async function setVersion(id, version, bot) {
-    let userData = readJSONFileSync(`database/data_user/${ id }`);
-
-    userData[0].version = version;
-
-    writeJSONFileSync(`database/data_user/${ id }`, userData);
-
-    console.log(`@${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`);
-    return bot.sendMessage(id, `Versi minecraft telah diatur ke ${ version }`);
-}
-
 async function setUsername(id, username, bot) {
     let userData = readJSONFileSync(`database/data_user/${ id }`);
 
@@ -89,6 +78,16 @@ function writeJSONFileSync(filePath, data) {
     }
 }
 
+const withErrorHandling = (fn) => {
+    return async (...args) => {
+        try {
+            await fn(...args);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+};
+
 module.exports = {
-    getValue, getTime, setVersion, setUsername, readJSONFileSync, writeJSONFileSync, sleep
+    getValue, getTime, setUsername, readJSONFileSync, writeJSONFileSync, sleep, withErrorHandling
 }

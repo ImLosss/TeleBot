@@ -1,6 +1,8 @@
 const fs = require('fs');
-const { setVersion, readJSONFileSync, setUsername, sleep } = require('../function/function');
+const { readJSONFileSync, setUsername, sleep } = require('../function/function');
 const console = require('../logs/console');
+const { setIp } = require('../function/setIp');
+const { setVersion } = require('../function/setVersion');
 
 async function cekVersion(id, bot) {
     return new Promise(async (resolve) => {
@@ -28,7 +30,7 @@ async function cekVersion(id, bot) {
 
         const options = {
             reply_markup: {
-                inline_keyboard: [data, [{ text: 'Auto', callback_data: JSON.stringify({ action: 'button_click_await', cmd: 'version', data: 'auto' }) }]]
+                inline_keyboard: [data, [{ text: 'Auto', callback_data: JSON.stringify({ action: 'button_click_await', cmd: 'version', data: false }) }]]
             }            
         }
 
@@ -61,7 +63,7 @@ async function cekVersion(id, bot) {
             bot.deleteMessage(messageToDel.chat.id, messageToDel.message_id);
             resolve(false);
             return;
-        }, 5000);
+        }, 15000);
     });
 }
 
@@ -97,7 +99,7 @@ async function cekUsername(id, bot) {
             bot.deleteMessage(message.chat.id, message.message_id);
             resolve(false);
             return;
-        }, 5000);
+        }, 15000);
     })
 }
 
@@ -119,7 +121,7 @@ async function cekIp(id, bot) {
             bot.deleteMessage(message.chat.id, message.message_id)
             .then(() => {
                 clearTimeout(timer);
-                setUsername(message.chat.id, msg.text, bot);
+                setIp(message.chat.id, msg.text, bot);
                 bot.removeListener('message', prompt);
                 resolve(true);
                 return;
@@ -133,10 +135,10 @@ async function cekIp(id, bot) {
             bot.deleteMessage(message.chat.id, message.message_id);
             resolve(false);
             return;
-        }, 5000);
+        }, 30000);
     })
 }
 
 module.exports = {
-    cekUsername, cekVersion
+    cekUsername, cekVersion, cekIp
 }

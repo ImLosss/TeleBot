@@ -1,360 +1,602 @@
 [
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 00:20",
-    "location": "cekDatabase",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": ".Alicanomagrib: di kudus"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 00:24",
-    "location": "cekDatabase",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』yonosisioooooo"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 00:26",
-    "location": "function",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.GacorKing12345"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 00:26",
-    "location": "function",
-    "message": "@ryan_syahh telah mengatur username: Losss"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": ".Kaneki456e: ouhh"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:10",
-    "location": "none",
-    "message": "tess"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.PANCAGAMING6413"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 01:12",
-    "location": "cekDatabase",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.RadzHOKI"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:12",
-    "location": "function",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』Reyy16"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:12",
-    "location": "function",
-    "message": "@ryan_syahh telah mengatur username: Losss"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.DrabToaster8565"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:54",
-    "location": "none",
-    "message": "D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\utils.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:05",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .ENKII2718: tarikin aku ke oneblock dongg kak @naileel plis gw nuggu dari jam 3 sore"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:56",
-    "location": "none",
-    "message": "D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: naileel sama moshx nggak keliatan kah Ellyne?"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:58",
-    "location": "none",
-    "message": "D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』Marselus_s3"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 01:59",
-    "location": "none",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Aemz0733"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:01",
-    "location": "console.js",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".Alicanomagrib: kamu kelas brp"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:02",
-    "location": "console.js",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Kaneki456e"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:02",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .Ellyne_Yeager: dmn?"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:04",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.dilah2918"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:05",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Jarotgamers"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:05",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: p"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:06",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.apri2229"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:08",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: tuh di chat nggak bisa baca"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:08",
-    "location": "console.js:38:16)",
-    "message": "index.js:15:13)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』Diazgar"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:10",
-    "location": "console.js",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.ManticLily76638"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:11",
-    "location": "console.js",
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: bg swanky"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:12",
-    "location": "console.js",
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".ValenGHd: p paling seru yang mana"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:14",
-    "location": "utils.js",
-    "message": "utils.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: apa?"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:15",
-    "location": "console.js",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".UcupRacing201M: vanilla kapan bisanya cuy"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:15",
-    "location": null,
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .ENKII2718: tarikin aku ke oneblock dongg kak @naileel plis gw nuggu dari jam 3 sore"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:16",
-    "location": null,
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』Reyy16"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:16",
-    "location": null,
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:06",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: gw beli rank, tapi kok ga ada tulisan nya"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:18"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .Ellyne_Yeager: nanti kalo skyblock longgar tpin ke skyblock dong udh 4 hari kena bug fly"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:20",
-    "location": "index.js",
-    "message": "loader"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Hadif8801wd"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:20",
-    "location": "index.js",
-    "message": "loader"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": ".widad_snack_vid: ???"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:21",
-    "location": "index.js",
-    "message": "loader"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Yurax800"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:21",
-    "location": "index.js:14:9)",
-    "message": "loader:1241:14)"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.ErzzCraft999"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:22",
-    "location": "index.js",
-    "message": "loader"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』ngawiTzy"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:23",
-    "location": "utils.js",
-    "message": "utils.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.RELIKXBL"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:23",
-    "location": null,
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Arcibo"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:25",
-    "location": null,
-    "message": "null"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .ENKII2718: halo kak"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:29",
-    "location": "console.js",
-    "message": "cekDatabase.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: open tiket kevin"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:30",
-    "location": "console.js",
-    "message": "index.js"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Jio_20132251"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:32",
-    "location": "console.js",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Subawe21"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:33",
-    "location": "console.js:38:22)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: anjir dari 1 ke 2 lagi"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:34",
-    "location": "console.js:38:22)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Haxsi01"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:35",
-    "location": "console.js:38:22)",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』ABDUL_BENAPAS"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:36",
-    "location": "console.js:38:22)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.bapakkau2035"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:37",
-    "location": "cekDatabase.js:20:25)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: gw balik ke tiga lgsg awhh"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:38",
-    "location": "index.js:14:9)",
-    "message": "tess"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:07",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: td 2 co"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:38",
-    "location": "cekDatabase.js:20:25)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Ellyne_Yeager"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:38",
-    "location": "function.js:29:13)",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.EvilColt3245613"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:38",
-    "location": "function.js:41:13)",
-    "message": "@ryan_syahh telah mengatur username: Losss"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: maksud nya bang?"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:40",
-    "location": "cekDatabase.js:20:25)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: alamak ke 3"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:40",
-    "location": "function.js:29:13)",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ɢᴜᴄᴄɪ] SketXz: hehe"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:44",
-    "location": "cekDatabase.js:20:25)",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』SikMaApalah"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:44",
-    "location": "function.js:29:13)",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke 1.20.x"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ɢᴜᴄᴄɪ] SketXz: maap bwang ❤"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:46",
-    "location": "cekDatabase.js:20:25",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: gw keempat"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:46",
-    "location": "function.js:29:13",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.HikaruKuroYK"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:47",
-    "location": "cekDatabase.js:20:25",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Kalryza77"
   },
   {
-    "type": "new_user",
-    "date": "2024-07-19 / 02:47",
-    "location": "cekDatabase.js:20:25",
-    "message": "membuat data_user untuk @ryan_syahh"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: taik la"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:48",
-    "location": "function.js:29:13",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke auto"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: dasar gucci"
   },
   {
-    "type": "info",
-    "date": "2024-07-19 / 02:48",
-    "location": "function.js:41:13",
-    "message": "@ryan_syahh telah mengatur username: Losss"
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』KangRujak"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』faiz5c"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: di dc ada open tiket, lapor ke situ kevin"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Alicanomagrib"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Fal2z"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: oke bg"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ɢᴜᴄᴄɪ] SketXz: love u too ❤"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": ".MaxThread297531: ini server kandang alwi kan?"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": ".Yukineeuu: udh 1 malah naik ke 2"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .ENKII2718: halo kk"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』HAMZNOMAGRIB"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Svarez999"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: besok up ke supreme ah biar gak antri"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: join dc dimana?"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』RexxGOOD"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ɢᴜᴄᴄɪ] SketXz: nah gitu dong .TegarIndo5758"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.kyyoku"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Sofuterutama"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: bagi 10k"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:08",
+    "location": "CreateBotController.js:30:17",
+    "message": " ������ ᴀꜰᴋ ︱ Moshx is now AFK."
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: tegar"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Yukineeuu"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.ArisGansMC"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: ya?"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": " ������ ᴀꜰᴋ ︱ .KambingSteel is now AFK."
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ɢᴜᴄᴄɪ] SketXz: :v"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴠɪᴘ] .SwankyLily39: di website rank itu ada link dc kevin"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": " ������ ᴀꜰᴋ ︱ .KambingSteel is no longer AFK."
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: lu klo afk diob gmn?"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Soft7itiaak"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.Zryy11"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.YannSukaEpep"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』Xgiee"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: oke, makasih bg"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: ya afk aja"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": ".KevinboloMc: ☺"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.AlleSandro111"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』HAMZNOMAGRIB"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] AkuOrangUtan: gmn kn lu mcpe?"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "[ᴍᴠᴘ+] .TegarIndo5758: tinggal berak kek"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-19 / 20:09",
+    "location": "CreateBotController.js:30:17",
+    "message": "『<』.KevinboloMc"
   }
 ]

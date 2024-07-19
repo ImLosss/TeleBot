@@ -1,5 +1,5 @@
 const console = require("../app/logs/console");
-const { mineflayer } = require("../app/controller/CreateBotController");
+const { joinServer } = require("../app/controller/CreateBotController");
 const { getValue } = require("../app/function/function");
 
 module.exports = (function() {
@@ -8,7 +8,7 @@ module.exports = (function() {
             const chatId = msg.chat.id;
             const value = await getValue(msg);
 
-            await mineflayer(bot, chatId, value);
+            await joinServer(bot, chatId, value);
         });
     };
 })();

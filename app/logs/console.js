@@ -52,7 +52,7 @@ async function log(log, type = 'info') {
 
         logData.push(data);
 
-        if(logData.length > 100) logData.splice(0, 1);
+        if(logData.length > 500) logData.splice(0, 1);
 
         writeJSONFileSync('app/logs/log.json', logData);
     } catch (error) {
