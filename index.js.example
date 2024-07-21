@@ -1,22 +1,18 @@
 const TelegramBot = require('node-telegram-bot-api');
 const fungsi = require('./app/function/function');
+const console = require('./app/logs/console');
 
 // Ganti token ini dengan token bot Anda
-const token = 'YOUR TOKEN';
+const token = 'YOUR_TOKEN';
 
 // Buat instance bot
 const bot = new TelegramBot(token, { polling: true });
+
 require('./listeners/createBot')(bot);
 require('./listeners/callback')(bot);
 require('./listeners/cekDatabase')(bot);
 
-
 // errorHandling
 bot.on('polling_error', (err) => {
-    // Tentukan zona waktu Makassar
-    const time = fungsi.getTime();
-
-    console.log(`[${ time } / Error] ${ err.message }`);
-
-    fungsi.saveError(err);
+    console.error(err);
 })
