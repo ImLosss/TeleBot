@@ -1,8 +1,10 @@
+require('module-alias/register');
+
 const fs = require('fs');
-const { readJSONFileSync, setUsername, sleep } = require('../function/function');
+const { readJSONFileSync, setUsername, sleep } = require('function/function');
 const console = require('../logs/console');
-const { setIp } = require('../function/setIp');
-const { setVersion } = require('../function/setVersion');
+const { setIp } = require('function/setIp');
+const { setVersion } = require('function/setVersion');
 
 async function cekVersion(id, bot) {
     return new Promise(async (resolve) => {

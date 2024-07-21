@@ -6,9 +6,17 @@
   },
   "dependencies": {
     "mineflayer": "^4.20.1",
+    "module-alias": "^2.2.3",
     "moment-timezone": "^0.5.45",
     "node-telegram-bot-api": "^0.66.0",
     "nodemon": "^3.1.4",
     "proper-lockfile": "^4.1.2"
+  },
+  "_moduleAliases": {
+    "listeners": "./listeners",
+    "import": "./app/service/import",
+    "function": "./app/function",
+    "console": "./app/logs/console",
+    "controller": "./app/controller"
   }
 }

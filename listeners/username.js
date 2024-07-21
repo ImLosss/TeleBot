@@ -1,15 +1,14 @@
 require('module-alias/register');
 
-const { getValue } = require("function/function");
-const { setIp } = require("function/setIp");
+const { getValue, setUsername } = require("function/function");
 
 module.exports = (function() {
     return function(bot) {
-        bot.onText(/^\/setip/i, async (msg) => {
+        bot.onText(/^\/setusername/i, async (msg) => {
             const chatId = msg.chat.id;
             const value = getValue(msg);
 
-            await setIp(chatId, value, bot);
+            await setUsername(chatId, value, bot);
         });
     };
 })();

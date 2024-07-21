@@ -1,6 +1,7 @@
-const console = require("../app/logs/console");
-const { joinServer } = require("../app/controller/CreateBotController");
-const { getValue } = require("../app/function/function");
+require('module-alias/register');
+
+const { joinServer } = require("controller/CreateBotController");
+const { getValue } = require("function/function");
 
 module.exports = (function() {
     return function(bot) {

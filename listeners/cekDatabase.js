@@ -1,7 +1,7 @@
+require('module-alias/register');
+
 const fs = require('fs');
-const { getTime } = require('../app/function/function');
-const console = require('../app/logs/console');
-const { getLocation } = require('../app/function/utils');
+const console = require('console');
 
 module.exports = (function() {
     return function(bot) {

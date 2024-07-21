@@ -1,66 +1,6 @@
 [
   {
     "type": "ingame",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:41:17",
-    "message": "Dewazxd9 joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:41:17",
-    "message": "Sending you to lobbys now.."
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:41:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:79:25",
-    "message": "/playerlist sadasd asdasd"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:41:17",
-    "message": "Sending you to lobbys now.."
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 1 of 1. Estimated time: 5 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:41:17",
-    "message": "Sending you to lobbys now.."
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:44",
-    "location": "CreateBotController.js:79:25",
-    "message": "/dc"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:46",
-    "location": "CreateBotController.js:41:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:46",
-    "location": "CreateBotController.js:41:17",
-    "message": "Sending you to lobbys now.."
-  },
-  {
-    "type": "ingame",
     "date": "2024-07-21 / 18:46",
     "location": "CreateBotController.js:41:17",
     "message": "Sending you to lobbys now.."
@@ -2996,6 +2936,66 @@
   {
     "type": "message_send",
     "date": "2024-07-21 / 21:03",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:34",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 21:34",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:48",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 21:48",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 22:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 22:16",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 22:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 22:16",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 22:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 22:16",
     "location": "CreateBotController.js:81:25",
     "message": "/dc"
   }
