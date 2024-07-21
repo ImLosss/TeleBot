@@ -1,0 +1,1466 @@
+[
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:41:17",
+    "message": "Losseees joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:41:17",
+    "message": "FyzeGaming joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 8 of 8. Estimated time: 40 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:41:17",
+    "message": "FyzeGaming left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 7 of 7. Estimated time: 35 seconds"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:77:25",
+    "message": "a"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "GinggaMan left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 7 of 7. Estimated time: 35 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "ThunderCales left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "yourjie_ left the game"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:77:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "\n[»] If you do not want to login next time, please execute:\n\n  » /premium <password> - if you have a premium launcher.\n  » /startsession - if you have a cracked launcher.\n"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 6 of 6. Estimated time: 30 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』ThunderCales"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:77:25",
+    "message": "a"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "Losseees: a"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』fitrah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 6 of 7. Estimated time: 30 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FalzMax2024"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 5 of 7. Estimated time: 25 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 2 of 3. Estimated time: 10 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ɢᴜᴄᴄɪ] RIZKY_LOVE: JustDzkyyyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RemoteNine09630"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』JustDzkyyyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ɢᴜᴄᴄɪ] RIZKY_LOVE: kapan on nya :>"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:41:17",
+    "message": "GinggaMan: caveblock mana"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』RIZKY_LOVE"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』SaikoGTG"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.NiiKunn001"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.ALWlSUSILO"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.StarThread66267"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Tongki2345"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "who612 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』shencx"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』fitrah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』aroxin1"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.VanzRwrr"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.GILL101210"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RAKAS098765"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:14",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』GinggaMan"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:14",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』krobby326"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.suzuka1977"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Zakiexe_02"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』ikhs4n"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "shencx: a"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』SikMaApalah"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:77:25",
+    "message": "t"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "Losseees: t"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:77:25",
+    "message": "/tess"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "Unknown command. Type \"/help\" for help."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FabyanAkhtar173"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "Rahmat9080 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": ".AzureMine380: males bad di antri nya setengah jam njr"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:77:25",
+    "message": "/tess"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "Unknown command. Type \"/help\" for help."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』DutaNEKO"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』shencx"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:77:25",
+    "message": "/djdj"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "Unknown command. Type \"/help\" for help."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Ezalor22"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』TheSatur"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Arfa11419"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Devils5746"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Asdessaaa"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Sanndd7"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:77:25",
+    "message": "/ksks"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "Unknown command. Type \"/help\" for help."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』xlez22"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:77:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "Losseees joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 4 of 4. Estimated time: 20 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "GEPOI joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 4 of 5. Estimated time: 20 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "sapta100 joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "sapta100 left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 4 of 6. Estimated time: 20 seconds"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:77:25",
+    "message": "/jsjs"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:41:17",
+    "message": "ThunderCales joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "RedRoys02 left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "ThunderCales left the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 3 of 6. Estimated time: 15 seconds"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:77:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "\n[»] If you do not want to login next time, please execute:\n\n  » /premium <password> - if you have a premium launcher.\n  » /startsession - if you have a cracked launcher.\n"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』ThunderCales"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 3 of 6. Estimated time: 15 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": ".gabino123456833 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 3 of 6. Estimated time: 15 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.A_1MP0ST0R"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.VinySinger99718"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 2 of 5. Estimated time: 10 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.ItzRey1578"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:24",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.aulia7721"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: wkwkwkkwk"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: 17k doang cuamn"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.DelviAffandi"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.fitrahimam"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: kenapa gak nabung buat beli rank murah lohh"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Raffacuy17puluh"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Davian124555"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Tzy7Rahmat7: sehari nabung 5k dapat :v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: tapi jangan ngemis ortu lu"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Farelll18: 17k bisa sih sehari"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: 17k dpt vip"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz fell from a high place"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Gyzeny"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: tau tuh"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Lucyferr_RD"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: beliin rank :v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Lyo1732"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: makanya uang jatah kas tuh di korupsi"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: kalo 25k dapat vip+"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: :v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": ".gabino123456833 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: anjirr"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』GinggaMan"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』faathirrrrr"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: klo donator skrat 1jtan lah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Tzy7Rahmat7: wkwwkw gua bendahara cok :v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.KingMC5878"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.XvnnnPvL"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.NodzliCraft19"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ɢᴜᴄᴄɪ] NOPRA: kontol"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Clovee14"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: tuh enak"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:26",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』NOPRA"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FrostRajul"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": ".gabino123456833: kalo vip+ nanggung langsung aja ke mvp"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: besok up ke mvp"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Rezaajaaa09"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Asemrokim"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』smileshy08"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』RyuujiMike4652"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Tzy7Rahmat7: tapi korup bahaya"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: gas up ke premium pake uang kas"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: soalnya di vip+ masih ngantri"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: :p"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: nanggung , ke donator aja"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.PANCAGAMING6413"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.TamePuppet84396"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: gil"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.AKU_ULTRAMAN407"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Kenzens0"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: gila"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: nanggung ke donator+ aja"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FieryPizza75357"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: budaya kita adalah korupsi"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』AbiSUKAIKAN"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: klo Supreme keatas bisa langsung masuk"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: yap itu benar"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:27",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: [&] p"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".gabino123456833: esempe esempe"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Tzy7Rahmat7: [i]"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ɢᴜᴄᴄɪ] .Zacky2374: yng bener kamu ras ;v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: trus lu kenapa gak beli supreme kan nanggung kalo beli mvp++"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』zax112"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Zacky2374"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』NOPENGG"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: kg tai"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』DimzCihuyyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "RedRoys02 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: lah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Skymix876"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".PAELHALIMM: kek mana cara nya sih"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴍᴠᴘ++] farras2: [Inventor"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: harga vip turun ya"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』farras2"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Kizocuyyy fell from a high place"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".PAELHALIMM: gak bisa masuk la"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.ItzMeeRiZzz"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "Electro_zz: sblmnya 18 dah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: msh sama"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: tanggung di donator ke admin aj :v"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.mazkaarid"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Wowm78190 fell from a high place"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Haiikall2023: kekmana subini"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "AsepRocky99 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.TamePuppet84396"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "KANDANGALWI / Rahmat9080 telah diban dari server karena nih sb"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Tzy7Rahmat7: nangung napa ga ke co owner"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』razaawkwowk"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Psychoo03"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:28",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: akhirnya posisi ke 2"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: 2 on?"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "SomayBandungunbanned Rahmat9080 for 'salah durasi'"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: turun ke 3"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Day1875 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] RedRoys02: 2 ob?"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』zax112"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.SquareCoins"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』DimzCihuyyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』cca944"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』adeAJA"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FarizzMci22"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Day1875"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.GameRumble7701"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "AsepRocky99 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Dinodj123445"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』ikan_udara"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』ARH852"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Cio407"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:29",
+    "location": "CreateBotController.js:41:17",
+    "message": ".gabino123456833: dari tadi posisi lima gak jalan"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.AHMADRIADI0797"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Fahzi45"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Kizocuyyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Tionoob19"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.ERROR1034857"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』bozgunduz"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.fitrahimam"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "[ᴠɪᴘ+] .Emir663705: gw dari tadi di posisi ke 2 trus padahal udah beli rank lo"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Remhz"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.SlightCow199723"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』RedRoys02"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "AsepRocky99 fell from a high place"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Remhz"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Emir663705"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.FabyanAkhtar173"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": ".Haiikall2023 fell out of the world"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』Remhz"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Redsaurs430"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.iqbaluserhaya"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": ".ADABUKU: mending main caveblock"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:30",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.RedBoys1525"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:31",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.Kiyosunemi"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:31",
+    "location": "CreateBotController.js:41:17",
+    "message": "『<』.SINDUP132445"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 18:31",
+    "location": "CreateBotController.js:41:17",
+    "message": "AsepRocky99: ngentod"
+  }
+]

@@ -3,7 +3,7 @@ const fs = require('fs');
 const console = require('../logs/console');
 const lockfile = require('proper-lockfile');
 
-async function getValue(msg) {
+function getValue(msg) {
     let text = msg.text;
     text = text.slice(msg.entities[0].length+1, text.length);
 

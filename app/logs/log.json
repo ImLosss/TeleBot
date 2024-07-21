@@ -598,5 +598,1690 @@
     "date": "2024-07-19 / 20:09",
     "location": "CreateBotController.js:30:17",
     "message": "『<』.KevinboloMc"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:40:17",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "1rone187 joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 7 of 8. Estimated time: 35 seconds"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:56:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "\n[»] If you do not want to login next time, please execute:\n\n  » /premium <password> - if you have a premium launcher.\n  » /startsession - if you have a cracked launcher.\n"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』middele"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Depalxqorin: coba cari lagi"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 7 of 9. Estimated time: 35 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: plsss mau masukk"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Dprist6778: hai"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Minzir0930"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Gandhimjp: masuk ke survival gimana"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 7 of 10. Estimated time: 35 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Nizam4k"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.DARK_NIKHAWK"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Lapet_om: tekan aja masuk nya"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:56:25",
+    "message": "/dc"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "[ᴠɪᴘ] .Teguh54sugianto: 1x ajaa mau lihat uang gw"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.PahryItsOky"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Kingrakha2017"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Depalxqorin: udah blm"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:47",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 6 of 10. Estimated time: 30 seconds"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:40:17",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』KanDerJOyA62aE"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.FrontSubset1032"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Halosemuanyah"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』276PKI78"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Alicanomagrib"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": ".EL_KUMAR_V2: axa"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Hehehe6054"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": ".AXA1241: apa"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:56:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:34:17",
+    "message": "KANDANGALWI / You are already logged!"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:48",
+    "location": "CreateBotController.js:56:25",
+    "message": "/dc"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:50",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:50",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:50",
+    "location": "CreateBotController.js:40:17",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:50",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』razaawkwowk"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:51",
+    "location": "CreateBotController.js:61:25",
+    "message": "/dc"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:51",
+    "location": "CreateBotController.js:49:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Suzanttff"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "masur132: -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_E_KUMAR_V2: p"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": ".Ryncanz: hadap situ"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "[ᴠɪᴘ+] .Bws_craft24: kamu hode y :v"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Qilaa5353"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.akazaa28"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 15:55",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 6 of 6. Estimated time: 30 seconds"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "Wilfoxtus4897 left the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "Jv_Duck left the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "jovinny left the game"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:63:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:63:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:63:25",
+    "message": "/login 040103"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "\n[»] If you do not want to login next time, please execute:\n\n  » /premium <password> - if you have a premium launcher.\n  » /startsession - if you have a cracked launcher.\n"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:33",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 3 of 3. Estimated time: 15 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Boykiller90"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 3 of 4. Estimated time: 15 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』xCalvert"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.DanzzEntity"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.NightEverYT"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 3 of 5. Estimated time: 15 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』VinnPiww"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:34",
+    "location": "setVersion.js:11:13",
+    "message": "@Losss11 telah mengatur versi minecraft ke false"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.apipkungkang"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 2 of 5. Estimated time: 10 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』xCalvert"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Hanagaki78"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:34",
+    "location": "function.js:30:13",
+    "message": "@Losss11 telah mengatur username: Losseee"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Brightwhiteme"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.WINZz_ON"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Zidnilo"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:34",
+    "location": "setIp.js:11:13",
+    "message": "@Losss11 telah mengatur IP: kalwi.id"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:51:17",
+    "message": "socketClosed"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Feardyy"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Jv_Duck"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:34",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』panz009gg"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:51:17",
+    "message": "socketClosed"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.BoweryOsprey547"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Panda67901"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』FarelNakmur"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』BluzezXD"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Kenzory_ST2024"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Cio407"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』PalkonZ"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Liumal155"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "Losseees joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "Welcome Losseees to the server!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Memor13z"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 2 of 2. Estimated time: 10 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Shiponaladiva"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Junior_F"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Vinzybeast771"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "zax112 joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Bipini"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Rapzzces"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:63:25",
+    "message": "/register 040103 040103"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "KANDANGALWI / Usage: /register <password>"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 2 of 3. Estimated time: 10 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.andi_miaw"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "zax112 left the game"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:63:25",
+    "message": "/register 040103"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "\n[»] Welcome to KandangAlwi! Here you have useful commands:\n\n  » /unregister <password>\n  » /changepassword <current-password> <new-password>\n  » /createpassword <password>\n  » /premium <password>\n  » /cracked <password>\n  » /startsession\n  » /destroysession\n  » /changeemailaddress <password> <email-address>\n  » /recoverypassword <email-address>\n\n"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Raeylynz"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Raeylynz"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.ZAHRA047085"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.ZAHRA047085"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 2 of 3. Estimated time: 10 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.LORDZIQRI"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.LORDZIQRI"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:63:25",
+    "message": "a"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "Losseees: a"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:35",
+    "location": "CreateBotController.js:34:17",
+    "message": "Losseees: a"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 2 of 2. Estimated time: 10 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Asep_gntng1845"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Asep_gntng1845"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "b"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "b"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "b"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "shencx: b"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "shencx: b"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.rizmanTYU"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.rizmanTYU"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 1 of 2. Estimated time: 5 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.ITZLanzX"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.ITZLanzX"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』shencx"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": ".AdytCuy fell from a high place"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Kaiton_112"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』abdulx"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:36",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』zax112"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.natasya82"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.UnlikeSine49040"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "a"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "a"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "Losseees: a"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』DRYRP"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Jovgeng"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.Devils5746"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』SikMaApalah"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "Ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:37",
+    "location": "CreateBotController.js:63:25",
+    "message": "Ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "Ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "Ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/join"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have an email address assigned to your account. Please assign it now using /changemailaddress <password> <email-address>!"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "[»] You still do not have second factor enabled on your account. Please enable it now using /requestsecondfactor!"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』.TeakBucket13776"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』3shot4shot"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "『<』Reyy_0"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/ss"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/ss"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:34:17",
+    "message": "Unknown command. Type \"/help\" for help."
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "send_msg",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:63:25",
+    "message": "/dc"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-20 / 16:38",
+    "location": "CreateBotController.js:51:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:41:21",
+    "message": "connected"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "Electro_zz left the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 3 of 3. Estimated time: 15 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "Electro_zz joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "EGAMES2011 joined the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 4 of 6. Estimated time: 20 seconds"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "krobby326 left the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "EGAMES2011 left the game"
+  },
+  {
+    "type": "message_client",
+    "date": "2024-07-21 / 17:54",
+    "location": "CreateBotController.js:34:17",
+    "message": "You are in position 3 of 4. Estimated time: 15 seconds"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 17:58",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 17:59",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:01",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:01",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:01",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:05",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:05",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:05",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener title sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:05",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:06",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:09",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:09",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:11",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:58:17",
+    "message": "socketClosed"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 3"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:12",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 3"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:13",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 3"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:15",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 3"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 3"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 2"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:16",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:22",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:22",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:23",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:25",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:39",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:39",
+    "location": "CreateBotService.js:144:17"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:39",
+    "location": "CreateBotService.js:144:17",
+    "message": "asdads"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:40",
+    "location": "CreateBotService.js:144:17",
+    "message": "asdsadad"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:40",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:40",
+    "location": "CreateBotService.js:144:17",
+    "message": "{}"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:41",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:41",
+    "location": "CreateBotService.js:144:17",
+    "message": "{}"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:42",
+    "location": "createBot.js:11:21",
+    "message": ""
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:42",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:42",
+    "location": "CreateBotService.js:144:17",
+    "message": "asdasd sdfdsf"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:44",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:44",
+    "location": "CreateBotService.js:144:17",
+    "message": "sadasd asdasd"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:44",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:44",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:44",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotService.js:144:17",
+    "message": ""
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotService.js:144:17",
+    "message": ""
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotController.js:58:17",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotController.js:62:17",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:46",
+    "location": "CreateBotController.js:66:17",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:48",
+    "location": "CreateBotController.js:48:21",
+    "message": "connected"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-21 / 18:48",
+    "location": "CreateBotService.js:144:17",
+    "message": ""
   }
 ]

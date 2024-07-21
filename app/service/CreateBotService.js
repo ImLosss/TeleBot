@@ -139,6 +139,22 @@ async function cekIp(id, bot) {
     })
 }
 
+async function playerOnline(botM, chatId, bot, pesan) {
+    try {
+        let player = [];
+        for (const playerName in botM.players) {
+            player.push(playerName);
+        }
+        let jml = player.length;
+        player = player.join(', ');
+
+        return bot.sendMessage(chatId, `<b>Players Online(${ jml }):</b>\n\n${ player }`, { parse_mode: 'HTML' });
+    } catch(e) {
+        console.error(e);
+        return bot.sendMessage(chatId, `Terjadi kesalahan`);
+    }
+}
+
 module.exports = {
-    cekUsername, cekVersion, cekIp
+    cekUsername, cekVersion, cekIp, playerOnline
 }

@@ -6,7 +6,7 @@ module.exports = (function() {
     return function(bot) {
         bot.onText(/^\/join$/, async (msg) => {
             const chatId = msg.chat.id;
-            const value = await getValue(msg);
+            const value = getValue(msg);
 
             await joinServer(bot, chatId, value);
         });
