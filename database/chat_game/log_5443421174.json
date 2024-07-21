@@ -1,174 +1,6 @@
 [
   {
     "type": "ingame",
-    "date": "2024-07-21 / 18:39",
-    "location": "CreateBotController.js:41:17",
-    "message": "MewingTZY left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:39",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 3 of 5. Estimated time: 15 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:39",
-    "location": "CreateBotController.js:41:17",
-    "message": "diannosulit joined the game"
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:39",
-    "location": "CreateBotController.js:79:25",
-    "message": "/playerlist asdsadad asdasda"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "navinza left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 3 of 6. Estimated time: 15 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "diannosulit left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 2 of 4. Estimated time: 10 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "Sending you to lobbys now.."
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "elviraangeli joined the game"
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:40",
-    "location": "CreateBotController.js:79:25",
-    "message": "/playerlist asdasd asdasdas"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:79:25",
-    "message": "/playerlist sadasda asdsafdss"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 3 of 3. Estimated time: 15 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "Diamondz86 joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 4 of 4. Estimated time: 20 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "ikhya left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "BacotGemink joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "mzareef21 joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "VivaLynx left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 3 of 5. Estimated time: 15 seconds"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:41",
-    "location": "CreateBotController.js:41:17",
-    "message": "mzareef21 left the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:41:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:41:17",
-    "message": "Vins_CraftID joined the game"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:41:17",
-    "message": "Renegede joined the game"
-  },
-  {
-    "type": "message_send",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:79:25",
-    "message": "/playerlist asdasd sdfdsf"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 18:42",
-    "location": "CreateBotController.js:41:17",
-    "message": "You are in position 3 of 4. Estimated time: 15 seconds"
-  },
-  {
-    "type": "ingame",
     "date": "2024-07-21 / 18:42",
     "location": "CreateBotController.js:41:17",
     "message": "Dewazxd9 joined the game"
@@ -2998,5 +2830,173 @@
     "date": "2024-07-21 / 20:11",
     "location": "CreateBotController.js:41:17",
     "message": "『<』ZiqoCraft"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:51",
+    "location": "CreateBotController.js:41:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 20:51",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:41:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:41:17",
+    "message": "eternityed joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:41:17",
+    "message": "Welcome eternityed to the server!"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 12 of 13. Estimated time: 1m 0s"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:41:17",
+    "message": "Fielkaseru joined the game"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 20:54",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:56",
+    "location": "CreateBotController.js:41:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:56",
+    "location": "CreateBotController.js:41:17",
+    "message": "You are in position 3 of 3. Estimated time: 15 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 20:56",
+    "location": "CreateBotController.js:41:17",
+    "message": "warrrsss joined the game"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 20:56",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] GembeLElit"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "berikan pass mu"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "atau..."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "wkwkwk"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "[-] ballnomercyy"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "ah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "ah"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:01",
+    "location": "CreateBotController.js:41:17",
+    "message": "[-] NotSPoke13"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:02",
+    "location": "CreateBotController.js:41:17",
+    "message": "Unable to connect you to skyblock. Please try again later."
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:02",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] ShanCS"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:02",
+    "location": "CreateBotController.js:41:17",
+    "message": "poka"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:02",
+    "location": "CreateBotController.js:41:17",
+    "message": "[-] KurkurNash"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:03",
+    "location": "CreateBotController.js:41:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:03",
+    "location": "CreateBotController.js:41:17",
+    "message": "[-] Kino"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-21 / 21:03",
+    "location": "CreateBotController.js:41:17",
+    "message": "hmm :/"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-21 / 21:03",
+    "location": "CreateBotController.js:81:25",
+    "message": "/dc"
   }
 ]

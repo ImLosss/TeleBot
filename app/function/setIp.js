@@ -9,7 +9,7 @@ async function setIp(id, ip, bot) {
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
     console.log(`@${ userData[0].teleUsername } telah mengatur IP: ${ ip }`);
-    return bot.sendMessage(id, `Ip anda telah diatur ke ${ ip }`);
+    return bot.sendMessage(id, `Ip anda telah diatur ke <b>${ ip }</b>`, { parse_mode: 'HTML' });
 }
 
 module.exports = {

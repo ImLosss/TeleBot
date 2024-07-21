@@ -9,7 +9,7 @@ async function setVersion(id, version, bot) {
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
     console.log(`@${ userData[0].teleUsername } telah mengatur versi minecraft ke ${ version }`);
-    return bot.sendMessage(id, `Versi minecraft telah diatur ke ${ version }`);
+    return bot.sendMessage(id, `Versi minecraft telah diatur ke <b>${ version }</b>`, { parse_mode: 'HTML' });
 }
 
 module.exports = {

@@ -1,14 +1,15 @@
 const console = require("../app/logs/console");
-const { joinServer } = require("../app/controller/CreateBotController");
+
 const { getValue } = require("../app/function/function");
+const { setIp } = require("../app/function/setIp");
 
 module.exports = (function() {
     return function(bot) {
-        bot.onText(/^\/join$/i, async (msg) => {
+        bot.onText(/^\/setip/i, async (msg) => {
             const chatId = msg.chat.id;
             const value = getValue(msg);
 
-            await joinServer(bot, chatId, value);
+            await setIp(chatId, value, bot);
         });
     };
 })();
