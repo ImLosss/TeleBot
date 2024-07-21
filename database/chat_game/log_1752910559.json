@@ -1,0 +1,38 @@
+[
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:22",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"text\":\"You are logging in too fast, try again later.\"}"
+  },
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:22",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"color\":\"red\",\"text\":\"You are not logged into your Minecraft account. If you are logged into your Minecraft account, try restarting your Minecraft client.\"}"
+  },
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:22",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"color\":\"red\",\"text\":\"You are not logged into your Minecraft account. If you are logged into your Minecraft account, try restarting your Minecraft client.\"}"
+  },
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:23",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"color\":\"red\",\"text\":\"You are not logged into your Minecraft account. If you are logged into your Minecraft account, try restarting your Minecraft client.\"}"
+  },
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:23",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"color\":\"red\",\"text\":\"You are not logged into your Minecraft account. If you are logged into your Minecraft account, try restarting your Minecraft client.\"}"
+  },
+  {
+    "type": "kicked",
+    "date": "2024-07-21 / 20:24",
+    "location": "CreateBotController.js:55:17",
+    "message": "{\"color\":\"red\",\"text\":\"You are not logged into your Minecraft account. If you are logged into your Minecraft account, try restarting your Minecraft client.\"}"
+  }
+]

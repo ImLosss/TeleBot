@@ -50,20 +50,22 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
         })
     }))
 
-    botM.once('error', withErrorHandling((err) => {
-        console.error(err);
+    botM.once('kicked', withErrorHandling((msgK) => {
+        msgK = JSON.parse(msgK);
+        console.log(msgK, 'kicked');
+        if (msgK.text != undefined && msgK.text != '') bot.sendMessage(chatId, `Kicked : ${ msgK.text }`);
+        if (msgK.translate != undefined) bot.sendMessage(chatId, `Kicked : ${ msgK.translate }`);
+        if (msgK.extra != undefined) {
+            let strKick = '';
+            msgK.extra.map((item) => {
+                if(item.text != undefined) strKick += item.text;
+            })
+            bot.sendMessage(chatId, `Kicked : ${ strKick }`);
+        }
     }))
 
-    botM.once('end', withErrorHandling((msg) => {
-        console.log(msg, 'disconnect');
-        bot.sendMessage(chatId, 'Disconnected');
-
-        const numListenersMessageBeforeRemoval = bot.listeners('message').length;
-        console.log(`Jumlah listener message sebelum dihapus : ${ numListenersMessageBeforeRemoval }`);
-
-        bot.removeListener('message', list2);
-        const numListenersMessageAfterRemoval = bot.listeners('message').length;
-        console.log(`Jumlah listener message setelah dihapus : ${  numListenersMessageAfterRemoval }`);
+    botM.once('error', withErrorHandling((err) => {
+        console.error(err);
     }))
 
     botM.addListener('messagestr', Lmessagestr);
@@ -93,6 +95,18 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
             }
         });
         bot.addListener('message', list2);
+
+        botM.once('end', withErrorHandling((msg) => {
+            console.log(msg, 'disconnect');
+            bot.sendMessage(chatId, 'Disconnected');
+    
+            const numListenersMessageBeforeRemoval = bot.listeners('message').length;
+            console.log(`Jumlah listener message sebelum dihapus : ${ numListenersMessageBeforeRemoval }`);
+    
+            bot.removeListener('message', list2);
+            const numListenersMessageAfterRemoval = bot.listeners('message').length;
+            console.log(`Jumlah listener message setelah dihapus : ${  numListenersMessageAfterRemoval }`);
+        }))
     }
 });
 
