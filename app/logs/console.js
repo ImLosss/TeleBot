@@ -7,6 +7,7 @@ async function error(errorMsg) {
     try {
         // Tentukan zona waktu Makassar
         const time = getTime();
+        const file = getLocation();
 
         console.log(`[${ time } / error] ${ errorMsg.message }`);
 
@@ -17,7 +18,7 @@ async function error(errorMsg) {
         const data = {
             type: 'Error',
             date: time,
-            errorLocation: stackLines[1] ? stackLines[1] : null,
+            errorLocation: file,
             errorMessage: errorMsg.message? errorMsg.message : null,
             error: errorMsg instanceof Error ? `${errorMsg.message}\n${errorMsg.stack}` : errorMsg
         }

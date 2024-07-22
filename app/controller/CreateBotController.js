@@ -1,16 +1,20 @@
-const { readJSONFileSync, getValue, withErrorHandling } = require("../function/function");
-const { cekUsername, cekVersion, cekIp, playerOnline } = require("../service/CreateBotService");
+require('module-alias/register');
+
+const { readJSONFileSync, getValue, withErrorHandling } = require("function/function");
+const { cekUsername, cekVersion, cekIp, playerOnline } = require("service/CreateBotService");
 const mineflayer = require('mineflayer');
-const console = require('../logs/console');
-const { injectTitle } = require("../function/utils");
+const { mapDownloader } = require('mineflayer-item-map-downloader');
+const console = require('console');
+const { injectTitle, deleteFile } = require("function/utils");
 const fs = require('fs');
+const { watcherDirMap } = require('../service/CreateBotService');
 
 const commandMap = {
     '/playerlist': playerOnline
 };
 
 const joinServer = withErrorHandling(async (bot, chatId, value) => {
-    let Lmessagestr, list2;
+    let Lmessagestr, list2, watcherDirMap;
 
     if(!await cekVersion(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
     if(!await cekUsername(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
@@ -18,12 +22,18 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
 
     let dataUser = readJSONFileSync(`database/data_user/${ chatId }`);
     
+    const filePathMap = `database/map/${ chatId }`;
+
+    if(!fs.existsSync(filePathMap)) {
+        fs.mkdirSync(filePathMap);
+    }
+
     const botM = mineflayer.createBot({
         host: dataUser[0].ip, 
         username: dataUser[0].username, 
         auth: 'offline',
-        version: dataUser[0].version
-        // "mapDownloader-outputDir": filePathMap
+        version: dataUser[0].version,
+        "mapDownloader-outputDir": filePathMap
     })
 
     if(!fs.existsSync(`database/chat_game/log_${ chatId }.json`)) {
@@ -32,7 +42,26 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
         fs.writeFileSync(`database/chat_game/error_${ chatId }.json`, JSON.stringify(data_user, null, 2));
     }
 
+    botM.loadPlugin(mapDownloader)
     injectTitle(botM);
+
+    botM.on('title', (text) => {
+        // text = JSON.parse(text);
+        text = text.value.text.value
+        console.log(text, 'title');
+        if(text == "") return;
+
+        bot.sendMessage(chatId, `Title: ${ text }`);
+    })
+
+    botM.on('subtitle', (text) => {
+        // text = JSON.parse(text);
+        text = text.value.text.value
+        console.log(text, 'subtitle');
+        if(text == "") return;
+
+        bot.sendMessage(chatId, `Subtitle: ${ text }`);
+    })
 
     let message = '';
     Lmessagestr = withErrorHandling(async (msgstr) => {
@@ -43,6 +72,20 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
     })
 
     botM.once('spawn', withErrorHandling(() => {
+        watcherDirMap = fs.watch(filePathMap, (eventType, filename) => {
+            if (eventType === 'change') {
+                console.log('file changed');
+                const dir = `${ filePathMap }/map_000000.png`;
+    
+                bot.sendPhoto(chatId, dir)
+                .then(() => { console.game('Success sending map', chatId, 'map_image') });
+    
+                setTimeout(() => {
+                    deleteFile(dir);
+                }, 5000);
+            }
+        });
+
         bot.sendMessage(chatId, 'connected')
         .then(() => {
             console.log('connected');
@@ -94,19 +137,27 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
                 }
             }
         });
-        bot.addListener('message', list2);
 
         botM.once('end', withErrorHandling((msg) => {
             console.log(msg, 'disconnect');
             bot.sendMessage(chatId, 'Disconnected');
     
+            
             const numListenersMessageBeforeRemoval = bot.listeners('message').length;
             console.log(`Jumlah listener message sebelum dihapus : ${ numListenersMessageBeforeRemoval }`);
-    
             bot.removeListener('message', list2);
             const numListenersMessageAfterRemoval = bot.listeners('message').length;
             console.log(`Jumlah listener message setelah dihapus : ${  numListenersMessageAfterRemoval }`);
+            
+
+            try {
+                watcherDirMap.close();
+            } catch (err) {
+                console.error(err);
+            }
         }))
+
+        bot.addListener('message', list2);
     }
 });
 

@@ -1,8 +1,11 @@
 const path = require('path');
+const fs = require('fs');
 
 function getLocation() {
     const error = new Error();
     const stack = error.stack.split('\n');
+
+    const projectRoot = getProjectRoot(__dirname);
 
     // Mulai dari elemen ke-2 untuk melewati baris pertama yang merupakan lokasi Error dibuat
     for (let i = 3; i < stack.length; i++) {
@@ -11,7 +14,8 @@ function getLocation() {
         
         if (filePathMatch) {
             const fullPath = filePathMatch[0];
-            if (fullPath && !fullPath.includes('node:internal/modules') && !fullPath.includes('service/utils.js')) {
+            if (fullPath && fullPath.includes(projectRoot) && !fullPath.includes('node:internal/modules') && !fullPath.includes('service/utils.js') && !fullPath.includes('service/utils.js')) {
+                
                 let fileName = path.basename(fullPath); 
                 fileName = fileName.replace(/[()]/g, '');
 
@@ -39,8 +43,28 @@ function injectTitle (bot) {
     })
 }
 
+function getProjectRoot(dir) {
+
+    while (dir !== path.parse(dir).root) {
+        if (fs.existsSync(path.join(dir, 'package.json'))) {
+            return path.basename(dir);
+        }
+        dir = path.dirname(dir);
+    }
+
+    return 'not found';
+}
+
+function deleteFile(dir) {
+    fs.unlink(dir, err => {
+        if (err) {
+            return;
+        }
+    });
+}
+
 
 
 module.exports = {
-    getLocation, injectTitle
+    getLocation, injectTitle, deleteFile
 };
