@@ -8,9 +8,7 @@ const token = 'YOUR_TOKEN';
 // Buat instance bot
 const bot = new TelegramBot(token, { polling: true });
 
-require('./listeners/createBot')(bot);
-require('./listeners/callback')(bot);
-require('./listeners/cekDatabase')(bot);
+require('import')(bot);
 
 // errorHandling
 bot.on('polling_error', (err) => {

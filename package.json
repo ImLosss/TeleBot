@@ -1,5 +1,5 @@
 {
-  "author": "Ryan_Syah",
+  "author": "https://github.com/ImLosss",
   "scripts": {
     "start": "nodemon index.js",
     "restart": "nodemon index.js"
