@@ -1,5 +1,6 @@
+require('module-alias/register');
 const { writeJSONFileSync, readJSONFileSync } = require("./function");
-const console = require('../logs/console');
+const console = require('console');
 
 async function setVersion(id, version, bot) {
     let userData = readJSONFileSync(`database/data_user/${ id }`);

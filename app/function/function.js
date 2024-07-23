@@ -1,8 +1,8 @@
-
+require('module-alias/register');
 
 const moment = require('moment-timezone');
 const fs = require('fs');
-const console = require('../logs/console');
+const console = require('console');
 const lockfile = require('proper-lockfile');
 
 function getValue(msg) {
@@ -19,18 +19,6 @@ function sleep(ms) {
             resolve();
         }, ms);
     });
-}
-
-async function setUsername(id, username, bot) {
-    let userData = readJSONFileSync(`database/data_user/${ id }`);
-
-    userData[0].username = username;
-
-    // Menulis data ke file 'error.json'
-    writeJSONFileSync(`database/data_user/${ id }`, userData);
-
-    console.log(`@${ userData[0].teleUsername } telah mengatur username: ${ username }`);
-    return bot.sendMessage(id, `Username anda telah diatur ke ${ username }`);
 }
 
 function getTime() {
@@ -91,5 +79,5 @@ const withErrorHandling = (fn) => {
 };
 
 module.exports = {
-    getValue, getTime, setUsername, readJSONFileSync, writeJSONFileSync, sleep, withErrorHandling
+    getValue, getTime, readJSONFileSync, writeJSONFileSync, sleep, withErrorHandling
 }

@@ -3,30 +3,6 @@
     "type": "ingame",
     "date": "2024-07-21 / 19:37",
     "location": "CreateBotController.js:41:17",
-    "message": "『<』.ObitoDra86"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:37",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』Fanlaur"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:37",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』.SmartCart869004"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:37",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』.KallMC8839"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:37",
-    "location": "CreateBotController.js:41:17",
     "message": "『<』.LeaLvyaa"
   },
   {
@@ -2996,6 +2972,30 @@
   {
     "type": "message_send",
     "date": "2024-07-23 / 03:09",
+    "location": "CreateBotController.js:124:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:70:17",
+    "message": "shencx joined the game"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:70:17",
+    "message": "You are in position 5 of 5. Estimated time: 25 seconds"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:70:17",
+    "message": "oksks left the game"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-23 / 17:28",
     "location": "CreateBotController.js:124:25",
     "message": "/dc"
   }

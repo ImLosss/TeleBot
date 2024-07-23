@@ -1,10 +1,11 @@
 require('module-alias/register');
 
-const { getValue, setUsername } = require("function/function");
+const { getValue } = require("function/function");
+const { setUsername } = require("function/setUsername");
 
 module.exports = (function() {
     return function(bot) {
-        bot.onText(/^\/setusername/i, async (msg) => {
+        bot.onText(/^\/setuser/i, async (msg) => {
             const chatId = msg.chat.id;
             const value = getValue(msg);
 

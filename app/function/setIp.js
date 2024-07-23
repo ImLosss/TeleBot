@@ -1,5 +1,6 @@
-const { readJSONFileSync, writeJSONFileSync } = require("./function");
-const console = require('../logs/console');
+require('module-alias/register');
+const { writeJSONFileSync, readJSONFileSync } = require("./function");
+const console = require('console');
 
 async function setIp(id, ip, bot) {
     let userData = readJSONFileSync(`database/data_user/${ id }`);

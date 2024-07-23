@@ -1,59 +1,5 @@
 [
   {
-    "type": "send_msg",
-    "date": "2024-07-20 / 16:38",
-    "location": "CreateBotController.js:63:25",
-    "message": "/dc"
-  },
-  {
-    "type": "send_msg",
-    "date": "2024-07-20 / 16:38",
-    "location": "CreateBotController.js:63:25",
-    "message": "/dc"
-  },
-  {
-    "type": "send_msg",
-    "date": "2024-07-20 / 16:38",
-    "location": "CreateBotController.js:63:25",
-    "message": "/dc"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-20 / 16:38",
-    "location": "CreateBotController.js:51:17",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "shencx joined the game"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:41:21",
-    "message": "connected"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "Electro_zz left the game"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "You are in position 3 of 3. Estimated time: 15 seconds"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "Electro_zz joined the game"
-  },
-  {
     "type": "message_client",
     "date": "2024-07-21 / 17:54",
     "location": "CreateBotController.js:34:17",
@@ -2992,6 +2938,60 @@
   {
     "type": "info",
     "date": "2024-07-23 / 03:09",
+    "location": "CreateBotController.js:150:21",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
+    "location": "setUsername.js:14:13",
+    "message": "@ryan_syahh telah mengatur username: Losss"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
+    "location": "setUsername.js:14:13",
+    "message": "@ryan_syahh telah mengatur username: Losss"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
+    "location": "setUsername.js:14:13",
+    "message": "@ryan_syahh telah mengatur username: shencx"
+  },
+  {
+    "type": "title",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:51:17",
+    "message": "Gunakan command"
+  },
+  {
+    "type": "subtitle",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:60:17",
+    "message": "/login <password>"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:91:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:142:21",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
+    "location": "CreateBotController.js:147:21",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:28",
     "location": "CreateBotController.js:150:21",
     "message": "Jumlah listener message setelah dihapus : 1"
   }
