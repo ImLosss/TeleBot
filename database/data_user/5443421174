@@ -1,7 +1,7 @@
 [
   {
     "teleUsername": "ryan_syahh",
-    "chatPublic": true,
+    "chatPublic": false,
     "chatPrivate": true,
     "status": "offline",
     "version": false,

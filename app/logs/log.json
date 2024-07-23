@@ -1,35 +1,5 @@
 [
   {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "EGAMES2011 joined the game"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "You are in position 4 of 6. Estimated time: 20 seconds"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "krobby326 left the game"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "EGAMES2011 left the game"
-  },
-  {
-    "type": "message_client",
-    "date": "2024-07-21 / 17:54",
-    "location": "CreateBotController.js:34:17",
-    "message": "You are in position 3 of 4. Estimated time: 15 seconds"
-  },
-  {
     "type": "info",
     "date": "2024-07-21 / 17:58",
     "location": "CreateBotController.js:48:21",
@@ -2994,5 +2964,35 @@
     "date": "2024-07-23 / 17:28",
     "location": "CreateBotController.js:150:21",
     "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:32",
+    "location": "setChat.js:14:13",
+    "message": "@ryan_syahh telah mengatur chat: on"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:37",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: of"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:39",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: on"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:39",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: on"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-23 / 17:39",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: of"
   }
 ]

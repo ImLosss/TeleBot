@@ -7,5 +7,6 @@ module.exports = (function() {
         require('listeners/cekDatabase')(bot);
         require('listeners/ip')(bot);
         require('listeners/username')(bot);
+        require('listeners/chat')(bot);
     };
 })();
