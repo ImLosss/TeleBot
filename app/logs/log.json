@@ -1,17 +1,5 @@
 [
   {
-    "type": "info",
-    "date": "2024-07-21 / 21:34",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:34",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
     "type": "disconnect",
     "date": "2024-07-21 / 21:34",
     "location": "CreateBotController.js:100:21",
@@ -2992,5 +2980,17 @@
     "date": "2024-07-25 / 01:49",
     "location": "CreateBotController.js:171:21",
     "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 02:00",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: of"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 02:01",
+    "location": "setChat.js:16:13",
+    "message": "@ryan_syahh telah mengatur chat: of"
   }
 ]
