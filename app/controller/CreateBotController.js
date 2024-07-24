@@ -118,7 +118,10 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
                 try {
                     let strKick = '';
                     msgK.value.extra.value.value.map((item) => {
-                        strKick += item;
+                        try { if (item.text.value != undefined) strKick += item.text.value } catch(err) {
+                            if (item.text != undefined) strKick += item.text;
+                            else strKick += item;
+                        };
                     })
                     bot.sendMessage(chatId, `Kicked : ${ strKick }`);
                 } catch (err) {
