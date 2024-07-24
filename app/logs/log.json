@@ -1,96 +1,6 @@
 [
   {
     "type": "info",
-    "date": "2024-07-21 / 20:58",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: asdas asdsa"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:00",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: asdas asdadas"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:00",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: kalwi.id"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:00",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwork.net"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:01",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 21:02",
-    "location": "CreateBotController.js:100:21",
-    "message": "socketClosed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:02",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:02",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:03",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 21:03",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:03",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:03",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:23",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: adsa"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:23",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:34",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: asdas"
-  },
-  {
-    "type": "info",
     "date": "2024-07-21 / 21:34",
     "location": "function.js:30:13",
     "message": "@ryan_syahh telah mengatur username: shencx"
@@ -2991,6 +2901,96 @@
     "type": "info",
     "date": "2024-07-25 / 01:34",
     "location": "CreateBotController.js:158:21",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:81:25",
+    "message": "file changed"
+  },
+  {
+    "type": "title",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:52:17",
+    "message": "You need to use"
+  },
+  {
+    "type": "subtitle",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:61:17",
+    "message": "/register <password> <captcha>"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:95:21",
+    "message": "connected"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:163:21",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:168:21",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:171:21",
+    "message": "Jumlah listener message setelah dihapus : 1"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:48",
+    "location": "setRealUsername.js:14:13",
+    "message": "@ryan_syahh telah mengatur username asli: shencx"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:81:25",
+    "message": "file changed"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:95:21",
+    "message": "connected"
+  },
+  {
+    "type": "title",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:52:17",
+    "message": "You need to use"
+  },
+  {
+    "type": "subtitle",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:61:17",
+    "message": "/register <password> <captcha>"
+  },
+  {
+    "type": "disconnect",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:163:21",
+    "message": "disconnect.quitting"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:168:21",
+    "message": "Jumlah listener message sebelum dihapus : 2"
+  },
+  {
+    "type": "info",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:171:21",
     "message": "Jumlah listener message setelah dihapus : 1"
   }
 ]

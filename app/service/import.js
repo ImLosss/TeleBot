@@ -8,5 +8,6 @@ module.exports = (function() {
         require('listeners/ip')(bot);
         require('listeners/username')(bot);
         require('listeners/chat')(bot);
+        require('listeners/realUsername')(bot);
     };
 })();

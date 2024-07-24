@@ -3,42 +3,6 @@
     "type": "ingame",
     "date": "2024-07-21 / 19:40",
     "location": "CreateBotController.js:41:17",
-    "message": "『<』.DuckyDragon2852"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』.Fyyy13"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』Ucup_Gaming"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
-    "message": ".FalzMax2024 fell out of the world"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』Gentho"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
-    "message": "『<』BangYin01"
-  },
-  {
-    "type": "ingame",
-    "date": "2024-07-21 / 19:40",
-    "location": "CreateBotController.js:41:17",
     "message": "『<』.TenPepper653831"
   },
   {
@@ -2997,6 +2961,42 @@
     "type": "message_send",
     "date": "2024-07-25 / 01:34",
     "location": "CreateBotController.js:132:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:74:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "map_image",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:85:39",
+    "message": "Success sending map"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-25 / 01:46",
+    "location": "CreateBotController.js:145:25",
+    "message": "/dc"
+  },
+  {
+    "type": "ingame",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:74:17",
+    "message": "[+] shencx"
+  },
+  {
+    "type": "map_image",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:85:39",
+    "message": "Success sending map"
+  },
+  {
+    "type": "message_send",
+    "date": "2024-07-25 / 01:49",
+    "location": "CreateBotController.js:145:25",
     "message": "/dc"
   }
 ]
