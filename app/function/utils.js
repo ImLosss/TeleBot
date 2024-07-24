@@ -26,6 +26,21 @@ function getLocation() {
     return null;
 }
 
+function removeFromArray(arr, value) {
+    if (value == 'reset') {
+        arr.splice(0, arr.length); // Hapus semua elemen dari array
+        return 'Berhasil reset data';
+    } else {
+        const index = arr.indexOf(value);
+        if (index !== -1) {
+            arr.splice(index, 1);
+            return `Berhasil menghapus *${value}*`;
+        } else {
+            return 'Data tidak ditemukan';
+        }
+    }
+}
+
 function injectTitle (bot) {
     bot._client.on('title', (packet) => {
         if (packet.action === 0 || packet.action === 1) {
@@ -66,5 +81,5 @@ function deleteFile(dir) {
 
 
 module.exports = {
-    getLocation, injectTitle, deleteFile
+    getLocation, injectTitle, deleteFile, removeFromArray
 };

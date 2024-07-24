@@ -1,13 +1,12 @@
 require('module-alias/register');
 
 const { readJSONFileSync, getValue, withErrorHandling } = require("function/function");
-const { cekUsername, cekVersion, cekIp, playerOnline } = require("service/CreateBotService");
+const { cekUsername, cekVersion, cekRealUsername, cekIp, cekAlt, playerOnline } = require("service/CreateBotService");
 const mineflayer = require('mineflayer');
 const { mapDownloader } = require('mineflayer-item-map-downloader');
 const console = require('console');
 const { injectTitle, deleteFile } = require("function/utils");
 const fs = require('fs');
-const { watcherDirMap } = require('../service/CreateBotService');
 
 const commandMap = {
     '/playerlist': playerOnline
@@ -19,6 +18,8 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
     if(!await cekVersion(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
     if(!await cekUsername(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
     if(!await cekIp(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
+    if(!await cekRealUsername(chatId, bot)) return bot.sendMessage(chatId, 'Coba kembali!');
+    cekAlt(chatId);
 
     let dataUser = readJSONFileSync(`database/data_user/${ chatId }`);
     
@@ -67,6 +68,9 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
     Lmessagestr = withErrorHandling(async (msgstr) => {
         if(msgstr.trim().length == 0 || message == msgstr) return;
 
+        let dataUser = readJSONFileSync(`database/data_user/${ chatId }`);
+        if(!dataUser[0].chatPublic) return
+
         console.game(msgstr, chatId);
         bot.sendMessage(chatId, msgstr);
     })
@@ -94,7 +98,11 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
     }))
 
     botM.once('kicked', withErrorHandling((msgK) => {
-        msgK = JSON.parse(msgK);
+        try {
+            msgK = JSON.parse(msgK);
+        } catch (e) {
+
+        }
         console.log(msgK, 'kicked');
         if (msgK.text != undefined && msgK.text != '') bot.sendMessage(chatId, `Kicked : ${ msgK.text }`);
         if (msgK.translate != undefined) bot.sendMessage(chatId, `Kicked : ${ msgK.translate }`);

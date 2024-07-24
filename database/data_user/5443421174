@@ -1,11 +1,19 @@
 [
   {
     "teleUsername": "ryan_syahh",
-    "chatPublic": false,
+    "chatPublic": true,
     "chatPrivate": true,
     "status": "offline",
     "version": false,
     "username": "shencx",
-    "ip": "kalwi.id"
+    "ip": "play.claritynetwork.net"
+  },
+  {
+    "play.claritynetwork.net": {
+      "realUser": "Losss",
+      "alt": [
+        "shencx"
+      ]
+    }
   }
 ]

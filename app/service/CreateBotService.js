@@ -1,10 +1,13 @@
 require('module-alias/register');
 
 const fs = require('fs');
-const { readJSONFileSync, setUsername, sleep, withErrorHandling } = require('function/function');
+const { readJSONFileSync, writeJSONFileSync, sleep, withErrorHandling } = require('function/function');
 const console = require('console');
 const { setIp } = require('function/setIp');
 const { setVersion } = require('function/setVersion');
+const { setUsername } = require('function/setUsername');
+const { setRealUsername } = require('function/setRealUsername');
+const { removeFromArray } = require('function/utils');
 
 async function cekVersion(id, bot) {
     return new Promise(async (resolve) => {
@@ -105,6 +108,44 @@ async function cekUsername(id, bot) {
     })
 }
 
+async function cekRealUsername(id, bot) {
+    return new Promise(async (resolve) => {
+        let timer, prompt;
+
+        let userData = readJSONFileSync(`database/data_user/${ id }`);
+
+        if(userData[1][userData[0].ip].realUser != undefined) {
+            resolve(true);
+            return;
+        };
+
+        await sleep(1000)
+        const message = await bot.sendMessage(id, `Masukkan username asli yang anda mainkan di server ${ userData[0].ip } (bukan akun alt/afk):`);
+
+        prompt = async (msg) => {
+            bot.deleteMessage(message.chat.id, message.message_id)
+            .then(() => {
+                clearTimeout(timer);
+                setRealUsername(message.chat.id, msg.text, bot)
+                .then(() => {
+                    bot.removeListener('message', prompt);
+                    resolve(true);
+                    return;
+                });
+            })
+        };
+
+        bot.addListener('message', prompt);
+
+        timer = setTimeout(() => {
+            bot.removeListener('message', prompt);
+            bot.deleteMessage(message.chat.id, message.message_id);
+            resolve(false);
+            return;
+        }, 15000);
+    })
+}
+
 async function cekIp(id, bot) {
     return new Promise(async (resolve) => {
         let timer, prompt;
@@ -141,6 +182,29 @@ async function cekIp(id, bot) {
     })
 }
 
+async function cekAlt(id) {
+    let dataUser = readJSONFileSync(`database/data_user/${ id }`);
+    const user = dataUser[0].username;
+    const ip = dataUser[0].ip;
+    const realUser = dataUser[1][ip].realUser;
+    let listAlt = [];
+    if(dataUser[1][ip].alt) listAlt = dataUser[1][ip].alt;
+
+    const index = listAlt.indexOf(user);
+    if (index !== -1) {
+        removeFromArray(listAlt, realUser);
+        dataUser[1][ip].alt = listAlt;
+        writeJSONFileSync(`database/data_user/${ id }`, dataUser);
+    } else {
+        if(user != dataUser[1][ip].realUser) { 
+            listAlt.push(user);
+            removeFromArray(listAlt, realUser);
+            dataUser[1][ip].alt = listAlt;
+            writeJSONFileSync(`database/data_user/${ id }`, dataUser);
+        }
+    }
+}
+
 async function playerOnline(botM, chatId, bot, pesan) {
     try {
         let player = [];
@@ -158,5 +222,5 @@ async function playerOnline(botM, chatId, bot, pesan) {
 }
 
 module.exports = {
-    cekUsername, cekVersion, cekIp, playerOnline
+    cekUsername, cekVersion, cekIp, playerOnline, cekRealUsername, cekAlt
 }

@@ -14,7 +14,7 @@ module.exports = (function() {
                     chatPublic: true,
                     chatPrivate: true,
                     status: "offline"
-                }]
+                },{}]
                 fs.writeFileSync(dir_data_user, JSON.stringify(data_user, null, 2));
 
                 console.log(`membuat data_user untuk @${ msg.chat.username }`, 'new_user');

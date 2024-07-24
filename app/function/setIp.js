@@ -7,6 +7,8 @@ async function setIp(id, ip, bot) {
 
     userData[0].ip = ip;
 
+    if(userData[1][ip] == undefined) userData[1][ip] = {};
+
     writeJSONFileSync(`database/data_user/${ id }`, userData);
 
     console.log(`@${ userData[0].teleUsername } telah mengatur IP: ${ ip }`);

@@ -1,20 +1,6 @@
 [
   {
     "type": "Error",
-    "date": "2024-07-23 / 02:24",
-    "errorLocation": null,
-    "errorMessage": "\"[object Object]\" is not valid JSON",
-    "error": "\"[object Object]\" is not valid JSON\nSyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\controller\\CreateBotController.js:56:21\n    at EventEmitter.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\function.js:86:19)\n    at EventEmitter.emit (node:events:514:28)\n    at Timeout._onTimeout (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\utils.js:41:17)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
-  },
-  {
-    "type": "Error",
-    "date": "2024-07-23 / 02:25",
-    "errorLocation": "function.js:88:21",
-    "errorMessage": "\"[object Object]\" is not valid JSON",
-    "error": "\"[object Object]\" is not valid JSON\nSyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\controller\\CreateBotController.js:49:21\n    at EventEmitter.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\function.js:86:19)\n    at EventEmitter.emit (node:events:514:28)\n    at Client.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\utils.js:38:13)\n    at Client.emit (node:events:514:28)\n    at emitPacket (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\src\\client.js:83:12)\n    at FullPacketParser.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\src\\client.js:112:9)\n    at FullPacketParser.emit (node:events:514:28)\n    at addChunk (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:279:12)\n    at readableAddChunk (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:262:11)\n    at Readable.push (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:228:10)\n    at Transform.push (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:132:32)\n    at FullPacketParser._transform (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\src\\serializer.js:89:10)\n    at Transform._read (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:166:10)\n    at Transform._write (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:155:83)\n    at doWrite (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:390:139)\n    at writeOrBuffer (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:381:5)\n    at Writable.write (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:302:11)\n    at Decompressor.ondata (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\node_modules\\readable-stream\\lib\\internal\\streams\\readable.js:705:22)\n    at Decompressor.emit (node:events:514:28)\n    at addChunk (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\node_modules\\readable-stream\\lib\\internal\\streams\\readable.js:321:12)"
-  },
-  {
-    "type": "Error",
     "date": "2024-07-23 / 02:25",
     "errorLocation": "function.js:88:21",
     "errorMessage": "\"[object Object]\" is not valid JSON",
@@ -348,5 +334,19 @@
     "errorLocation": "CreateBotController.js:111:17",
     "errorMessage": "read ECONNRESET",
     "error": "read ECONNRESET\nError: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:217:20)"
+  },
+  {
+    "type": "Error",
+    "date": "2024-07-25 / 00:53",
+    "errorLocation": "function.js:76:21",
+    "errorMessage": "unsupported protocol version: 1.20.x",
+    "error": "unsupported protocol version: 1.20.x\nError: unsupported protocol version: 1.20.x\n    at Object.createClient (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\src\\createClient.js:30:22)\n    at Object.createBot (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\mineflayer\\lib\\loader.js:98:35)\n    at D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\controller\\CreateBotController.js:31:29\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\function.js:74:13\n    at async Object.callback (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\listeners\\createBot.js:12:13)"
+  },
+  {
+    "type": "Error",
+    "date": "2024-07-25 / 01:27",
+    "errorLocation": "function.js:76:21",
+    "errorMessage": "\"[object Object]\" is not valid JSON",
+    "error": "\"[object Object]\" is not valid JSON\nSyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\controller\\CreateBotController.js:101:21\n    at EventEmitter.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\function.js:74:19)\n    at Object.onceWrapper (node:events:629:26)\n    at EventEmitter.emit (node:events:514:28)\n    at Client.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\mineflayer\\lib\\plugins\\kick.js:5:9)\n    at Client.emit (node:events:514:28)\n    at emitPacket (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\src\\client.js:83:12)\n    at FullPacketParser.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\src\\client.js:112:9)\n    at FullPacketParser.emit (node:events:514:28)\n    at addChunk (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:279:12)\n    at readableAddChunk (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:262:11)\n    at Readable.push (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_readable.js:228:10)\n    at Transform.push (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:132:32)\n    at FullPacketParser._transform (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\src\\serializer.js:89:10)\n    at Transform._read (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:166:10)\n    at Transform._write (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_transform.js:155:83)\n    at doWrite (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:390:139)\n    at writeOrBuffer (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:381:5)\n    at Writable.write (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\protodef\\node_modules\\readable-stream\\lib\\_stream_writable.js:302:11)\n    at Decompressor.ondata (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\minecraft-protocol\\node_modules\\readable-stream\\lib\\internal\\streams\\readable.js:705:22)\n    at Decompressor.emit (node:events:514:28)"
   }
 ]
