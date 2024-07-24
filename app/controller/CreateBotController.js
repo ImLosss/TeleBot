@@ -113,6 +113,19 @@ const joinServer = withErrorHandling(async (bot, chatId, value) => {
             })
             bot.sendMessage(chatId, `Kicked : ${ strKick }`);
         }
+        if(msgK.value != undefined) {
+            if (msgK.value.extra != undefined) {
+                try {
+                    let strKick = '';
+                    msgK.value.extra.value.value.map((item) => {
+                        strKick += item;
+                    })
+                    bot.sendMessage(chatId, `Kicked : ${ strKick }`);
+                } catch (err) {
+
+                }
+            }
+        }
     }))
 
     botM.once('error', withErrorHandling((err) => {
