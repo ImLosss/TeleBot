@@ -18,42 +18,6 @@
     "message": "Gunakan command"
   },
   {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:60:17",
-    "message": "/login <password>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:142:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:147:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:150:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
     "type": "info",
     "date": "2024-07-23 / 03:08",
     "location": "CreateBotController.js:91:21",
@@ -2984,5 +2948,41 @@
     "date": "2025-03-09 / 03:01",
     "location": "commandHandler.js:20:47",
     "message": "asd"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 03:10",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 03:10",
+    "location": "commandHandler.js:21:40",
+    "message": "/changechannel dong"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 03:11",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 03:11",
+    "location": "commandHandler.js:21:40",
+    "message": "/changechannel dong"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 03:11",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 03:11",
+    "location": "commandHandler.js:21:40",
+    "message": "/changechannel dong"
   }
 ]

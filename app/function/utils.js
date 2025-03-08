@@ -133,6 +133,14 @@ function cutVal(value, index) {
     return words.slice(index).join(' '); // Gabungkan kembali kata-kata dari indeks yang ditentukan
 }
 
+async function changeChannel(bot, value, config, fromId) {
+    config.ID_CHANNEL = value;
+
+    writeJSONFileSync('./config.json', config);
+
+    return bot.sendMessage(fromId, `Channel berhasil diganti ke @${ value }`)
+}
+
 const withErrorHandling = (fn) => {
     return async (...args) => {
         try {
@@ -144,5 +152,5 @@ const withErrorHandling = (fn) => {
 };
 
 module.exports = {
-    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling
+    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel
 };

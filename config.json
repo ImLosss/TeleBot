@@ -1,8 +1,10 @@
 {
-    "API_TELEGRAM": "6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc",
-    "ID_CHANNEL": "@dongworld",
-    "OWNER": [5443421174],
-    "MAINTENANCE": false,
-    "MAINTENANCE_WHITELIST": [],
-    "DONATE_LINK": "https://sociabuzz.com/dongworld/tribe"
+  "API_TELEGRAM": "6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc",
+  "ID_CHANNEL": "dong",
+  "OWNER": [
+    5443421174
+  ],
+  "MAINTENANCE": false,
+  "MAINTENANCE_WHITELIST": [],
+  "DONATE_LINK": "https://sociabuzz.com/dongworld/tribe"
 }

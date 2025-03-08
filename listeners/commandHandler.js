@@ -4,8 +4,9 @@ const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = requi
 const cmd = require('service/commandImport');
 
 const prefixFunctions = {
-    'send': withErrorHandling((bot, msg, value, config) => cmd.sendChannel(bot, msg, value, config)),
-    'updatebs': withErrorHandling((bot, msg, value, config) => cmd.updatebs(bot, msg, value, config)),
+    'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
+    'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
+    'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
 }
 
 module.exports = (function() {
@@ -27,6 +28,7 @@ module.exports = (function() {
                         if(!config.OWNER.includes(msg.from.id)) return
                         
                         const funcName = text.replace(pre, '').trim().split(' ');
+                        const fromId = msg.chat.id;
                     
                         if(config.MAINTENANCE) {
                             const whitelist = config.MAINTENANCE_WHITELIST;
@@ -37,7 +39,7 @@ module.exports = (function() {
                         }
 
                         if (prefixFunctions[funcName[0]]) {
-                            return prefixFunctions[funcName[0]](bot, msg, value, config);
+                            return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
                         }
                     }
                 }
