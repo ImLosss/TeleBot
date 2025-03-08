@@ -1,0 +1,10 @@
+{
+  "API_TELEGRAM": YOUT_TOKEN_HERE,
+  "ID_CHANNEL": "dong",
+  "OWNER": [
+    5443421174
+  ],
+  "MAINTENANCE": false,
+  "MAINTENANCE_WHITELIST": [],
+  "DONATE_LINK": "https://sociabuzz.com/dongworld/tribe"
+}
