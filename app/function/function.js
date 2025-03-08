@@ -33,51 +33,6 @@ function getTime() {
     return `${ tanggal } / ${ jam }:${ menit }`;
 }
 
-function readJSONFileSync(filePath) {
-    let release;
-    try {
-        // Lock the file for reading
-        release = lockfile.lockSync(filePath);
-        
-        const fileContent = fs.readFileSync(filePath, 'utf-8');
-
-        return JSON.parse(fileContent);
-    } catch (error) {
-        console.error('error');
-    } finally {
-        if (release) {
-            release();
-        }
-    }
-}
-
-function writeJSONFileSync(filePath, data) {
-    let release;
-    try {
-        // Lock the file for writing
-        release = lockfile.lockSync(filePath);
-        
-        const jsonData = JSON.stringify(data, null, 2);
-        fs.writeFileSync(filePath, jsonData, 'utf-8');
-    } catch (error) {
-        console.error('Error writing file:', error);
-    } finally {
-        if (release) {
-            release();
-        }
-    }
-}
-
-const withErrorHandling = (fn) => {
-    return async (...args) => {
-        try {
-            await fn(...args);
-        } catch (err) {
-            console.error(err);
-        }
-    };
-};
-
 module.exports = {
-    getValue, getTime, readJSONFileSync, writeJSONFileSync, sleep, withErrorHandling
+    getValue, getTime, sleep
 }

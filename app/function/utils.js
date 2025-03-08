@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const lockfile = require('proper-lockfile');
 
 function getLocation() {
     const error = new Error();
@@ -78,8 +79,70 @@ function deleteFile(dir) {
     });
 }
 
+function writeJSONFileSync(filePath, data) {
+    let release;
+    try {
+        // Pastikan direktori ada sebelum menulis file
+        const dirPath = path.dirname(filePath);
+        if (!fs.existsSync(dirPath)) {
+            console.log('tess');
+            fs.mkdirSync(dirPath, { recursive: true });
+        }
 
+         // Pastikan file ada sebelum mengunci
+         if (!fs.existsSync(filePath)) {
+            console.log('Membuat file:', filePath);
+            fs.writeFileSync(filePath, '{}', 'utf-8'); // Buat file kosong agar bisa dikunci
+        }
+
+        // Lock the file for writing
+        release = lockfile.lockSync(filePath);
+        
+        const jsonData = JSON.stringify(data, null, 2);
+        fs.writeFileSync(filePath, jsonData, 'utf-8');
+    } catch (error) {
+        console.error('Error writing file:', error);
+    } finally {
+        if (release) {
+            release();
+        }
+    }
+}
+
+function readJSONFileSync(filePath) {
+    let release;
+    try {
+        // Lock the file for reading
+        release = lockfile.lockSync(filePath);
+        
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.error('error');
+        console.log(error);
+    } finally {
+        if (release) {
+            release();
+        }
+    }
+}
+
+function cutVal(value, index) {
+    const words = value.split(' '); // Pisahkan kalimat menjadi array kata-kata
+    return words.slice(index).join(' '); // Gabungkan kembali kata-kata dari indeks yang ditentukan
+}
+
+const withErrorHandling = (fn) => {
+    return async (...args) => {
+        try {
+            await fn(...args);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+};
 
 module.exports = {
-    getLocation, injectTitle, deleteFile, removeFromArray
+    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling
 };

@@ -1,1670 +1,5 @@
 [
   {
-    "type": "disconnect",
-    "date": "2024-07-21 / 21:34",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:34",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:34",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:48",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 21:48",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:48",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:48",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:48",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:49",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwork.net"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:55",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwork.net"
-  },
-  {
-    "type": "new_user",
-    "date": "2024-07-21 / 21:58",
-    "location": "cekDatabase.js:20:25",
-    "message": "membuat data_user untuk @ryan_syahh"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:58",
-    "location": "setVersion.js:11:13",
-    "message": "@ryan_syahh telah mengatur versi minecraft ke false"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:59",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: Losss"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:59",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwoek.net"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 21:59",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwork.net"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:02",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:02",
-    "location": "function.js:30:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:14",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:100:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-21 / 22:16",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:09",
-    "location": "CreateBotController.js:48:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 01:10",
-    "location": "CreateBotController.js:100:21",
-    "message": "socketClosed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:10",
-    "location": "CreateBotController.js:104:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:10",
-    "location": "CreateBotController.js:108:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:28",
-    "location": "CreateBotService.js:161:13"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:28",
-    "location": "CreateBotController.js:61:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:35",
-    "location": "D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:36",
-    "location": "D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:37",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:38",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:40",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:45",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:47",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 01:49",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:01",
-    "location": "CreateBotController.js:59:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:02",
-    "location": "CreateBotController.js:59:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:03",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:03",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:03",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:03",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:04",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:05",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:06",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:06",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:80:17",
-    "message": "{\"extra\":[{\"color\":\"dark_gray\",\"text\":\"[\"},{\"bold\":true,\"color\":\"red\",\"text\":\"»\"},{\"color\":\"dark_gray\",\"text\":\"] \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:80:17",
-    "message": "{\"extra\":[{\"color\":\"dark_gray\",\"text\":\"[\"},{\"bold\":true,\"color\":\"red\",\"text\":\"»\"},{\"color\":\"dark_gray\",\"text\":\"] \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:07",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:08",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:08",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:08",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:50:21",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:73:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:59:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:72:21",
-    "message": "connected"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:79:17",
-    "message": "{\"extra\":[{\"color\":\"dark_gray\",\"text\":\"[\"},{\"bold\":true,\"color\":\"red\",\"text\":\"»\"},{\"color\":\"dark_gray\",\"text\":\"] \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:79:17",
-    "message": "{\"text\":\"You are logging in too fast, try again later.\"}"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:123:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:127:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:09",
-    "location": "CreateBotController.js:131:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:59:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:72:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:123:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:127:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:131:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:59:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:124:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:128:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:10",
-    "location": "CreateBotController.js:132:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:12",
-    "location": "CreateBotController.js:59:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:12",
-    "location": "CreateBotController.js:59:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:12",
-    "location": "CreateBotController.js:59:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:12",
-    "location": "CreateBotController.js:95:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:138:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:142:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:146:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: Losss"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:14",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:17",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shecx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:17",
-    "location": "function.js:32:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:17",
-    "location": "CreateBotController.js:75:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:89:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:140:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:144:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:75:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:89:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:140:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:144:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:18",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:19",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:19",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:20",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:20",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:23",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:23",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:24",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:24",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:25",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:25",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:25",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:25",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:27",
-    "location": "CreateBotController.js:73:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:27",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:29",
-    "location": {},
-    "message": "@ryan_syahh telah mengatur IP: kalwi.id"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:29",
-    "location": {},
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:30",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:31",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:33",
-    "location": "CreateBotController.js:87:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:37",
-    "location": "CreateBotController.js:49:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"bold\":{\"type\":\"byte\",\"value\":1},\"text\":{\"type\":\"string\",\"value\":\"Gunakan command\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:37",
-    "location": "CreateBotController.js:57:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"gold\"},\"text\":{\"type\":\"string\",\"value\":\"/login <password>\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:37",
-    "location": "CreateBotController.js:89:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:38",
-    "location": "CreateBotController.js:49:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"red\"},\"bold\":{\"type\":\"byte\",\"value\":1},\"text\":{\"type\":\"string\",\"value\":\"Gunakan command\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:38",
-    "location": "CreateBotController.js:57:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"gold\"},\"text\":{\"type\":\"string\",\"value\":\"/login <password>\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:38",
-    "location": "CreateBotController.js:89:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:39",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:44",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: play.claritynetwork.net"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:44",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:44",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:51:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"bold\":{\"type\":\"byte\",\"value\":1},\"text\":{\"type\":\"string\",\"value\":\"You need to use\"},\"color\":{\"type\":\"string\",\"value\":\"yellow\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:60:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"gold\"},\"text\":{\"type\":\"string\",\"value\":\"/register <password> <captcha>\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:45",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:46",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:46",
-    "location": "CreateBotController.js:51:17"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:46",
-    "location": "CreateBotController.js:60:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"color\":{\"type\":\"string\",\"value\":\"gold\"},\"text\":{\"type\":\"string\",\"value\":\"/register <password> <captcha>\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:46",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:51:17"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:51:17",
-    "message": "{\"type\":\"compound\",\"value\":{\"bold\":{\"type\":\"byte\",\"value\":1},\"text\":{\"type\":\"string\",\"value\":\"You need to use\"},\"color\":{\"type\":\"string\",\"value\":\"yellow\"}}}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:47",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:49",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:49",
-    "location": "CreateBotController.js:51:17",
-    "message": "{\"type\":\"string\",\"value\":\"You need to use\"}"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:49",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:52",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:52",
-    "location": "CreateBotController.js:51:17",
-    "message": "You need to use"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:52",
-    "location": "CreateBotController.js:60:17",
-    "message": "/register <password> <captcha>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:52",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:53",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:53",
-    "location": "CreateBotController.js:51:17",
-    "message": "You need to use"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:53",
-    "location": "CreateBotController.js:60:17",
-    "message": "/register <password> <captcha>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:53",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:54",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:54",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:54",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:55",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 02:55",
-    "location": "CreateBotController.js:51:17",
-    "message": "You need to use"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 02:55",
-    "location": "CreateBotController.js:60:17",
-    "message": "/register <password> <captcha>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:55",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:77:25",
-    "message": "file changed"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:51:17",
-    "message": "You need to use"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:60:17",
-    "message": "/register <password> <captcha>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "setIp.js:11:13",
-    "message": "@ryan_syahh telah mengatur IP: kalwi.id"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:60:17",
-    "message": "/login <password>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:51:17",
-    "message": "Hi shencx"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:60:17",
-    "message": "Logged"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:144:21",
-    "message": "socketClosed"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:56",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:51:17",
-    "message": "SUCCESSFULLY"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:60:17",
-    "message": "Logged In!"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:148:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 02:57",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:151:21",
-    "message": "Jumlah listener title sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener subtitle message sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:153:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:160:21",
-    "message": "Jumlah listener title setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:161:21",
-    "message": "Jumlah listener subtitle setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:01",
-    "location": "CreateBotController.js:162:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:60:21",
-    "message": "SUCCESSFULLY"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:69:21",
-    "message": "Logged In!"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:93:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:151:21",
-    "message": "Jumlah listener title sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener subtitle message sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:153:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:160:21",
-    "message": "Jumlah listener title setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:161:21",
-    "message": "Jumlah listener subtitle setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:02",
-    "location": "CreateBotController.js:162:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:60:21",
-    "message": "SUCCESSFULLY"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:69:21",
-    "message": "Logged In!"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:93:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:151:21",
-    "message": "Jumlah listener title sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener subtitle message sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:153:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:160:21",
-    "message": "Jumlah listener title setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:161:21",
-    "message": "Jumlah listener subtitle setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:03",
-    "location": "CreateBotController.js:162:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:05",
-    "location": "CreateBotController.js:51:17",
-    "message": "SUCCESSFULLY"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:05",
-    "location": "CreateBotController.js:60:17",
-    "message": "Logged In!"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:144:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:151:21",
-    "message": "Jumlah listener title sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:152:21",
-    "message": "Jumlah listener subtitle message sebelum dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:153:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:160:21",
-    "message": "Jumlah listener title setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:161:21",
-    "message": "Jumlah listener subtitle setelah dihapus : 0"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:06",
-    "location": "CreateBotController.js:162:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:98:17",
-    "message": "{\"extra\":[{\"bold\":true,\"color\":\"yellow\",\"text\":\"KANDANGALWI \"},{\"color\":\"light_purple\",\"text\":\"/ \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:98:17",
-    "message": "{\"extra\":[{\"bold\":true,\"color\":\"yellow\",\"text\":\"KANDANGALWI \"},{\"color\":\"light_purple\",\"text\":\"/ \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:142:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:147:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:150:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:07",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:60:17",
-    "message": "/login <password>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:98:17",
-    "message": "{\"extra\":[{\"bold\":true,\"color\":\"yellow\",\"text\":\"KANDANGALWI \"},{\"color\":\"light_purple\",\"text\":\"/ \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:98:17",
-    "message": "{\"text\":\"You are logging in too fast, try again later.\"}"
-  },
-  {
-    "type": "kicked",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:98:17",
-    "message": "{\"extra\":[{\"bold\":true,\"color\":\"yellow\",\"text\":\"KANDANGALWI \"},{\"color\":\"light_purple\",\"text\":\"/ \"},{\"color\":\"gray\",\"text\":\"You are already online!\"}],\"text\":\"\"}"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:142:21",
-    "message": "disconnect.quitting"
-  },
-  {
     "type": "info",
     "date": "2024-07-23 / 03:08",
     "location": "CreateBotController.js:147:21",
@@ -2992,5 +1327,1662 @@
     "date": "2024-07-25 / 02:01",
     "location": "setChat.js:16:13",
     "message": "@ryan_syahh telah mengatur chat: of"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:42",
+    "location": "index.js:9:9"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:43",
+    "location": "index.js:9:9"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:44",
+    "location": "index.js:9:9"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:44",
+    "location": "index.js:9:9",
+    "message": "{\"API_TELEGRAM\":\"6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc\",\"ID_CHANNEL\":\"-1002415717437\"}"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:45",
+    "location": "index.js:9:9",
+    "message": "{\"API_TELEGRAM\":\"6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc\",\"ID_CHANNEL\":\"-1002415717437\"}"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:45",
+    "location": "index.js:9:9",
+    "message": "{\"API_TELEGRAM\":\"6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc\",\"ID_CHANNEL\":\"-1002415717437\"}"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 01:46",
+    "location": "index.js:9:9",
+    "message": "{\"API_TELEGRAM\":\"6407569253:AAGtuRac6eA52IQBrLjjmlDcaqGH9SE8Eyc\",\"ID_CHANNEL\":\"-1002415717437\"}"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:05",
+    "location": "index.js:17:21",
+    "message": "Mengabaikan pesan sebelum update_id: 292139778"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:10",
+    "location": "index.js:21:21",
+    "message": "Mengabaikan semua pesan sebelum update_id: 292139800"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:12",
+    "location": "index.js:18:17",
+    "message": "Menghapus 16 pesan lama sebelum bot aktif."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:12",
+    "location": "index.js:32:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:14",
+    "location": "index.js:18:17",
+    "message": "Menghapus 1 pesan lama sebelum bot aktif."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:14",
+    "location": "index.js:32:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:15",
+    "location": "index.js:18:17",
+    "message": "Menghapus 2 pesan lama sebelum bot aktif."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:15",
+    "location": "index.js:32:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:17",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 4 pesan lama, update_id terakhir: 292139825"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:17",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:18",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139830"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:18",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:19",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139833"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:19",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:19",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139834"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-05 / 02:19",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-06 / 16:52",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:07",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:08",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 2 pesan lama, update_id terakhir: 292139837"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:08",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:08",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139838"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:08",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:14",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139838"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:14",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:15",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139838"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:15",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:16",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139838"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:16",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139838"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5453,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741338461,\"text\":\"a\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5454,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741338492,\"text\":\"a\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5455,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741338537,\"text\":\"a\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5456,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339184,\"text\":\"a\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5457,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339197,\"text\":\"/send asdasd\",\"entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:19",
+    "location": "commandHandler.js:20:40",
+    "message": "/send asdasd"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:20",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:21",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:21",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5458,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339271,\"text\":\"a\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:21",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:21",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5459,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339276,\"text\":\"/send halo\",\"entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:21",
+    "location": "commandHandler.js:20:40",
+    "message": "/send halo"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:23",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:23",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:23",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:23",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:24",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:24",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:24",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:24",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:24",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5461,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339347,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVVZ8q60jQTD2e3KalP7Q3Y23Wj9pQAAtkTAALl4VlWhTEsmMD9EXEBAAdtAAM2BA\",\"file_unique_id\":\"AQAD2RMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVVZ8q60jQTD2e3KalP7Q3Y23Wj9pQAAtkTAALl4VlWhTEsmMD9EXEBAAdtAAM2BA\",\"file_unique_id\":\"AQAD2RMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVVWfKutI0Ew9ntympT-0N2Nt1o_aUAALZEwAC5eFZVoUxLJjA_RFxNgQ\",\"file_unique_id\":\"AgAD2RMAAuXhWVY\",\"file_size\":4693974},\"caption\":\"/send halo\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:24",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:25",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:25",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:25",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:25",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:25",
+    "location": "commandHandler.js:19:21",
+    "message": "{\"message_id\":5461,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741339347,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVVZ8q60jQTD2e3KalP7Q3Y23Wj9pQAAtkTAALl4VlWhTEsmMD9EXEBAAdtAAM2BA\",\"file_unique_id\":\"AQAD2RMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVVZ8q60jQTD2e3KalP7Q3Y23Wj9pQAAtkTAALl4VlWhTEsmMD9EXEBAAdtAAM2BA\",\"file_unique_id\":\"AQAD2RMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVVWfKutI0Ew9ntympT-0N2Nt1o_aUAALZEwAC5eFZVoUxLJjA_RFxNgQ\",\"file_unique_id\":\"AgAD2RMAAuXhWVY\",\"file_size\":4693974},\"caption\":\"/send halo\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:25",
+    "location": "commandHandler.js:21:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:27",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:27",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:29",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139843"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:29",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:36",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:36",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:37",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5464,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741340256,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVYZ8q-YM9GuA8VQy85Gjh9WEzdGdgAAuMTAALl4VlWE8OaeLQJMgcBAAdtAAM2BA\",\"file_unique_id\":\"AQAD4xMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVYZ8q-YM9GuA8VQy85Gjh9WEzdGdgAAuMTAALl4VlWE8OaeLQJMgcBAAdtAAM2BA\",\"file_unique_id\":\"AQAD4xMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVWGfKvmDPRrgPFUMvORo4fVhM3RnYAALjEwAC5eFZVhPDmni0CTIHNgQ\",\"file_unique_id\":\"AgAD4xMAAuXhWVY\",\"file_size\":4693974},\"caption\":\"/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:37",
+    "location": "commandHandler.js:20:40",
+    "message": "/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:39",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5466,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741340375,\"text\":\"https://bili.im/wtwd7MY\",\"entities\":[{\"offset\":0,\"length\":23,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"https://bili.im/wtwd7MY\",\"prefer_small_media\":true}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:39",
+    "location": "commandHandler.js:20:40",
+    "message": "https://bili.im/wtwd7MY"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:40",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-07 / 17:40",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5467,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741340462,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVbZ8q_Luihh4KMZq9o2YNGfAqAhmkAAucTAALl4VlWlILDpmiOrP8BAAdtAAM2BA\",\"file_unique_id\":\"AQAD5xMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVbZ8q_Luihh4KMZq9o2YNGfAqAhmkAAucTAALl4VlWlILDpmiOrP8BAAdtAAM2BA\",\"file_unique_id\":\"AQAD5xMAAuXhWVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVW2fKvy7ooYeCjGavaNmDRnwKgIZpAALnEwAC5eFZVpSCw6Zojqz_NgQ\",\"file_unique_id\":\"AgAD5xMAAuXhWVY\",\"file_size\":4693974},\"caption\":\"/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-07 / 17:40",
+    "location": "commandHandler.js:20:40",
+    "message": "/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:39",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139848"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:39",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:40",
+    "location": "commandHandler.js:19:21",
+    "message": "{\"message_id\":5469,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434020,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVdZ8wspIslxpSnHsFM4sCKPBD_sYkAAhsXAALl4WFWA7gdmMGJeH0BAAdtAAM2BA\",\"file_unique_id\":\"AQADGxcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVdZ8wspIslxpSnHsFM4sCKPBD_sYkAAhsXAALl4WFWA7gdmMGJeH0BAAdtAAM2BA\",\"file_unique_id\":\"AQADGxcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVXWfMLKSLJcaUpx7BTOLAijwQ_7GJAAIbFwAC5eFhVgO4HZjBiXh9NgQ\",\"file_unique_id\":\"AgADGxcAAuXhYVY\",\"file_size\":4693974},\"caption\":\"/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:40",
+    "location": "commandHandler.js:21:40",
+    "message": "/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:41",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:41",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:42",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139850"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:42",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:43",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139850"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:43",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:43",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5470,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434122,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVeZ8wtCVSqFg4XfmBYxGHYHI2zAAG7AAIcFwAC5eFhVt_Ox0GAhrssAQAHbQADNgQ\",\"file_unique_id\":\"AQADHBcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVeZ8wtCVSqFg4XfmBYxGHYHI2zAAG7AAIcFwAC5eFhVt_Ox0GAhrssAQAHbQADNgQ\",\"file_unique_id\":\"AQADHBcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVXmfMLQlUqhYOF35gWMRh2ByNswABuwACHBcAAuXhYVbfzsdBgIa7LDYE\",\"file_unique_id\":\"AgADHBcAAuXhYVY\",\"file_size\":4693974},\"caption\":\"/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:43",
+    "location": "commandHandler.js:22:40",
+    "message": "/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:43",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5471,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434213,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVfZ8wtZfiUkxgkc_u5OxWcTmaa9jEAAh0XAALl4WFWVzzHbwq9idABAAdtAAM2BA\",\"file_unique_id\":\"AQADHRcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVfZ8wtZfiUkxgkc_u5OxWcTmaa9jEAAh0XAALl4WFWVzzHbwq9idABAAdtAAM2BA\",\"file_unique_id\":\"AQADHRcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVX2fMLWX4lJMYJHP7uTsVnE5mmvYxAAIdFwAC5eFhVlc8x28KvYnQNgQ\",\"file_unique_id\":\"AgADHRcAAuXhYVY\",\"file_size\":4693974},\"caption\":\"/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:43",
+    "location": "commandHandler.js:22:40",
+    "message": "/send Perfect World Episode 205 Special Subtitle Indonesia 1080P sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:44",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5472,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434249,\"text\":\"asdas\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:44",
+    "location": "commandHandler.js:22:40",
+    "message": "asdas"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:44",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5473,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434251,\"text\":\"/send asdas\",\"entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:44",
+    "location": "commandHandler.js:22:40",
+    "message": "/send asdas"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:46",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:47",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5475,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434434,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVjZ8wuQpg6f6EuOle1dYwjQLB_AtoAAh8XAALl4WFWkAgoHLClydQBAAdtAAM2BA\",\"file_unique_id\":\"AQADHxcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVjZ8wuQpg6f6EuOle1dYwjQLB_AtoAAh8XAALl4WFWkAgoHLClydQBAAdtAAM2BA\",\"file_unique_id\":\"AQADHxcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVY2fMLkKYOn-hLjpXtXWMI0CwfwLaAAIfFwAC5eFhVpAIKBywpcnUNgQ\",\"file_unique_id\":\"AgADHxcAAuXhYVY\",\"file_size\":4693974},\"caption\":\"/send sadasd\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:47",
+    "location": "commandHandler.js:22:40",
+    "message": "/send sadasd"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:47",
+    "location": "sendChannel.js:9:13",
+    "message": "jalan"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:47",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:47",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5476,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434478,\"video\":{\"duration\":237,\"width\":256,\"height\":144,\"file_name\":\"Yowamushi Pedal - Love Hime + Lyrics.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVkZ8wubZLGO5Er_x_gf3yNIR14ohYAAiAXAALl4WFWdb3GNYvjJYIBAAdtAAM2BA\",\"file_unique_id\":\"AQADIBcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVkZ8wubZLGO5Er_x_gf3yNIR14ohYAAiAXAALl4WFWdb3GNYvjJYIBAAdtAAM2BA\",\"file_unique_id\":\"AQADIBcAAuXhYVZy\",\"file_size\":503,\"width\":256,\"height\":144},\"file_id\":\"BAACAgUAAxkBAAIVZGfMLm2SxjuRK_8f4H98jSEdeKIWAAIgFwAC5eFhVnW9xjWL4yWCNgQ\",\"file_unique_id\":\"AgADIBcAAuXhYVY\",\"file_size\":4693974},\"caption\":\"/send asdasda\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:47",
+    "location": "commandHandler.js:22:40",
+    "message": "/send asdasda"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:47",
+    "location": "sendChannel.js:9:13",
+    "message": "jalan"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:48",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:48",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5478,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741434542,\"forward_origin\":{\"type\":\"channel\",\"chat\":{\"id\":-1002391619191,\"title\":\"DongWorld ID🇲🇨\",\"username\":\"dongworld\",\"type\":\"channel\"},\"message_id\":114,\"date\":1741409604},\"forward_from_chat\":{\"id\":-1002391619191,\"title\":\"DongWorld ID🇲🇨\",\"username\":\"dongworld\",\"type\":\"channel\"},\"forward_from_message_id\":114,\"forward_date\":1741409604,\"video\":{\"duration\":111,\"width\":1920,\"height\":1080,\"file_name\":\"137.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVmZ8wuruHcIXLG574pw6rkft5MwJAAAkgVAAJM11hWyqPalo_Te1IBAAdtAAM2BA\",\"file_unique_id\":\"AQADSBUAAkzXWFZy\",\"file_size\":644,\"width\":320,\"height\":180},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVmZ8wuruHcIXLG574pw6rkft5MwJAAAkgVAAJM11hWyqPalo_Te1IBAAdtAAM2BA\",\"file_unique_id\":\"AQADSBUAAkzXWFZy\",\"file_size\":644,\"width\":320,\"height\":180},\"file_id\":\"BAACAgUAAxkBAAIVZmfMLq7h3CFyxue-KcOq5H7eTMCQAAJIFQACTNdYVsqj2paP03tSNgQ\",\"file_unique_id\":\"AgADSBUAAkzXWFY\",\"file_size\":28007153},\"caption\":\"Trailer BTTH Eps 137 Sub\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:48",
+    "location": "commandHandler.js:22:40",
+    "message": "Trailer BTTH Eps 137 Sub"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:57",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 2 pesan lama, update_id terakhir: 292139858"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:57",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-08 / 19:57",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5479,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-08 / 19:57",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:04",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139862"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:04",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:04",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5481,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741435589,\"text\":\"t.me/dongworld/115\",\"entities\":[{\"offset\":0,\"length\":18,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"http://t.me/dongworld/115\"}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:04",
+    "location": "commandHandler.js:22:40",
+    "message": "t.me/dongworld/115"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:04",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5482,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741453477,\"forward_origin\":{\"type\":\"user\",\"sender_user\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"date\":1741435019},\"forward_from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"forward_date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:04",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:13",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:14",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5484,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741454047,\"forward_origin\":{\"type\":\"user\",\"sender_user\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"date\":1741435019},\"forward_from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"forward_date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:14",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:16",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:16",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5485,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741454195,\"forward_origin\":{\"type\":\"user\",\"sender_user\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"date\":1741435019},\"forward_from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"forward_date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:16",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:17",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5486,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741454230,\"text\":\"https://t.me/tesss211/99\",\"entities\":[{\"offset\":0,\"length\":24,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"https://t.me/tesss211/99\"}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:17",
+    "location": "commandHandler.js:22:40",
+    "message": "https://t.me/tesss211/99"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:23",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:23",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5487,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741454642,\"forward_origin\":{\"type\":\"channel\",\"chat\":{\"id\":-1002415717437,\"title\":\"Tess\",\"username\":\"tesss211\",\"type\":\"channel\"},\"message_id\":99,\"date\":1741454196},\"forward_from_chat\":{\"id\":-1002415717437,\"title\":\"Tess\",\"username\":\"tesss211\",\"type\":\"channel\"},\"forward_from_message_id\":99,\"forward_date\":1741454196,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\\n\\nLink to Share:\\nhttps://t.me/tesss211/99\",\"caption_entities\":[{\"offset\":74,\"length\":24,\"type\":\"url\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:23",
+    "location": "commandHandler.js:22:40",
+    "message": "BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\n\nLink to Share:\nhttps://t.me/tesss211/99"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:24",
+    "location": "commandHandler.js:20:21",
+    "message": "{\"message_id\":5488,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741454661,\"forward_origin\":{\"type\":\"user\",\"sender_user\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"date\":1741435019},\"forward_from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"forward_date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:24",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:35",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:36",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 1 pesan lama, update_id terakhir: 292139869"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:36",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:36",
+    "location": "commandHandler.js:19:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "cmd:send,BTTH,S5,Episode,137,Subtitle,Indonesia,1080p,HD,sub,bagus",
+    "date": "2025-03-09 / 01:36",
+    "location": "commandHandler.js:30:33",
+    "message": "@undefined"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:37",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:38",
+    "location": "commandHandler.js:19:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:39",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:39",
+    "location": "commandHandler.js:19:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:39",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:39",
+    "location": "commandHandler.js:19:40",
+    "message": "/send asdasd"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:40",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:40",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:42",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:42",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:42",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:43",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:43",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:44",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:44",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:45",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:45",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:45",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:45",
+    "location": "commandHandler.js:20:40",
+    "message": "/send asdsd"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:46",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:47",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:47",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:47",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:47",
+    "location": "commandHandler.js:20:40",
+    "message": "a"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:48",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:49",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:49",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:49",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:51",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:51",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 01:51",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 01:59",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:00",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:00",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 102 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:01",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 102 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "updateBstation.js:7:13",
+    "message": "1"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:01",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 102 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:01",
+    "location": "updateBstation.js:7:13",
+    "message": "102"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:03",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:03",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:03",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 102 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:03",
+    "location": "updateBstation.js:7:13",
+    "message": "102"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:06",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:06",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:06",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:07",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:07",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 103 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:07",
+    "location": "updateBstation.js:7:13",
+    "message": "103"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:07",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:07",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:07",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:08",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:08",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:08",
+    "location": "updateBstation.js:7:13",
+    "message": "105"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:13",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:13",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:13",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/4794567473631744 false"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:14",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:14",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/479456747363174 false"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:16",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:16",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:16",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/479456747363174 false"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:16",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:16",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:21",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:21",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:21",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/47945674736317445"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/479456747363174 false"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:22",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 105 https://www.bilibili.tv/id/video/4794567473631744"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:24",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:24",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:24",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:28",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:28",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:28",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:29",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:30",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:32",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:35",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:38",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:39",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:40",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:41",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:42",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:42",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:42",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:43",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:43",
+    "location": "commandHandler.js:20:40",
+    "message": "/updatebs 111 https://www.bilibili.tv/id/video/47945674736317445"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:46",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:46",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:46",
+    "location": "commandHandler.js:20:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:47",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:47",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:49",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "commandHandler.js:14:21",
+    "message": "tess"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:50",
+    "location": "commandHandler.js:20:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:50",
+    "location": "commandHandler.js:17:21",
+    "message": "{\"message_id\":108,\"from\":{\"id\":1087968824,\"is_bot\":true,\"first_name\":\"Group\",\"username\":\"GroupAnonymousBot\"},\"sender_chat\":{\"id\":-1002495629411,\"title\":\"Tess obrolan\",\"type\":\"supergroup\"},\"chat\":{\"id\":-1002495629411,\"title\":\"Tess obrolan\",\"type\":\"supergroup\"},\"date\":1741459666,\"new_chat_participant\":{\"id\":6407569253,\"is_bot\":true,\"first_name\":\"MinecraftBot\",\"username\":\"minecraftku_bot\"},\"new_chat_member\":{\"id\":6407569253,\"is_bot\":true,\"first_name\":\"MinecraftBot\",\"username\":\"minecraftku_bot\"},\"new_chat_members\":[{\"id\":6407569253,\"is_bot\":true,\"first_name\":\"MinecraftBot\",\"username\":\"minecraftku_bot\"}]}"
+  },
+  {
+    "type": "MessageFrom:@undefined",
+    "date": "2025-03-09 / 02:50",
+    "location": "commandHandler.js:21:40"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:53",
+    "location": "index.js:20:21",
+    "message": "Mengabaikan 3 pesan lama, update_id terakhir: 292139934"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:53",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:53",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5528,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741459731,\"text\":\"/updatebs 113 https://www.bilibili.tv/id/video/47945674736317445\",\"entities\":[{\"offset\":0,\"length\":9,\"type\":\"bot_command\"},{\"offset\":14,\"length\":50,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"https://www.bilibili.tv/id/video/47945674736317445\",\"prefer_small_media\":true}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:53",
+    "location": "commandHandler.js:22:40",
+    "message": "/updatebs 113 https://www.bilibili.tv/id/video/47945674736317445"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:54",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5529,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741460048,\"forward_origin\":{\"type\":\"user\",\"sender_user\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"date\":1741435019},\"forward_from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"id\"},\"forward_date\":1741435019,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\",\"caption_entities\":[{\"offset\":0,\"length\":5,\"type\":\"bot_command\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:54",
+    "location": "commandHandler.js:22:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:55",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5531,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741460110,\"forward_origin\":{\"type\":\"channel\",\"chat\":{\"id\":-1002415717437,\"title\":\"Tess\",\"username\":\"tesss211\",\"type\":\"channel\"},\"message_id\":115,\"date\":1741460048},\"forward_from_chat\":{\"id\":-1002415717437,\"title\":\"Tess\",\"username\":\"tesss211\",\"type\":\"channel\"},\"forward_from_message_id\":115,\"forward_date\":1741460048,\"video\":{\"duration\":1417,\"width\":1920,\"height\":816,\"file_name\":\"BTTH_EP137_INDO_1080P.mp4\",\"mime_type\":\"video/mp4\",\"thumbnail\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"thumb\":{\"file_id\":\"AAMCBQADGQEAAhVnZ8wwi9kaK1QS9I1XOH47b3nX2eIAAigXAALl4WFWlCUv1_d0r64BAAdtAAM2BA\",\"file_unique_id\":\"AQADKBcAAuXhYVZy\",\"file_size\":554,\"width\":320,\"height\":136},\"file_id\":\"BAACAgUAAxkBAAIVZ2fMMIvZGitUEvSNVzh-O29519niAAIoFwAC5eFhVpQlL9f3dK-uNgQ\",\"file_unique_id\":\"AgADKBcAAuXhYVY\",\"file_size\":559853486},\"caption\":\"BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\\n\\nLink to Share:\\nhttps://t.me/tesss211/115\",\"caption_entities\":[{\"offset\":74,\"length\":25,\"type\":\"url\"}]}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:55",
+    "location": "commandHandler.js:22:40",
+    "message": "BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus\n\nLink to Share:\nhttps://t.me/tesss211/115"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:56",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5532,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741460194,\"text\":\"/updatebs 115 https://www.bilibili.tv/id/video/47945674736317445 false\",\"entities\":[{\"offset\":0,\"length\":9,\"type\":\"bot_command\"},{\"offset\":14,\"length\":50,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"https://www.bilibili.tv/id/video/47945674736317445\"}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:56",
+    "location": "commandHandler.js:22:40",
+    "message": "/updatebs 115 https://www.bilibili.tv/id/video/47945674736317445 false"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:56",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5533,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741460209,\"text\":\"/updatebs 115 https://www.bilibili.tv/id/video/47945674736317444\",\"entities\":[{\"offset\":0,\"length\":9,\"type\":\"bot_command\"},{\"offset\":14,\"length\":50,\"type\":\"url\"}],\"link_preview_options\":{\"url\":\"https://www.bilibili.tv/id/video/47945674736317444\"}}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:56",
+    "location": "commandHandler.js:22:40",
+    "message": "/updatebs 115 https://www.bilibili.tv/id/video/47945674736317444"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 02:58",
+    "location": "commandHandler.js:18:21",
+    "message": "{\"message_id\":5534,\"from\":{\"id\":5443421174,\"is_bot\":false,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"language_code\":\"en\"},\"chat\":{\"id\":5443421174,\"first_name\":\"Pahri\",\"username\":\"ryan_syahh\",\"type\":\"private\"},\"date\":1741460342,\"text\":\"asdas\"}"
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 02:58",
+    "location": "commandHandler.js:22:40",
+    "message": "asdas"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 03:00",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 03:00",
+    "location": "commandHandler.js:20:40",
+    "message": "sa"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 03:01",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 03:01",
+    "location": "commandHandler.js:20:47",
+    "message": "asd"
   }
 ]
