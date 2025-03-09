@@ -1,13 +1,6 @@
 [
   {
     "type": "Error",
-    "date": "2024-07-23 / 02:37",
-    "errorLocation": "function.js:88:21",
-    "errorMessage": "\"[object Object]\" is not valid JSON",
-    "error": "\"[object Object]\" is not valid JSON\nSyntaxError: \"[object Object]\" is not valid JSON\n    at JSON.parse (<anonymous>)\n    at D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\controller\\CreateBotController.js:58:21\n    at EventEmitter.<anonymous> (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\function.js:86:19)\n    at EventEmitter.emit (node:events:514:28)\n    at Timeout._onTimeout (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\app\\function\\utils.js:41:17)\n    at listOnTimeout (node:internal/timers:573:17)\n    at process.processTimers (node:internal/timers:514:7)"
-  },
-  {
-    "type": "Error",
     "date": "2024-07-23 / 02:39",
     "errorLocation": "function.js:88:21",
     "errorMessage": "\"[object Object]\" is not valid JSON",
@@ -348,5 +341,12 @@
     "errorLocation": "index.js:49:13",
     "errorMessage": "EFATAL: Error: read ECONNRESET",
     "error": "EFATAL: Error: read ECONNRESET\nRequestError: Error: read ECONNRESET\n    at new RequestError (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\request-promise-core\\lib\\errors.js:14:15)\n    at plumbing.callback (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\request-promise-core\\lib\\plumbing.js:87:29)\n    at Request.RP$callback [as _callback] (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\request-promise-core\\lib\\plumbing.js:46:31)\n    at self.callback (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\@cypress\\request\\request.js:183:22)\n    at Request.emit (node:events:514:28)\n    at Request.onRequestError (D:\\Dokumenku\\Pemrograman\\Node\\TelegramBot\\node_modules\\@cypress\\request\\request.js:869:8)\n    at ClientRequest.emit (node:events:514:28)\n    at TLSSocket.socketErrorListener (node:_http_client:495:9)\n    at TLSSocket.emit (node:events:514:28)\n    at emitErrorNT (node:internal/streams/destroy:151:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)"
+  },
+  {
+    "type": "Error",
+    "date": "2025-03-09 / 16:35",
+    "errorLocation": "sendChannel.js:43:21",
+    "errorMessage": "Gagal mengirim video:",
+    "error": "Gagal mengirim video:"
   }
 ]

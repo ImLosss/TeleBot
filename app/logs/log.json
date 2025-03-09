@@ -1,96 +1,6 @@
 [
   {
     "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:147:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:150:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 03:08",
-    "location": "CreateBotController.js:60:17",
-    "message": "/login <password>"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 03:09",
-    "location": "CreateBotController.js:142:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:09",
-    "location": "CreateBotController.js:147:21",
-    "message": "Jumlah listener message sebelum dihapus : 2"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 03:09",
-    "location": "CreateBotController.js:150:21",
-    "message": "Jumlah listener message setelah dihapus : 1"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 17:28",
-    "location": "setUsername.js:14:13",
-    "message": "@ryan_syahh telah mengatur username: Losss"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 17:28",
-    "location": "setUsername.js:14:13",
-    "message": "@ryan_syahh telah mengatur username: Losss"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 17:28",
-    "location": "setUsername.js:14:13",
-    "message": "@ryan_syahh telah mengatur username: shencx"
-  },
-  {
-    "type": "title",
-    "date": "2024-07-23 / 17:28",
-    "location": "CreateBotController.js:51:17",
-    "message": "Gunakan command"
-  },
-  {
-    "type": "subtitle",
-    "date": "2024-07-23 / 17:28",
-    "location": "CreateBotController.js:60:17",
-    "message": "/login <password>"
-  },
-  {
-    "type": "info",
-    "date": "2024-07-23 / 17:28",
-    "location": "CreateBotController.js:91:21",
-    "message": "connected"
-  },
-  {
-    "type": "disconnect",
-    "date": "2024-07-23 / 17:28",
-    "location": "CreateBotController.js:142:21",
-    "message": "disconnect.quitting"
-  },
-  {
-    "type": "info",
     "date": "2024-07-23 / 17:28",
     "location": "CreateBotController.js:147:21",
     "message": "Jumlah listener message sebelum dihapus : 2"
@@ -2984,5 +2894,95 @@
     "date": "2025-03-09 / 03:11",
     "location": "commandHandler.js:21:40",
     "message": "/changechannel dong"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:30",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:31",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:31",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:31",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:31",
+    "location": "commandHandler.js:21:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:32",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:32",
+    "location": "commandHandler.js:21:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:32",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:32",
+    "location": "commandHandler.js:21:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:33",
+    "location": null,
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:33",
+    "location": null,
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:34",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:34",
+    "location": "commandHandler.js:21:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
+  },
+  {
+    "type": "info",
+    "date": "2025-03-09 / 16:35",
+    "location": "index.js:38:13",
+    "message": "Bot aktif dan hanya menerima pesan baru."
+  },
+  {
+    "type": "MessageFrom:@ryan_syahh",
+    "date": "2025-03-09 / 16:35",
+    "location": "commandHandler.js:21:40",
+    "message": "/send BTTH S5 Episode 137 Subtitle Indonesia 1080p HD sub bagus"
   }
 ]

@@ -13,8 +13,6 @@ async function error(errorMsg) {
 
         let errorData = readJSONFileSync('app/logs/error.json')
 
-        const stackLines = errorMsg.stack.split('\n');
-
         const data = {
             type: 'Error',
             date: time,
@@ -29,6 +27,7 @@ async function error(errorMsg) {
 
         writeJSONFileSync('app/logs/error.json', errorData);
     } catch (error) {
+        console.log(error);
         console.log('error saat menulis log: ', error.message);
     }
 }
