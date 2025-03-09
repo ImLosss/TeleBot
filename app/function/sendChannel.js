@@ -41,6 +41,7 @@ function sendChannel(bot, msg, value, config) {
         })
         .catch((err) => {
             console.error('Gagal mengirim video:', err);
+            bot.sendMessage(chatId, 'Terjadi kesalahan saat mengirim video');
         });
     } else {
         bot.sendMessage(chatId, 'Silakan kirim video.');
