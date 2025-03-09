@@ -4,7 +4,9 @@ const lockfile = require('proper-lockfile');
 
 function getLocation() {
     const error = new Error();
-    // const stack = error?.stack?.split('\n') || null;
+    const stack = error?.stack?.split('\n') || null;
+
+    if (stack == null) return null;
 
     const projectRoot = getProjectRoot(__dirname);
 
