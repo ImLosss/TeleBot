@@ -138,9 +138,11 @@ function cutVal(value, index) {
 async function changeChannel(bot, value, config, fromId) {
     config.ID_CHANNEL = value;
 
+    if(!value.startsWith('@')) return bot.sendMessage(fromId, 'Format anda salah');
+
     writeJSONFileSync('./config.json', config);
 
-    return bot.sendMessage(fromId, `Channel berhasil diganti ke @${ value }`)
+    return bot.sendMessage(fromId, `Channel berhasil diganti ke ${ value }`)
 }
 
 const withErrorHandling = (fn) => {
