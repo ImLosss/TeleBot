@@ -4,6 +4,7 @@ const lockfile = require('proper-lockfile');
 
 function getLocation() {
     const error = new Error();
+    console.log(error);
     const stack = error?.stack?.split('\n') || null;
 
     if (stack == null) return null;
