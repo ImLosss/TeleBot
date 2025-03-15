@@ -12,11 +12,14 @@ const prefixFunctions = {
 module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
+            console.log(msg)
             if(msg.chat.type != 'private') return 
             let config = readJSONFileSync(`./config.json`);
             const prefix = ['/'];
 
             const text = msg.text || msg.caption;
+
+            if(!text) return;
 
             if(msg.body != "") console.log(text, `MessageFrom:@${ msg.chat.username }`);
             const value = cutVal(text, 1);

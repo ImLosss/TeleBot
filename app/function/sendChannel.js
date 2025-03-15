@@ -1,13 +1,19 @@
 require('module-alias/register');
 const console = require('console');
-const { readJSONFileSync } = require('function/utils');
+const { readJSONFileSync, cutVal } = require('function/utils');
 
 function sendChannel(bot, msg, value, config) {
+    let button = true
     const chatId = msg.chat.id;
 
     // Cek jika pesan mengandung video
     if (msg.video) {
         const videoFileId = msg.video.file_id; // Ambil file_id dari video
+
+        if(value.startsWith('nobutton')) {
+            button = false;
+            value = cutVal(value, 1);
+        }
 
         // Membuat tombol inline
         const inlineKeyboard = {
@@ -28,11 +34,11 @@ function sendChannel(bot, msg, value, config) {
 
         // Mengirim video ke channel dengan tombol
         bot.sendVideo(config.ID_CHANNEL, videoFileId, {
-            caption: value,
-            reply_markup: inlineKeyboard
+            caption: value
         })
         .then((result) => {
             bot.sendMessage(chatId, `Message_id: ${ result.message_id }`, { reply_to_message_id: msg.message_id });
+            if(!button) return
             bot.editMessageCaption(`${ value }\n\nLink to Share:\nhttps://t.me/${ config.ID_CHANNEL.replace('@', '') }/${ result.message_id }`, {
                 chat_id: config.ID_CHANNEL,
                 message_id: result.message_id,
