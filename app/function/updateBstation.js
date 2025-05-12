@@ -7,6 +7,7 @@ function updatebs(bot, msg, value, config) {
 
     if(!msg.reply_to_message) return bot.sendMessage(msg.chat.id, 'Silakan balas pesan yang ingin diubah');
     if(!isJSON(msg.reply_to_message.text)) return bot.sendMessage(msg.chat.id, 'Pesan anda bukan format JSON');
+    if(!value) return bot.sendMessage(msg.chat.id, 'Silakan kirim link video dengan benar.\n\nContoh:\n/updatebs <link>');
 
     if(value.startsWith('false')) {
         value = cutVal(value, 1);
