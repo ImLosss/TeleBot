@@ -44,6 +44,10 @@ function removeFromArray(arr, value) {
     }
 }
 
+function isJSON(str) {
+    return typeof str === 'string' && /^[\],:{}\s]*$/.test(str.replace(/\\["\\\/bfnrtu]/g, '@').replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, ']').replace(/(?:^|:|,)(?:\s*\[)+/g, ''));
+}
+
 function injectTitle (bot) {
     bot._client.on('title', (packet) => {
         if (packet.action === 0 || packet.action === 1) {
@@ -156,5 +160,5 @@ const withErrorHandling = (fn) => {
 };
 
 module.exports = {
-    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel
+    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel, isJSON
 };

@@ -3,47 +3,30 @@ const console = require('console');
 const { readJSONFileSync, cutVal } = require('function/utils');
 
 function sendChannel(bot, msg, value, config) {
-    let button = true
     const chatId = msg.chat.id;
 
     // Cek jika pesan mengandung video
-    if (msg.video) {
-        const videoFileId = msg.video.file_id; // Ambil file_id dari video
+    if (msg.video || msg.reply_to_message?.video?.file_id) {
+        let caption;
+        const videoFileId = msg.video?.file_id || msg.reply_to_message.video.file_id; // Ambil file_id dari video
 
-        if(value.startsWith('nobutton')) {
-            button = false;
-            value = cutVal(value, 1);
-        }
+        const forwardChannel = value.split(' ')[0];
+        value = cutVal(value, 1); // Ambil judul video
 
-        // Membuat tombol inline
-        const inlineKeyboard = {
-            inline_keyboard: [
-                [
-                    // { text: 'Bstation (Soon)', url: 'https://bili.im/wtwd7MY' }
-                    { text: 'Bstation (Soon)', callback_data: 'not_available' }
-                ],
-                [
-                    { text: 'Channel', url: 't.me/dongworld' },
-                    { text: 'Obrolan', url: 't.me/dongworld_ngobrol' }
-                ],
-                [
-                    { text: 'Support', url: config.DONATE_LINK }
-                ]
-            ]
-        };
+        caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
+        if(forwardChannel == "false") caption = `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
+
+        value = cutVal(value, 1);
+
+        if(!value) return bot.sendMessage(chatId, 'Silakan kirim video dengan caption yang benar.\n\nContoh:\n/send <channel> <Judul Video>')
 
         // Mengirim video ke channel dengan tombol
-        bot.sendVideo(config.ID_CHANNEL, videoFileId, {
-            caption: value
+        bot.sendVideo(config.ID_CHANNEL, videoFileId, { 
+            caption
         })
         .then((result) => {
-            bot.sendMessage(chatId, `Message_id: ${ result.message_id }`, { reply_to_message_id: msg.message_id });
-            if(!button) return
-            bot.editMessageCaption(`${ value }\n\nLink to Share:\nhttps://t.me/${ config.ID_CHANNEL.replace('@', '') }/${ result.message_id }`, {
-                chat_id: config.ID_CHANNEL,
-                message_id: result.message_id,
-                reply_markup: inlineKeyboard
-            })
+            bot.sendVideo(`@${ forwardChannel }`, videoFileId, { caption: `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`, reply_markup: { inline_keyboard: [[{ text: "Channel Utama", url: 't.me/dongworld' }]] } });
+            bot.sendMessage(chatId, JSON.stringify({ response: 'Video Berhasil dikirim', channel: forwardChannel, title: value, caption: `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`, message_id: result.message_id }), { reply_to_message_id: msg.message_id });
         })
         .catch((err) => {
             console.error('Gagal mengirim video:', err);
