@@ -16,8 +16,6 @@ function sendChannel(bot, msg, value, config) {
         caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
         if(forwardChannel == "false") caption = `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
 
-        value = cutVal(value, 1);
-
         if(!value) return bot.sendMessage(chatId, 'Silakan kirim video dengan caption yang benar.\n\nContoh:\n/send <channel> <Judul Video>')
 
         // Mengirim video ke channel dengan tombol
