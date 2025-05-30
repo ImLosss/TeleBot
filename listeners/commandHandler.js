@@ -15,8 +15,8 @@ let tempData = {};
 module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
-            console.log(msg)
-            if(msg.chat.type != 'private') return 
+            console.log(msg);
+            if(msg.chat.type == 'private') return 
             let config = readJSONFileSync(`./config.json`);
             const prefix = ['/'];
 
@@ -28,15 +28,15 @@ module.exports = (function() {
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
-
                 for (const pre of prefix) {
                     if (text.startsWith(`${pre}`)) {
-                        if(!config.OWNER.includes(msg.from.id)) return
+                        if(config.ID_CHANNEL != msg.chat.id) return
                         
                         const funcName = text.replace(pre, '').trim().split(' ');
                         const fromId = msg.chat.id;
                     
                         if(config.MAINTENANCE) {
+                            console.log('tess');
                             const whitelist = config.MAINTENANCE_WHITELIST;
                             if(prefixFunctions[funcName[0]] && !whitelist.includes(sender)) {
                                 console.log(`@${ msg.chat.username }`, `cmd:${ funcName[0] }`)
