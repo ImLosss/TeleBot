@@ -16,6 +16,11 @@ module.exports = (function() {
             } catch (e) {
                 return bot.answerCallbackQuery(query.id, { text: 'Invalid callback data' });
             }
+
+            if (query.message) {
+                bot.deleteMessage(query.message.chat.id, query.message.message_id);
+            }
+
             const fn = callbackFunctions[data.function];
             if (typeof fn === 'function') {
                 fn(bot, query, data);
