@@ -3,19 +3,26 @@ const console = require('console');
 const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = require("function/utils");
 const cmd = require('service/commandImport');
 
+const callbackFunctions = {
+    downloadVideo: cmd.downloadVideo,
+};
+
 module.exports = (function() {
     return function(bot) {
-        bot.on('callback_query', (callbackQuery) => {
-            const chatId = callbackQuery.message.chat.id;
-            const data = callbackQuery.data;
-
-            if (data === 'not_available') {
-                // Tampilkan pemberitahuan kecil
-                bot.answerCallbackQuery(callbackQuery.id, {
-                    text: 'Proses upload, coba lagi dalam beberapa menit kedepan...🤗 [ADMIN]', // Pesan yang ditampilkan
-                    show_alert: true // false = toast notification, true = alert box
-                });
+        bot.on('callback_query', (query) => {
+            let data;
+            try {
+                data = JSON.parse(query.data);
+            } catch (e) {
+                return bot.answerCallbackQuery(query.id, { text: 'Invalid callback data' });
+            }
+            const fn = callbackFunctions[data.function];
+            if (typeof fn === 'function') {
+                fn(bot, query, data);
+            } else {
+                bot.answerCallbackQuery(query.id, { text: 'Unknown action' });
             }
         });
+
     };
 })();
