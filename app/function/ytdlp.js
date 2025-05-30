@@ -7,10 +7,10 @@ const fs = require('fs');
 
 let tempData = {};
 
-function ytdlp(bot, msg, value, config) {
+async function ytdlp(bot, msg, value, config) {
     if (!value) return bot.sendMessage(msg.chat.id, 'Silakan kirim link video yang valid.');
 
-    bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
+    const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
     exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, (error, stdout, stderr) => {
@@ -62,7 +62,6 @@ function ytdlp(bot, msg, value, config) {
 
                 let uniqid = Math.random().toString(36).substr(2, 5);
                 if (!tempData[msg.chat.username]) tempData[msg.chat.username] = {};
-                console.log(fmt);
                 tempData[msg.chat.username][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
@@ -79,7 +78,10 @@ function ytdlp(bot, msg, value, config) {
             reply_markup: {
                 inline_keyboard: buttons
             }
-        });
+        })
+        .then(() => {
+            bot.deleteMessage(msg.chat.id, loadingMsg.message_id)
+        })
     });
 }
 
