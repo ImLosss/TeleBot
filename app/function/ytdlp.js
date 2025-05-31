@@ -46,9 +46,10 @@ async function ytdlp(bot, msg, value, config) {
 
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
-        const allowedRes = ['360p', '480p', '480', '720p', '720', '1080p', '1080'];
+        const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
         const buttonData = info.formats
             .filter(fmt => {
+                console.log(fmt);
                 const res = (fmt.format_note || fmt.resolution || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
@@ -71,6 +72,7 @@ async function ytdlp(bot, msg, value, config) {
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
+        if (buttonData.length === 0) return bot.sendMessage(msg.chat.id, 'Tidak ada format yang sesuai.');
         for (let i = 0; i < buttonData.length; i += 2) {
             buttons.push(buttonData.slice(i, i + 2));
         }
