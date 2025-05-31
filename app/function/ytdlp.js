@@ -17,7 +17,7 @@ async function ytdlp(bot, msg, value, config) {
     exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
-            return bot.sendMessage(msg.chat.id, `Gagal mengambil format: ${stderr || error.message}`);
+            return bot.sendMessage(msg.chat.id, `Gagal mengambil format: ${ error.message}`);
         }
 
         // Cari baris pertama yang valid JSON
