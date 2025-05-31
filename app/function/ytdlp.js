@@ -61,11 +61,11 @@ async function ytdlp(bot, msg, value, config) {
                 }
 
                 let uniqid = Math.random().toString(36).substr(2, 5);
-                if (!tempData[msg.chat.username]) tempData[msg.chat.username] = {};
-                tempData[msg.chat.username][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true}; // Simpan URL sementara
+                if (!tempData[msg.from.username]) tempData[msg.from.username] = {};
+                tempData[msg.from.username][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
-                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: msg.chat.username, arg3: uniqid })
+                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: msg.from.username, arg3: uniqid })
                 };
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
@@ -90,6 +90,7 @@ function downloadVideo(bot, query, data) {
     let format_id = tempData[username][data.arg3]?.format_id;
     let url = tempData[username][data.arg3]?.url;
     let acodec = tempData[username][data.arg3]?.acodec;
+    let ext = tempData[username][data.arg3]?.ext;
     console.log(acodec);
     console.log(format_id, url);
 
@@ -100,9 +101,9 @@ function downloadVideo(bot, query, data) {
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-    const outputTemplate = path.join(outputDir, `${username}-%(title)s-%(id)s.%(ext)s`);
-    let cmd = `yt-dlp -f ${format_id}+worstaudio -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
-    if(acodec) cmd = `yt-dlp -f ${format_id} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
+    const outputTemplate = path.join(outputDir, `${username}-%(title)s-%(id)s.${ ext }`);
+    let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
+    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
 
@@ -126,15 +127,40 @@ function downloadVideo(bot, query, data) {
             }
 
             const videoPath = path.join(outputDir, userFiles[0].file);
-            bot.sendChatAction(query.message.chat.id, 'upload_video');
-            bot.sendVideo(query.message.chat.id, videoPath)
+            const stats = fs.statSync(videoPath);
+            if (stats.size > 50 * 1024 * 1024) {
+                bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
+                uploadFile(videoPath, path.basename(videoPath))
+                    .then(async (fileId) => {
+                        if (!fileId) {
+                            bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                            fs.unlink(videoPath, () => {});
+                            return;
+                        }
+                        const linkData = await generatePublicURL(fileId);
+                        if (linkData && linkData.webViewLink) {
+                            bot.sendMessage(query.message.chat.id, `File berhasil diupload ke Google Drive:\n${linkData.webViewLink}`);
+                        } else {
+                            bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
+                        }
+                        fs.unlink(videoPath, () => {});
+                    })
+                    .catch((err) => {
+                        bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                        fs.unlink(videoPath, () => {});
+                    });
+            }
+            else {
+                bot.sendChatAction(query.message.chat.id, 'upload_video');
+                bot.sendVideo(query.message.chat.id, videoPath)
                 .then(() => {
-                    // Hapus file setelah dikirim
                     fs.unlink(videoPath, () => {});
                 })
                 .catch(() => {
-                    bot.sendMessage(query.message.chat.id, 'Gagal mengirim video.');
+                    bot.sendMessage(query.message.chat.id, `Hanya bisa mengirim file dengan ukuran maksimal 50 MB. (${ Math.floor(stats.size / 1048576) } MB)`);
+                    fs.unlink(videoPath, () => {});
                 });
+            }
         });
     });
 }
