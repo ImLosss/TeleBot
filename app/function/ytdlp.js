@@ -62,11 +62,11 @@ async function ytdlp(bot, msg, value, config) {
                 }
 
                 let uniqid = Math.random().toString(36).substr(2, 5);
-                if (!tempData[msg.from.username]) tempData[msg.from.username] = {};
-                tempData[msg.from.username][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext}; // Simpan URL sementara
+                if (!tempData[msg.from.id]) tempData[msg.from.id] = {};
+                tempData[msg.from.id][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
-                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: msg.from.username, arg3: uniqid })
+                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: msg.from.id, arg3: uniqid })
                 };
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
