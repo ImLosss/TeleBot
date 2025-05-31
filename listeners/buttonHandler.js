@@ -5,12 +5,17 @@ const cmd = require('service/commandImport');
 
 const callbackFunctions = {
     downloadVideo: cmd.downloadVideo,
+    dlvs_choose_sub: cmd.dlvs_choose_sub,
+    dlvs_downloadVideo: cmd.dlvs_downloadVideo,
 };
 
 module.exports = (function() {
     return function(bot) {
         bot.on('callback_query', (query) => {
             let data;
+            let config = readJSONFileSync(`./config.json`);
+
+            if(!config.RECEIVE_MESSAGE) return console.log("Skip Callback Query.");
             try {
                 data = JSON.parse(query.data);
             } catch (e) {

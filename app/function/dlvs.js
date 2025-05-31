@@ -5,10 +5,11 @@ const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
+const { text } = require('stream/consumers');
 
 let tempData = {};
 
-async function ytdlp(bot, msg, value, config) {
+async function dlvs(bot, msg, value, config) {
     if (!value) return bot.sendMessage(msg.chat.id, 'Silakan kirim link video yang valid.');
 
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
@@ -49,7 +50,7 @@ async function ytdlp(bot, msg, value, config) {
         const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
         const buttonData = info.formats
             .filter(fmt => {
-                console.log(fmt);
+                // console.log(fmt);
                 const res = (fmt.format_note || fmt.resolution || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
@@ -63,10 +64,10 @@ async function ytdlp(bot, msg, value, config) {
                 }
 
                 let uniqid = Math.random().toString(36).substr(2, 5);
-                tempData[uniqid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, user_id: msg.from.id}; // Simpan URL sementara
+                tempData[uniqid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
-                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: uniqid })
+                    callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg2: uniqid })
                 };
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
@@ -82,18 +83,85 @@ async function ytdlp(bot, msg, value, config) {
             }
         })
         .then(() => {
-            bot.deleteMessage(msg.chat.id, loadingMsg.message_id)
+            bot.deleteMessage(msg.chat.id, loadingMsg.message_id);
+            tempData[msg.from.id] = {}
         })
     });
 }
 
-async function downloadVideo(bot, query, data) {
+async function dlvs_choose_sub(bot, query, data) {
+    let uniqid = data.arg2;
+    let url = tempData[uniqid].url;
+    let user_id = tempData[uniqid].url;
+    let chat_id = tempData[uniqid].chat_id;
+
+    if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
+
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, (error, stdout, stderr) => {
+        if (error) {
+            console.log('stderr:', stderr);
+            return bot.sendMessage(msg.chat.id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
+        }
+
+        // Cari baris pertama yang valid JSON
+        let jsonStr = '';
+        const lines = stdout.split('\n');
+        for (const line of lines) {
+            if (line.trim().startsWith('{') && line.trim().endsWith('}')) {
+                jsonStr = line.trim();
+                break;
+            }
+        }
+        if (!jsonStr) {
+            return bot.sendMessage(chat_id, 'Gagal memproses data JSON dari yt-dlp.');
+        }
+
+        let info;
+        try {
+            info = JSON.parse(jsonStr);
+        } catch (e) {
+            return bot.sendMessage(chat_id, 'Gagal memproses data JSON dari yt-dlp.');
+        }
+
+        if (!info.subtitles || info.subtitles.length === 0) {
+            return bot.sendMessage(chat_id, 'Subtitle tidak ditemukan.');
+        }
+
+        // Ambil maksimal 8 format agar tombol tidak terlalu banyak
+        const maxButtons = 40;
+        const buttonData = Object.keys(info.subtitles).map(lang => {
+            const ext = info.subtitles[lang][0]?.ext || false;
+            tempData[uniqid].ext_lang = ext || false;
+            tempData[uniqid].lang = lang;
+            return {
+                text: `${lang} (${ext})`,
+                callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg2: uniqid })
+            };
+        });
+
+        // Bagi menjadi baris berisi maksimal 2 tombol
+        const buttons = [];
+        for (let i = 0; i < buttonData.length; i += 2) {
+            buttons.push(buttonData.slice(i, i + 2));
+        }
+
+        bot.sendMessage(chat_id, 'Pilih Subtitle yang diinginkan:', {
+            reply_markup: {
+                inline_keyboard: buttons
+            }
+        });
+    });
+}
+
+async function dlvs_downloadVideo(bot, query, data) {
     const uniqid = data.arg2;
     let format_id = tempData[uniqid]?.format_id;
     let title = tempData[uniqid]?.title;
     let url = tempData[uniqid]?.url;
     let acodec = tempData[uniqid]?.acodec;
-    let ext = tempData[uniqid]?.ext;
+    let ext_lang = tempData[uniqid]?.ext_lang;
+    let ext = ext_lang == 'ass' ? 'mkv' : tempData[uniqid]?.ext;
+    let lang = tempData[uniqid]?.lang;
     tempData[uniqid] = null;
     console.log(acodec);
     console.log(format_id, url);
@@ -106,14 +174,14 @@ async function downloadVideo(bot, query, data) {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     const outputTemplate = path.join(outputDir, `${uniqid}.%(ext)s`);
-    let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
-    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
 
     exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
-            console.log('stderr:', stderr);
+            console.log(stderr, 'stderr');
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
 
@@ -121,9 +189,9 @@ async function downloadVideo(bot, query, data) {
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
 
-            // Cari file terbaru yang sesuai uniqid
+            const videoExts = ['.mp4', '.mkv']; // tambahkan sesuai kebutuhan
             const userFiles = files
-                .filter(f => f.startsWith(uniqid))
+                .filter(f => f.startsWith(uniqid) && videoExts.includes(path.extname(f).toLowerCase()))
                 .map(f => ({ file: f, time: fs.statSync(path.join(outputDir, f)).mtime.getTime() }))
                 .sort((a, b) => b.time - a.time);
 
@@ -144,7 +212,7 @@ async function downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:`, {
+                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext} SOFTSUB* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, {
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -177,9 +245,14 @@ async function downloadVideo(bot, query, data) {
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
-                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext }* berhasil diunduh`, parse_mode: 'Markdown' })
+                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } SOFTSUB* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
                 .then(() => {
-                    fs.unlink(videoPath, () => {});
+                    fs.readdir(outputDir, (err, files) => {
+                        if (err) return;
+                        files
+                            .filter(f => f.startsWith(uniqid))
+                            .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
+                    });
                 })
                 .catch(() => {
                     bot.sendMessage(query.message.chat.id, `Hanya bisa mengirim file dengan ukuran maksimal 50 MB. (${ Math.floor(stats.size / 1048576) } MB)`);
@@ -191,5 +264,5 @@ async function downloadVideo(bot, query, data) {
 }
 
 module.exports = {
-    ytdlp, downloadVideo
+    dlvs, dlvs_choose_sub, dlvs_downloadVideo
 }

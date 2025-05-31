@@ -12,6 +12,7 @@ const prefixFunctions = {
 
 const prefixFunctionsGroup = {
     'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
+    'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
 }
 
 module.exports = (function() {
@@ -20,6 +21,7 @@ module.exports = (function() {
             console.log(msg);
             
             let config = readJSONFileSync(`./config.json`);
+            if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
             const prefix = ['/'];
 
             const text = msg.text || msg.caption;

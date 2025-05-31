@@ -2,3 +2,5 @@ node_modules
 index.js
 config.json
 *.json
+yt-dlp.exe
+ffmpeg.exe
