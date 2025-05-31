@@ -3,8 +3,9 @@ const mime = require('mime-types');
 const fs = require('fs');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 let config = readJSONFileSync(`./config.json`);
+const console = require('console');
 
-console.log(config.CLIENT_ID, config.CLIENT_SECRET, config.REDIRECT_URI, config.REFRESH_TOKEN);
+// console.log(config.CLIENT_ID, config.CLIENT_SECRET, config.REDIRECT_URI, config.REFRESH_TOKEN);
 
 const oauth2Client = new google.auth.OAuth2(
     config.CLIENT_ID,
@@ -21,7 +22,6 @@ const drive = google.drive({
 
 async function uploadFile(path, fileName) {
     let mime_type = await cekMime(path);
-    console.log(mime_type);
     try{
         const response = await drive.files.create({
             requestBody: {
@@ -72,23 +72,27 @@ async function generatePublicURL(fileID) {
 }
 
 async function cekMime(path){
-    // Mendapatkan MIME type berdasarkan ekstensi file
-    const mimeType = mime.lookup(path);
-    return mimeType;
+    let mimeType = mime.lookup(path);
+    // Perbaiki jika hasilnya salah
+    if (path.endsWith('.mp4')) mimeType = 'video/mp4';
+    if (path.endsWith('.mkv')) mimeType = 'video/x-matroska';
+    // Tambahkan format lain jika perlu
+    return mimeType || 'application/octet-stream';
 }
 
-async function emptyTrash(msg) {
+async function emptyTrash() {
     try {
         await drive.files.emptyTrash()
         .then(() => {
-            msg.reply('Berhasil menghapus sampah Drive');
+            console.log('Trash has been emptied', 'drive');
         })
     } catch(err) {
         console.log(err)
-        msg.reply(`Error: ${ err.message }`);
+        console.log('Failed to empty trash', 'drive');
     }
 }
 
 module.exports = {
     uploadFile, generatePublicURL, deleteFile, emptyTrash
 }
+
