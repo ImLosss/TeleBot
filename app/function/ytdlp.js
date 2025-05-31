@@ -130,7 +130,7 @@ async function downloadVideo(bot, query, data) {
 
             const videoPath = path.join(outputDir, userFiles[0].file);
             const stats = fs.statSync(videoPath);
-            if (stats.size < 50 * 1024 * 1024) {
+            if (stats.size > 50 * 1024 * 1024) {
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
