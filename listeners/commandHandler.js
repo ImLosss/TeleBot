@@ -25,7 +25,7 @@ module.exports = (function() {
 
             if(!text) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username == '@GroupAnonymousBot' ? "admin" : msg.from.username }`);
+            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username == 'GroupAnonymousBot' ? "admin" : msg.from.username }`);
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
@@ -42,7 +42,7 @@ module.exports = (function() {
                             }
                         } else {
                             if(config.ID_CHANNEL != msg.chat.id) return
-                            
+
                             if (prefixFunctionsGroup[funcName[0]]) {
                                 return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
                             }
