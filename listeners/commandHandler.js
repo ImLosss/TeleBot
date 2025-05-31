@@ -7,7 +7,7 @@ const prefixFunctions = {
     // 'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
     // 'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
     // 'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
-    'ytdlp': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
+    'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
 }
 
 let tempData = {};
@@ -24,7 +24,7 @@ module.exports = (function() {
 
             if(!text) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.chat.username }`);
+            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username }`);
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
