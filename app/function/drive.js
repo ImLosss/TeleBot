@@ -4,6 +4,8 @@ const fs = require('fs');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 let config = readJSONFileSync(`./config.json`);
 
+console.log(config.CLIENT_ID, config.CLIENT_SECRET, config.REDIRECT_URI, config.REFRESH_TOKEN);
+
 const oauth2Client = new google.auth.OAuth2(
     config.CLIENT_ID,
     config.CLIENT_SECRET,

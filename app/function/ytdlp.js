@@ -50,7 +50,7 @@ async function ytdlp(bot, msg, value, config) {
         const buttonData = info.formats
             .filter(fmt => {
                 const res = (fmt.format_note || fmt.resolution || '').toLowerCase();
-                return allowedRes.some(r => res.includes(r));
+                return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
             .slice(0, maxButtons)
             .map(fmt => {
@@ -102,7 +102,7 @@ function downloadVideo(bot, query, data) {
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-    const outputTemplate = path.join(outputDir, `${username}-%(title)s-%(id)s.${ ext }`);
+    const outputTemplate = path.join(outputDir, `${username}-%(id)s.${ ext }`);
     let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
 
@@ -110,7 +110,8 @@ function downloadVideo(bot, query, data) {
 
     exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
-            return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
+            console.log('stderr:', stderr);
+            // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
 
         // Cari file hasil download
@@ -129,7 +130,7 @@ function downloadVideo(bot, query, data) {
 
             const videoPath = path.join(outputDir, userFiles[0].file);
             const stats = fs.statSync(videoPath);
-            if (stats.size > 50 * 1024 * 1024) {
+            if (stats.size < 50 * 1024 * 1024) {
                 bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
@@ -140,15 +141,28 @@ function downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, `File berhasil diupload ke Google Drive:\n${linkData.webViewLink}`);
+                            bot.sendMessage(query.message.chat.id, 'File berhasil diupload ke Google Drive, file akan terhapus dalam 1 jam kedepan:', {
+                                reply_markup: {
+                                    inline_keyboard: [
+                                        [
+                                            { text: 'Download', url: linkData.webViewLink }
+                                        ]
+                                    ]
+                                }
+                            });
+                            fs.unlink(videoPath, () => {});
+
+                            setTimeout(() => {
+                                deleteFile(fileId).then(() => { emptyTrash() })
+                            }, 20000);
                         } else {
                             bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
+                            fs.unlink(videoPath, () => {});
                         }
-                        fs.unlink(videoPath, () => {});
                     })
                     .catch((err) => {
                         bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
-                        fs.unlink(videoPath, () => {});
+                        // fs.unlink(videoPath, () => {});
                     });
             }
             else {
