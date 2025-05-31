@@ -64,7 +64,7 @@ async function ytdlp(bot, msg, value, config) {
 
                 let uniqid = Math.random().toString(36).substr(2, 5);
                 if (!tempData[msg.from.id]) tempData[msg.from.id] = {};
-                tempData[msg.from.id][uniqid] = {url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext}; // Simpan URL sementara
+                tempData[msg.from.id][uniqid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
                     callback_data: JSON.stringify({ function: 'downloadVideo', arg2: msg.from.id, arg3: uniqid })
@@ -91,6 +91,7 @@ async function ytdlp(bot, msg, value, config) {
 async function downloadVideo(bot, query, data) {
     const username = data.arg2;
     let format_id = tempData[username][data.arg3]?.format_id;
+    let title = tempData[username][data.arg3]?.title;
     let url = tempData[username][data.arg3]?.url;
     let acodec = tempData[username][data.arg3]?.acodec;
     let ext = tempData[username][data.arg3]?.ext;
@@ -143,7 +144,8 @@ async function downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, 'File berhasil diupload ke Google Drive, file akan dihapus dalam 1 jam kedepan:', {
+                            bot.sendMessage(query.message.chat.id, 'File *${title}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:', {
+                                parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
                                         [
@@ -175,7 +177,7 @@ async function downloadVideo(bot, query, data) {
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
-                bot.sendVideo(query.message.chat.id, videoPath)
+                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}* berhasil diunduh`, parse_mode: 'Markdown' })
                 .then(() => {
                     fs.unlink(videoPath, () => {});
                 })
