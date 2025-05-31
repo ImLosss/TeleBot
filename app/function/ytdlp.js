@@ -2,6 +2,7 @@ require('module-alias/register');
 const console = require('console');
 const { exec } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
+const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
 
