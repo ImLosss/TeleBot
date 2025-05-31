@@ -140,7 +140,7 @@ function cutVal(value, index) {
 }
 
 async function changeChannel(bot, value, config, fromId) {
-    config.ID_CHANNEL = value;
+    config.USERNAME_CHANNEL = value;
 
     if(!value.startsWith('@')) return bot.sendMessage(fromId, 'Format anda salah');
 

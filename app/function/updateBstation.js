@@ -42,7 +42,7 @@ function updatebs(bot, msg, value, config) {
     bot.editMessageCaption(
         json.title, // Caption baru
         {
-            chat_id: config.ID_CHANNEL,
+            chat_id: config.USERNAME_CHANNEL,
             message_id: json.message_id
         }
     );
@@ -52,12 +52,12 @@ function updatebs(bot, msg, value, config) {
             inline_keyboard: inline_keyboard
         },
         {
-            chat_id: config.ID_CHANNEL,
+            chat_id: config.USERNAME_CHANNEL,
             message_id: json.message_id
         }
     )
     .then(() => {
-        if (notif) bot.sendMessage(config.ID_CHANNEL, `${ json.title }\n\nBstation ✅\n\nGood Sub + Video High Bitrate ✅\n\nNonton di bstation biar hemat kuota\n\nJanlupa di share y ges🔥`, { reply_to_message_id: json.message_id });
+        if (notif) bot.sendMessage(config.USERNAME_CHANNEL, `${ json.title }\n\nBstation ✅\n\nGood Sub + Video High Bitrate ✅\n\nNonton di bstation biar hemat kuota\n\nJanlupa di share y ges🔥`, { reply_to_message_id: json.message_id });
     })
 }
 

@@ -19,7 +19,7 @@ function sendChannel(bot, msg, value, config) {
         if(!value) return bot.sendMessage(chatId, 'Silakan kirim video dengan caption yang benar.\n\nContoh:\n/send <channel> <Judul Video>')
 
         // Mengirim video ke channel dengan tombol
-        bot.sendVideo(config.ID_CHANNEL, videoFileId, { 
+        bot.sendVideo(config.USERNAME_CHANNEL, videoFileId, { 
             caption
         })
         .then((result) => {

@@ -4,19 +4,20 @@ const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = requi
 const cmd = require('service/commandImport');
 
 const prefixFunctions = {
-    // 'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
-    // 'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
-    // 'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
-    'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
+    'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
+    'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
+    'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
 }
 
-let tempData = {};
+const prefixFunctionsGroup = {
+    'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
+}
 
 module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
             console.log(msg);
-            if(msg.chat.type == 'private') return 
+            
             let config = readJSONFileSync(`./config.json`);
             const prefix = ['/'];
 
@@ -24,29 +25,29 @@ module.exports = (function() {
 
             if(!text) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username }`);
+            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username == '@GroupAnonymousBot' ? "admin" : msg.from.username }`);
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
                 for (const pre of prefix) {
                     if (text.startsWith(`${pre}`)) {
-                        if(config.ID_CHANNEL != msg.chat.id) return
-                        
                         const funcName = text.replace(pre, '').trim().split(' ');
                         const fromId = msg.chat.id;
-                    
-                        if(config.MAINTENANCE) {
-                            console.log('tess');
-                            const whitelist = config.MAINTENANCE_WHITELIST;
-                            if(prefixFunctions[funcName[0]] && !whitelist.includes(sender)) {
-                                console.log(`@${ msg.chat.username }`, `cmd:${ funcName[0] }`)
-                                return msg.reply('Bot sedang melakukan pengujian fitur, Anda tidak termasuk dalam whitelist!');
+
+                        if(msg.chat.type == 'private') {
+                            if(!config.OWNER.includes(msg.from.id)) return
+
+                            if (prefixFunctions[funcName[0]]) {
+                                return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
+                            }
+                        } else {
+                            if(config.ID_CHANNEL != msg.chat.id) return
+                            
+                            if (prefixFunctionsGroup[funcName[0]]) {
+                                return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
                             }
                         }
-
-                        if (prefixFunctions[funcName[0]]) {
-                            return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
-                        }
+                        
                     }
                 }
             }
