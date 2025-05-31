@@ -144,7 +144,7 @@ async function downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, 'File *${title}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:', {
+                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:`, {
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -177,7 +177,7 @@ async function downloadVideo(bot, query, data) {
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
-                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}* berhasil diunduh`, parse_mode: 'Markdown' })
+                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext }* berhasil diunduh`, parse_mode: 'Markdown' })
                 .then(() => {
                     fs.unlink(videoPath, () => {});
                 })
