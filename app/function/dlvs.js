@@ -68,7 +68,7 @@ async function dlvs(bot, msg, value, config) {
                 if (tempData[id] == undefined) tempData[id] = {};
                 tempData[id][subid] = {title: info.title, res: res, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
                 return {
-                    text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
+                    text: `${fmt.ext} | ${fmt.resolution || fmt.format_note || ''}${sizeMB}`,
                     callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
                 };
             });
