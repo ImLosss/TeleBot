@@ -291,7 +291,7 @@ async function get_subs(stdout) {
 
         // Fallback
         return { Language: '', Name: '', Format: [] };
-    }).filter(obj => obj.Format.length > 0); // hanya yang punya format yang diizinkan
+    }).filter(obj => obj.format.length > 0); // hanya yang punya format yang diizinkan
 
     return subtitleJson;
 }
