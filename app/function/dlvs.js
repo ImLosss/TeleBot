@@ -197,7 +197,7 @@ async function dlvs_downloadVideo(bot, query, data) {
 
             const videoExts = ['.mp4', '.mkv']; // tambahkan sesuai kebutuhan
             const userFiles = files
-                .filter(f => f.startsWith(uniqid) && videoExts.includes(path.extname(f).toLowerCase()))
+                .filter(f => f.startsWith(id) && videoExts.includes(path.extname(f).toLowerCase()))
                 .map(f => ({ file: f, time: fs.statSync(path.join(outputDir, f)).mtime.getTime() }))
                 .sort((a, b) => b.time - a.time);
 
@@ -256,7 +256,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                     fs.readdir(outputDir, (err, files) => {
                         if (err) return;
                         files
-                            .filter(f => f.startsWith(uniqid))
+                            .filter(f => f.startsWith(id))
                             .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
                     });
                 })
