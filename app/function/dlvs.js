@@ -47,7 +47,7 @@ async function dlvs(bot, msg, value, config) {
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         let id = Math.random().toString(36).substr(2, 3);
         const maxButtons = 40;
-        const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
+        const allowedRes = ['360', '362', '480', '512', '536', '720', '848', '864', '1080', '1280', '1920' ];
         const buttonData = info.formats
             .filter(fmt => {
                 console.log(fmt);
@@ -63,7 +63,7 @@ async function dlvs(bot, msg, value, config) {
                     sizeMB = ` | ~${(fmt.filesize_approx / 1048576).toFixed(2)} MB`;
                 }
 
-                let res = (fmt.format_note || fmt.resolution || '').toLowerCase();
+                let res = (fmt.resolution || fmt.format_note || '').toLowerCase();
                 let subid = Math.random().toString(36).substr(2, 5);
                 if (tempData[id] == undefined) tempData[id] = {};
                 tempData[id][subid] = {title: info.title, res: res, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
