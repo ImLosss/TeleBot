@@ -65,7 +65,7 @@ async function ytdlp(bot, msg, value, config) {
 
                 let subid = Math.random().toString(36).substr(2, 5);
                 if(tempData[id] === undefined) tempData[id] = {};
-                tempData[id][subid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, user_id: msg.from.id, id: id}; // Simpan URL sementara
+                tempData[id][subid] = {title: info.title, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, user_id: msg.from.id, id: id}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
                     callback_data: JSON.stringify({ function: 'downloadVideo', arg1: id, arg2: subid })
@@ -94,6 +94,7 @@ async function downloadVideo(bot, query, data) {
     let subid = data.arg2;
     let format_id = tempData[id][subid].format_id;
     let title = tempData[id][subid].title;
+    let url_thumbnail = tempData[id][subid].thumbnail;
     let url = tempData[id][subid].url;
     let acodec = tempData[id][subid].acodec;
     let ext = tempData[id][subid].ext;
@@ -146,7 +147,8 @@ async function downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:`, {
+                            bot.sendPhoto(query.message.chat.id, thumbnail, {
+                                caption: `File *${title}.${ext}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
