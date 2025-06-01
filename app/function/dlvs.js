@@ -51,7 +51,7 @@ async function dlvs(bot, msg, value, config) {
         const buttonData = info.formats
             .filter(fmt => {
                 // console.log(fmt);
-                const res = (fmt.format_note || fmt.resolution || '').toLowerCase();
+                let res = (fmt.format_note || fmt.resolution || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
             .slice(0, maxButtons)
@@ -63,9 +63,10 @@ async function dlvs(bot, msg, value, config) {
                     sizeMB = ` | ~${(fmt.filesize_approx / 1048576).toFixed(2)} MB`;
                 }
 
+                let res = (fmt.format_note || fmt.resolution || '').toLowerCase();
                 let subid = Math.random().toString(36).substr(2, 5);
                 if (tempData[id] == undefined) tempData[id] = {};
-                tempData[id][subid] = {title: info.title, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
+                tempData[id][subid] = {title: info.title, res: res, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
                     callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
@@ -142,6 +143,7 @@ async function dlvs_downloadVideo(bot, query, data) {
     let subid = tempData[id][subid2]?.subid;
     let format_id = tempData[id][subid].format_id;
     let title = tempData[id][subid].title;
+    let res = tempData[id][subid].res;
     let url_thumbnail = tempData[id][subid].thumbnail;
     let url = tempData[id][subid].url;
     let acodec = tempData[id][subid].acodec;
@@ -201,7 +203,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
+                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -234,7 +236,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
-                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } SOFTSUB ${lang}* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
+                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } ${res} SOFTSUB ${lang}* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
                 .then(() => {
                     fs.readdir(outputDir, (err, files) => {
                         if (err) return;
