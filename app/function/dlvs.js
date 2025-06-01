@@ -101,7 +101,7 @@ async function dlvs_choose_sub(bot, query, data) {
     exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
-            return bot.sendMessage(msg.chat.id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
+            // return bot.sendMessage(chat_id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
         }
 
         const list_subs = await get_subs(stdout);
