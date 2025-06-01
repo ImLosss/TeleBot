@@ -94,9 +94,8 @@ async function dlvs(bot, msg, value, config) {
 async function dlvs_choose_sub(bot, query, data) {
     let id = data.arg1;
     let subid = data.arg2;
-    let url = tempData[uniqid].url;
-    let chat_id = tempData[uniqid].chat_id;
-    tempData[uniqid] = null;
+    let url = tempData[id][subid].url;
+    let chat_id = tempData[id][subid].chat_id;
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
