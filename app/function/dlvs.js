@@ -283,9 +283,9 @@ async function get_subs(stdout) {
         if (match) {
             const formats = match[2].split(',').map(f => f.trim()).filter(f => allowedExts.includes(f));
             return {
-                Language: match[1],
-                Name: '',
-                Format: formats
+                language: match[1],
+                name: '',
+                format: formats
             };
         }
 
