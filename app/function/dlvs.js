@@ -118,7 +118,9 @@ async function dlvs_choose_sub(bot, query, data) {
                     callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg1: id, arg2: subid2 })
                 });
             });
-        }).slice(0, maxButtons);
+        });
+
+        buttonData = buttonData.slice(0, maxButtons);
 
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
