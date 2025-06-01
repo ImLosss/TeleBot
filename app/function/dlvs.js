@@ -164,7 +164,7 @@ async function dlvs_downloadVideo(bot, query, data) {
     let url = tempData[id][subid].url;
     let acodec = tempData[id][subid].acodec;
     let ext_lang = tempData[id][subid2].ext_lang;
-    let ext = ext_lang == 'ass' ? 'mkv' : tempData[id][subid].ext;
+    let ext = 'mkv';
     let lang = tempData[id][subid2].lang;
     tempData[id] = null;
     console.log(acodec);
@@ -218,7 +218,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext} SOFTSUB* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, {
+                            bot.sendMessage(query.message.chat.id, `File *${title}.${ext} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, {
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -251,7 +251,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
-                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } SOFTSUB* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
+                bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } SOFTSUB ${lang}* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
                 .then(() => {
                     fs.readdir(outputDir, (err, files) => {
                         if (err) return;

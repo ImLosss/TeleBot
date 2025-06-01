@@ -45,6 +45,7 @@ async function ytdlp(bot, msg, value, config) {
         }
 
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
+        let id = Math.random().toString(36).substr(2, 3);
         const maxButtons = 40;
         const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
         const buttonData = info.formats
@@ -62,11 +63,11 @@ async function ytdlp(bot, msg, value, config) {
                     sizeMB = ` | ~${(fmt.filesize_approx / 1048576).toFixed(2)} MB`;
                 }
 
-                let uniqid = Math.random().toString(36).substr(2, 5);
-                tempData[uniqid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, user_id: msg.from.id}; // Simpan URL sementara
+                let subid = Math.random().toString(36).substr(2, 5);
+                tempData[id][subid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, user_id: msg.from.id, id: id}; // Simpan URL sementara
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
-                    callback_data: JSON.stringify({ function: 'downloadVideo', arg2: uniqid })
+                    callback_data: JSON.stringify({ function: 'downloadVideo', arg1: id, arg2: subid })
                 };
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
@@ -88,15 +89,15 @@ async function ytdlp(bot, msg, value, config) {
 }
 
 async function downloadVideo(bot, query, data) {
-    const uniqid = data.arg2;
-    let format_id = tempData[uniqid]?.format_id;
-    let title = tempData[uniqid]?.title;
-    let url = tempData[uniqid]?.url;
-    let acodec = tempData[uniqid]?.acodec;
-    let ext = tempData[uniqid]?.ext;
-    tempData[uniqid] = null;
-    console.log(acodec);
-    console.log(format_id, url);
+    let id = data.arg1;
+    let subid = data.arg2;
+    let format_id = tempData[id][subid].format_id;
+    let title = tempData[id][subid].title;
+    let url = tempData[id][subid].url;
+    let acodec = tempData[id][subid].acodec;
+    let ext = tempData[id][subid].ext;
+    tempData[id] = null;
+    console.log(`${format_id}, ${url}, acodec: ${acodec}`, 'format');
 
     if (!url) {
         return bot.answerCallbackQuery(url, { text: 'URL tidak ditemukan.' });
@@ -105,7 +106,7 @@ async function downloadVideo(bot, query, data) {
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-    const outputTemplate = path.join(outputDir, `${uniqid}.%(ext)s`);
+    const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
     let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
@@ -121,9 +122,9 @@ async function downloadVideo(bot, query, data) {
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
 
-            // Cari file terbaru yang sesuai uniqid
+            // Cari file terbaru yang sesuai id
             const userFiles = files
-                .filter(f => f.startsWith(uniqid))
+                .filter(f => f.startsWith(id))
                 .map(f => ({ file: f, time: fs.statSync(path.join(outputDir, f)).mtime.getTime() }))
                 .sort((a, b) => b.time - a.time);
 
