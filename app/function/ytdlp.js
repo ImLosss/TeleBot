@@ -51,7 +51,7 @@ async function ytdlp(bot, msg, value, config) {
         const buttonData = info.formats
             .filter(fmt => {
                 console.log(fmt);
-                let res = (fmt.format_note || fmt.resolution || '').toLowerCase();
+                let res = (fmt.resolution || fmt.format_note || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
             .slice(0, maxButtons)

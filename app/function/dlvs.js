@@ -50,8 +50,8 @@ async function dlvs(bot, msg, value, config) {
         const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
         const buttonData = info.formats
             .filter(fmt => {
-                // console.log(fmt);
-                let res = (fmt.format_note || fmt.resolution || '').toLowerCase();
+                console.log(fmt);
+                let res = (fmt.resolution || fmt.format_note || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
             .slice(0, maxButtons)
