@@ -161,7 +161,7 @@ async function dlvs_downloadVideo(bot, query, data) {
     let subid = tempData[id][subid2]?.subid;
     let format_id = tempData[id][subid].format_id;
     let title = tempData[id][subid].title;
-    let thumbnail = tempData[id][subid].thumbnail;
+    let url_thumbnail = tempData[id][subid].thumbnail;
     let url = tempData[id][subid].url;
     let acodec = tempData[id][subid].acodec;
     let ext_lang = tempData[id][subid2].ext_lang;
@@ -219,7 +219,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendPhoto(query.message.chat.id, thumbnail, {
+                            bot.sendPhoto(query.message.chat.id, url_thumbnail, {
                                 caption: `File *${title}.${ext} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
