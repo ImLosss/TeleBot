@@ -46,6 +46,7 @@ async function dlvs(bot, msg, value, config) {
         }
 
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
+        let id = Math.random().toString(36).substr(2, 3);
         const maxButtons = 40;
         const allowedRes = ['360', '480', '512', '720', '848', '1080', '1280', '1920' ];
         const buttonData = info.formats
@@ -63,11 +64,11 @@ async function dlvs(bot, msg, value, config) {
                     sizeMB = ` | ~${(fmt.filesize_approx / 1048576).toFixed(2)} MB`;
                 }
 
-                let uniqid = Math.random().toString(36).substr(2, 5);
-                tempData[uniqid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; // Simpan URL sementara
+                let subid = Math.random().toString(36).substr(2, 5);
+                tempData[id][subid] = {title: info.title, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
                 return {
                     text: `${fmt.ext} | ${fmt.format_note || fmt.resolution || ''}${sizeMB}`,
-                    callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg2: uniqid })
+                    callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
                 };
             });
         // Bagi menjadi baris berisi maksimal 2 tombol
@@ -90,10 +91,11 @@ async function dlvs(bot, msg, value, config) {
 }
 
 async function dlvs_choose_sub(bot, query, data) {
-    let uniqid = data.arg2;
+    let id = data.arg1;
+    let subid = data.arg2;
     let url = tempData[uniqid].url;
-    let user_id = tempData[uniqid].url;
     let chat_id = tempData[uniqid].chat_id;
+    tempData[uniqid] = null;
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
@@ -130,12 +132,12 @@ async function dlvs_choose_sub(bot, query, data) {
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
         const buttonData = Object.keys(info.subtitles).map(lang => {
+            let subid2 = Math.random().toString(36).substr(2, 5);
             const ext = info.subtitles[lang][0]?.ext || false;
-            tempData[uniqid].ext_lang = ext || false;
-            tempData[uniqid].lang = lang;
+            tempData[id][subid2] = { ext_lang:ext, lang:lang, subid: subid }; // Simpan URL sementara
             return {
                 text: `${lang} (${ext})`,
-                callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg2: uniqid })
+                callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg1: id, arg2: subid2 })
             };
         });
 
@@ -154,15 +156,17 @@ async function dlvs_choose_sub(bot, query, data) {
 }
 
 async function dlvs_downloadVideo(bot, query, data) {
-    const uniqid = data.arg2;
-    let format_id = tempData[uniqid]?.format_id;
-    let title = tempData[uniqid]?.title;
-    let url = tempData[uniqid]?.url;
-    let acodec = tempData[uniqid]?.acodec;
-    let ext_lang = tempData[uniqid]?.ext_lang;
-    let ext = ext_lang == 'ass' ? 'mkv' : tempData[uniqid]?.ext;
-    let lang = tempData[uniqid]?.lang;
-    tempData[uniqid] = null;
+    let id = data.arg1;
+    let subid2 = data.arg2;
+    let subid = tempData[id][subid2]?.subid;
+    let format_id = tempData[id][subid].format_id;
+    let title = tempData[id][subid].title;
+    let url = tempData[id][subid].url;
+    let acodec = tempData[id][subid].acodec;
+    let ext_lang = tempData[id][subid2].ext_lang;
+    let ext = ext_lang == 'ass' ? 'mkv' : tempData[id][subid].ext;
+    let lang = tempData[id][subid2].lang;
+    tempData[id] = null;
     console.log(acodec);
     console.log(`${format_id}, ${url}`);
     console.log(`${ext_lang}, ${lang}`);
