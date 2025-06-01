@@ -5,7 +5,6 @@ const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
-const { text } = require('stream/consumers');
 
 let tempData = {};
 
@@ -99,47 +98,27 @@ async function dlvs_choose_sub(bot, query, data) {
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             return bot.sendMessage(msg.chat.id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
         }
 
-        // Cari baris pertama yang valid JSON
-        let jsonStr = '';
-        const lines = stdout.split('\n');
-        for (const line of lines) {
-            if (line.trim().startsWith('{') && line.trim().endsWith('}')) {
-                jsonStr = line.trim();
-                break;
-            }
-        }
-        if (!jsonStr) {
-            return bot.sendMessage(chat_id, 'Gagal memproses data JSON dari yt-dlp.');
-        }
-
-        let info;
-        try {
-            info = JSON.parse(jsonStr);
-        } catch (e) {
-            return bot.sendMessage(chat_id, 'Gagal memproses data JSON dari yt-dlp.');
-        }
-
-        if (!info.subtitles || info.subtitles.length === 0) {
-            return bot.sendMessage(chat_id, 'Subtitle tidak ditemukan.');
-        }
+        const list_subs = await get_subs(stdout);
 
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
-        const buttonData = Object.keys(info.subtitles).map(lang => {
-            let subid2 = Math.random().toString(36).substr(2, 5);
-            const ext = info.subtitles[lang][0]?.ext || false;
-            tempData[id][subid2] = { ext_lang:ext, lang:lang, subid: subid }; // Simpan URL sementara
-            return {
-                text: `${lang} (${ext})`,
-                callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg1: id, arg2: subid2 })
-            };
-        });
+        let buttonData = [];
+        list_subs.forEach(sub => {
+            (sub.format || []).forEach(ext => {
+                let subid2 = Math.random().toString(36).substr(2, 5);
+                tempData[id][subid2] = { ext_lang: ext, lang: sub.lang, subid: subid };
+                buttonData.push({
+                    text: `${sub.lang} (${ext})`,
+                    callback_data: JSON.stringify({ function: 'dlvs_downloadVideo', arg1: id, arg2: subid2 })
+                });
+            });
+        }).slice(0, maxButtons);
 
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
@@ -269,6 +248,52 @@ async function dlvs_downloadVideo(bot, query, data) {
             }
         });
     });
+}
+
+async function get_subs(stdout) {
+    const lines = stdout.split('\n');
+    const startIdx = lines.findIndex(line => line.includes('Language Name') || line.includes('Language Format'));
+    let subtitleLines = [];
+    if (startIdx !== -1) {
+        for (let i = startIdx + 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line || line.startsWith('{')) break;
+            subtitleLines.push(line);
+        }
+    }
+
+    const allowedExts = ['srt', 'ass', 'ssa', 'vtt', 'sup', 'sub', 'idx'];
+
+    const subtitleJson = subtitleLines.map(line => {
+        const clean = line.replace(/^\d+:\s*/, '').trim();
+
+        // Format: kode nama format1, format2, ...
+        let match = clean.match(/^([a-z-]+)\s+([A-Za-z ]+?)\s+([a-z0-9, ]+)$/i);
+        if (match) {
+            const formats = match[3].split(',').map(f => f.trim()).filter(f => allowedExts.includes(f));
+            return {
+                lang: match[1],
+                name: match[2].trim(),
+                format: formats
+            };
+        }
+
+        // Format: kode format1, format2, ...
+        match = clean.match(/^([a-z-]+)\s+([a-z0-9, ]+)$/i);
+        if (match) {
+            const formats = match[2].split(',').map(f => f.trim()).filter(f => allowedExts.includes(f));
+            return {
+                Language: match[1],
+                Name: '',
+                Format: formats
+            };
+        }
+
+        // Fallback
+        return { Language: '', Name: '', Format: [] };
+    }).filter(obj => obj.Format.length > 0); // hanya yang punya format yang diizinkan
+
+    return subtitleJson;
 }
 
 module.exports = {
