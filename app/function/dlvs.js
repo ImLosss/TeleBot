@@ -164,7 +164,8 @@ async function dlvs_downloadVideo(bot, query, data) {
     let lang = tempData[uniqid]?.lang;
     tempData[uniqid] = null;
     console.log(acodec);
-    console.log(format_id, url);
+    console.log(`${format_id}, ${url}`);
+    console.log(`${ext_lang}, ${lang}`);
 
     if (!url) {
         return bot.answerCallbackQuery(url, { text: 'URL tidak ditemukan.' });
@@ -185,6 +186,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
 
+        console.log(stdout, 'stdout');
         // Cari file hasil download
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
