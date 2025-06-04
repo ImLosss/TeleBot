@@ -4,4 +4,4 @@ config.json
 *.json
 yt-dlp.exe
 ffmpeg.exe
-donwloads/*
+donwloads
