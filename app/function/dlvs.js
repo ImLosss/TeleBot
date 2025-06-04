@@ -46,8 +46,8 @@ async function dlvs(bot, msg, value, config) {
 
         const durationSeconds = info.duration; // durasi dalam detik
         const durationFormatted = durationSeconds
-            ? new Date(durationSeconds * 1000).toISOString().substr(11, 8)
-            : 'Tidak diketahui';
+            ? '[' + new Date(durationSeconds * 1000).toISOString().substr(11, 8) + ']'
+            : '';
 
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         let id = Math.random().toString(36).substr(2, 3);
@@ -83,7 +83,7 @@ async function dlvs(bot, msg, value, config) {
             buttons.push(buttonData.slice(i, i + 2));
         }
 
-        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan: [${durationFormatted}]`, {
+        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan: ${durationFormatted}`, {
             reply_markup: {
                 inline_keyboard: buttons
             }
