@@ -6,8 +6,11 @@ const fs = require('fs');
 const { cutVal } = require('function/utils');
 
 async function dla(bot, msg, value) {
-    let url = value.split(' ')[0].trim();
     let title = cutVal(value, 1);
+    let url = value.split(' ')[0].trim();
+
+    const ytRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/i;
+    if (!ytRegex.test(url)) await bot.sendMessage(msg.chat.id, 'URL yang diberikan bukan URL YouTube yang valid.');
 
     // Ambil detail musik
     let detail;
@@ -64,7 +67,6 @@ async function dla(bot, msg, value) {
     let safeTitle = (title || detail.title || 'audio').replace(/[\\/:*?"<>|]/g, '_');
     const outputTemplate = path.join(outputDir, `${safeTitle}.mp3`);
     const cmd = `yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o "${outputTemplate}" "${detail.url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
-    console.log(cmd);
 
     let loadingMsg = await bot.sendMessage(msg.chat.id, 'Sedang mengunduh dan mengkonversi audio ke mp3...');
     exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, async (error, stdout, stderr) => {
