@@ -62,12 +62,8 @@ async function dla(bot, msg, value) {
 
     // Gunakan customTitle jika ada, jika tidak pakai judul asli
     let safeTitle = (title || detail.title || 'audio').replace(/[\\/:*?"<>|]/g, '_');
-    const outputTemplate = path.join(outputDir, `${safeTitle}.m4a`);
-
-    const lang = 'zh-Hant'; // atau ganti sesuai kebutuhan
-    const ext_lang = 'vtt'; // atau 'srt' jika ingin srt
-    // Tambahkan opsi subtitle ke command yt-dlp
-    const cmd = `yt-dlp -f bestaudio --extract-audio --audio-format m4a --audio-quality 0 --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${detail.url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location . --cookies-from-browser firefox`;
+    const outputTemplate = path.join(outputDir, `${safeTitle}.mp3`);
+    const cmd = `yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o "${outputTemplate}" "${detail.url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
     console.log(cmd);
 
     let loadingMsg = await bot.sendMessage(msg.chat.id, 'Sedang mengunduh dan mengkonversi audio ke mp3...');
@@ -77,8 +73,6 @@ async function dla(bot, msg, value) {
             await bot.sendMessage(msg.chat.id, `Gagal mengunduh audio.`);
             return;
         }
-
-        console.log(stdout, 'stdout');
         // Pastikan file mp3 sudah ada
         if (!fs.existsSync(outputTemplate)) {
             await bot.sendMessage(msg.chat.id, 'File audio tidak ditemukan.');
@@ -89,7 +83,7 @@ async function dla(bot, msg, value) {
         try {
             await downloadImage(detail.thumbnail, coverPath);
             await changeTitleAndCover(safeTitle, detail.artist || detail.uploader, outputTemplate, coverPath);
-            // fs.unlink(coverPath, () => {});
+            fs.unlink(coverPath, () => {});
         } catch (e) {
             await bot.sendMessage(msg.chat.id, 'Gagal menulis metadata atau mengunduh thumbnail.');
         }
