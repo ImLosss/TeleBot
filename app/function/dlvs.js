@@ -83,7 +83,7 @@ async function dlvs(bot, msg, value, config) {
             buttons.push(buttonData.slice(i, i + 2));
         }
 
-        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan (${durationFormatted}):`, {
+        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan: [${durationFormatted}]`, {
             reply_markup: {
                 inline_keyboard: buttons
             }
@@ -208,7 +208,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nDurasi: ${durationStr}\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
+                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${stats.size / 1048576}\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -310,12 +310,10 @@ function getDuration (videoPath) {
         const ffprobeCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${videoPath}"`;
         const output = execSync(ffprobeCmd).toString().trim();
         const seconds = parseFloat(output);
-        console.log(seconds, 'seconds');
         if (isNaN(seconds)) return '';
         const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
         const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
         const s = Math.floor(seconds % 60).toString().padStart(2, '0');
-        console.log(`${h}:${m}:${s}`, 'duration');
         return `${h}:${m}:${s}`;
     } catch (e) {
         console.log(`gagal mengambil durasi: ${ e.message }`, 'error');

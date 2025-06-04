@@ -1,6 +1,6 @@
 require('module-alias/register');
 const console = require('console');
-const { exec } = require('child_process');
+const { exec, execSync } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
 const path = require('path');
@@ -44,6 +44,11 @@ async function ytdlp(bot, msg, value, config) {
             return bot.sendMessage(msg.chat.id, 'Tidak ditemukan format yang tersedia.');
         }
 
+        const durationSeconds = info.duration; // durasi dalam detik
+        const durationFormatted = durationSeconds
+            ? new Date(durationSeconds * 1000).toISOString().substr(11, 8)
+            : 'Tidak diketahui';
+
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         let id = Math.random().toString(36).substr(2, 3);
         const maxButtons = 40;
@@ -80,7 +85,7 @@ async function ytdlp(bot, msg, value, config) {
             buttons.push(buttonData.slice(i, i + 2));
         }
 
-        bot.sendMessage(msg.chat.id, 'Pilih format yang diinginkan:', {
+        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan: [${durationFormatted}]`, {
             reply_markup: {
                 inline_keyboard: buttons
             }
@@ -138,49 +143,50 @@ async function downloadVideo(bot, query, data) {
             }
 
             const videoPath = path.join(outputDir, userFiles[0].file);
+            let durationStr = getDuration(videoPath);
             const stats = fs.statSync(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
-                    .then(async (fileId) => {
-                        if (!fileId) {
-                            bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
-                            fs.unlink(videoPath, () => {});
-                            return;
-                        }
-                        const linkData = await generatePublicURL(fileId);
-                        if (linkData && linkData.webViewLink) {
-                            bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} ${res}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan:`,
-                                parse_mode: 'Markdown',
-                                reply_markup: {
-                                    inline_keyboard: [
-                                        [
-                                            { text: 'Download', url: linkData.webViewLink }
-                                        ]
-                                    ]
-                                }
-                            })
-                            .then((msg) => {
-                                bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-                                fs.unlink(videoPath, () => {});
-
-                                setTimeout(() => {
-                                    deleteFile(fileId).then(() => { 
-                                        emptyTrash();
-                                        bot.deleteMessage(query.message.chat.id, msg.message_id)
-                                    })
-                                }, 3600000);
-                            });
-                        } else {
-                            bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
-                            fs.unlink(videoPath, () => {});
-                        }
-                    })
-                    .catch((err) => {
+                .then(async (fileId) => {
+                    if (!fileId) {
                         bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
                         fs.unlink(videoPath, () => {});
-                    });
+                        return;
+                    }
+                    const linkData = await generatePublicURL(fileId);
+                    if (linkData && linkData.webViewLink) {
+                        bot.sendPhoto(query.message.chat.id, url_thumbnail, {
+                            caption: `File *${title}.${ext} ${res}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${stats.size / 1048576}\n\nFile akan dihapus dalam 1 jam kedepan:`,
+                            parse_mode: 'Markdown',
+                            reply_markup: {
+                                inline_keyboard: [
+                                    [
+                                        { text: 'Download', url: linkData.webViewLink }
+                                    ]
+                                ]
+                            }
+                        })
+                        .then((msg) => {
+                            bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
+                            fs.unlink(videoPath, () => {});
+
+                            setTimeout(() => {
+                                deleteFile(fileId).then(() => { 
+                                    emptyTrash();
+                                    bot.deleteMessage(query.message.chat.id, msg.message_id)
+                                })
+                            }, 3600000);
+                        });
+                    } else {
+                        bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
+                        fs.unlink(videoPath, () => {});
+                    }
+                })
+                .catch((err) => {
+                    bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                    fs.unlink(videoPath, () => {});
+                });
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
@@ -196,6 +202,22 @@ async function downloadVideo(bot, query, data) {
         });
     });
 }
+
+function getDuration (videoPath) {
+    try {
+        const ffprobeCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${videoPath}"`;
+        const output = execSync(ffprobeCmd).toString().trim();
+        const seconds = parseFloat(output);
+        if (isNaN(seconds)) return '';
+        const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
+        const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+        const s = Math.floor(seconds % 60).toString().padStart(2, '0');
+        return `${h}:${m}:${s}`;
+    } catch (e) {
+        console.log(`gagal mengambil durasi: ${ e.message }`, 'error');
+        return '';
+    }
+};
 
 module.exports = {
     ytdlp, downloadVideo
