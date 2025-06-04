@@ -311,6 +311,7 @@ function getDuration (videoPath) {
         const ffprobeCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${videoPath}"`;
         const output = execSync(ffprobeCmd).toString().trim();
         const seconds = parseFloat(output);
+        console.log(seconds, 'seconds');
         if (isNaN(seconds)) return '';
         const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
         const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
