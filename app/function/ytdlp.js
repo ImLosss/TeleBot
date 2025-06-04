@@ -157,7 +157,7 @@ async function downloadVideo(bot, query, data) {
                     const linkData = await generatePublicURL(fileId);
                     if (linkData && linkData.webViewLink) {
                         bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                            caption: `File *${title}.${ext} ${res}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${stats.size / 1048576}\n\nFile akan dihapus dalam 1 jam kedepan:`,
+                            caption: `File *${title}.${ext} ${res}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}\n\nFile akan dihapus dalam 1 jam kedepan:`,
                             parse_mode: 'Markdown',
                             reply_markup: {
                                 inline_keyboard: [

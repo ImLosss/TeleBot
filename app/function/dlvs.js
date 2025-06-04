@@ -208,7 +208,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${stats.size / 1048576}\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
+                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
