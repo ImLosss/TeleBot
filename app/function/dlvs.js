@@ -44,13 +44,17 @@ async function dlvs(bot, msg, value, config) {
             return bot.sendMessage(msg.chat.id, 'Tidak ditemukan format yang tersedia.');
         }
 
+        const durationSeconds = info.duration; // durasi dalam detik
+        const durationFormatted = durationSeconds
+            ? new Date(durationSeconds * 1000).toISOString().substr(11, 8)
+            : 'Tidak diketahui';
+
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         let id = Math.random().toString(36).substr(2, 3);
         const maxButtons = 40;
         const allowedRes = ['360', '362', '480', '512', '536', '720', '848', '864', '1080', '1280', '1920' ];
         const buttonData = info.formats
             .filter(fmt => {
-                console.log(fmt);
                 let res = (fmt.resolution || fmt.format_note || '').toLowerCase();
                 return allowedRes.some(r => res.includes(r)) && fmt.ext !== 'webm';
             })
@@ -79,7 +83,7 @@ async function dlvs(bot, msg, value, config) {
             buttons.push(buttonData.slice(i, i + 2));
         }
 
-        bot.sendMessage(msg.chat.id, 'Pilih format yang diinginkan:', {
+        bot.sendMessage(msg.chat.id, `Pilih format yang diinginkan (${durationFormatted}):`, {
             reply_markup: {
                 inline_keyboard: buttons
             }
@@ -163,7 +167,7 @@ async function dlvs_downloadVideo(bot, query, data) {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
-    let cmd = `yt-dlp -f ${format_id}+worstaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    let cmd = `yt-dlp -f ${format_id}+bestvideo --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
@@ -174,7 +178,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
 
-        console.log(stdout, 'stdout');
+        // console.log(stdout, 'stdout');
         // Cari file hasil download
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
@@ -190,6 +194,8 @@ async function dlvs_downloadVideo(bot, query, data) {
             }
 
             const videoPath = path.join(outputDir, userFiles[0].file);
+            let durationStr = getDuration(videoPath);
+            console.log(durationStr, 'durationStr');
             const stats = fs.statSync(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
@@ -203,7 +209,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
+                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\nDurasi: ${durationStr}\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
@@ -299,6 +305,22 @@ async function get_subs(stdout) {
 
     return subtitleJson;
 }
+
+function getDuration (videoPath) {
+    try {
+        const ffprobeCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${videoPath}"`;
+        const output = execSync(ffprobeCmd).toString().trim();
+        const seconds = parseFloat(output);
+        if (isNaN(seconds)) return '';
+        const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
+        const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+        const s = Math.floor(seconds % 60).toString().padStart(2, '0');
+        console.log(`${h}:${m}:${s}`, 'duration');
+        return `${h}:${m}:${s}`;
+    } catch (e) {
+        return '';
+    }
+};
 
 module.exports = {
     dlvs, dlvs_choose_sub, dlvs_downloadVideo
