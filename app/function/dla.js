@@ -10,7 +10,7 @@ async function dla(bot, msg, value) {
     let url = value.split(' ')[0].trim();
 
     const ytRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/i;
-    if (!ytRegex.test(url)) await bot.sendMessage(msg.chat.id, 'URL yang diberikan bukan URL YouTube yang valid.');
+    if (!ytRegex.test(url)) return bot.sendMessage(msg.chat.id, 'URL yang diberikan bukan URL YouTube yang valid.');
 
     // Ambil detail musik
     let detail;
