@@ -133,6 +133,8 @@ async function dlvs_choose_sub(bot, query, data) {
             buttons.push(buttonData.slice(i, i + 2));
         }
 
+        if (buttons.length === 0) return bot.sendMessage(chat_id, 'Tidak ada subtitle yang tersedia.');
+
         bot.sendMessage(chat_id, 'Pilih Subtitle yang diinginkan:', {
             reply_markup: {
                 inline_keyboard: buttons
