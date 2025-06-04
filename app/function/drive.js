@@ -41,7 +41,7 @@ async function uploadFile(path, fileName) {
     }
 }
 
-async function deleteFile(fileID) {
+async function deleteFileDrive(fileID) {
     try {
         const response = await drive.files.delete({
             fileId: fileID
@@ -93,6 +93,6 @@ async function emptyTrash() {
 }
 
 module.exports = {
-    uploadFile, generatePublicURL, deleteFile, emptyTrash
+    uploadFile, generatePublicURL, deleteFileDrive, emptyTrash
 }
 

@@ -2,7 +2,7 @@ require('module-alias/register');
 const console = require('console');
 const { exec, execSync } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
-const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
+const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
 
@@ -172,7 +172,7 @@ async function downloadVideo(bot, query, data) {
                             fs.unlink(videoPath, () => {});
 
                             setTimeout(() => {
-                                deleteFile(fileId).then(() => { 
+                                deleteFileDrive(fileId).then(() => { 
                                     emptyTrash();
                                     bot.deleteMessage(query.message.chat.id, msg.message_id)
                                 })

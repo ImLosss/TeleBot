@@ -2,7 +2,7 @@ require('module-alias/register');
 const console = require('console');
 const { exec, execSync } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
-const { uploadFile, generatePublicURL, deleteFile, emptyTrash } = require('function/drive');
+const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
 
@@ -225,7 +225,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                                 fs.unlink(videoPath, () => {});
 
                                 setTimeout(() => {
-                                    deleteFile(fileId).then(() => { 
+                                    deleteFileDrive(fileId).then(() => { 
                                         emptyTrash();
                                         bot.deleteMessage(query.message.chat.id, msg.message_id)
                                     })
@@ -273,13 +273,17 @@ async function get_subs(stdout) {
         }
     }
 
+    if (subtitleLines.length === 0) return { Language: '', Name: '', Format: [] };
+
     const allowedExts = ['srt', 'ass', 'ssa', 'vtt', 'sup', 'sub', 'idx'];
 
     const subtitleJson = subtitleLines.map(line => {
         const clean = line.replace(/^\d+:\s*/, '').trim();
 
+        console.log(clean);
+
         // Format: kode nama format1, format2, ...
-        let match = clean.match(/^([a-z-]+)\s+([A-Za-z ]+?)\s+([a-z0-9, ]+)$/i);
+        let match = clean.match(/^([a-z-]+)\s+(.+?)\s+([a-z0-9,\s-]+)$/i);
         if (match) {
             const formats = match[3].split(',').map(f => f.trim()).filter(f => allowedExts.includes(f));
             return {
@@ -290,18 +294,18 @@ async function get_subs(stdout) {
         }
 
         // Format: kode format1, format2, ...
-        match = clean.match(/^([a-z-]+)\s+([a-z0-9, ]+)$/i);
+        match = clean.match(/^([a-z-]+)\s+([a-z0-9,\s-]+)$/i);
         if (match) {
             const formats = match[2].split(',').map(f => f.trim()).filter(f => allowedExts.includes(f));
             return {
-                language: match[1],
+                lang: match[1],
                 name: '',
                 format: formats
             };
         }
 
         // Fallback
-        return { Language: '', Name: '', Format: [] };
+        return { lang: '', name: '', format: [] };
     }).filter(obj => obj.format.length > 0); // hanya yang punya format yang diizinkan
 
     return subtitleJson;
