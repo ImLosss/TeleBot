@@ -273,7 +273,7 @@ async function get_subs(stdout) {
         }
     }
 
-    if (subtitleLines.length === 0) return { Language: '', Name: '', Format: [] };
+    if (subtitleLines.length === 0) return [];
 
     const allowedExts = ['srt', 'ass', 'ssa', 'vtt', 'sup', 'sub', 'idx'];
 
