@@ -94,7 +94,7 @@ async function dlvs(bot, msg, value, config) {
                 };
             });
         
-        console.log(tempData[id][subid]);
+        console.log(tempData[id]);
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
         if (buttonData.length === 0) return bot.sendMessage(msg.chat.id, 'Tidak ada format yang sesuai.');
