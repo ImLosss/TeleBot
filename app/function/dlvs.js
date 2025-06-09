@@ -216,8 +216,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             console.log(stderr, 'stderr');
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
-
-        console.log(stdout, 'stdout');
+        
         // Cari file hasil download
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
