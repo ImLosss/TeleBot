@@ -201,7 +201,7 @@ async function dlvs_downloadVideo(bot, query, data) {
 
     if (hardsub) {
         console.log('hardsub');
-        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=${y}" -c:a copy "downloads/${id}_hardsub.${ext}"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
