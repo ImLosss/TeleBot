@@ -195,13 +195,13 @@ async function dlvs_downloadVideo(bot, query, data) {
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-    const outputTemplate = path.join(outputDir, `${id}.${ext}`);
+    const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
     let cmd = `yt-dlp -f ${format_id}+bestaudio --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
     if(acodec) cmd = `yt-dlp -f ${format_id} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     if (hardsub) {
         console.log('hardsub');
-        cmd = `yt-dlp -f ${format_id}+bestaudio --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "${id}.${ext}" -vf "subtitles=${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=${y}" -c:a copy "${id}_hardsub.${ext}"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "${id}.${ext}" -vf "subtitles=${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=${y}" -c:a copy "${id}_hardsub.${ext}"`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
