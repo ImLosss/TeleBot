@@ -93,6 +93,8 @@ async function dlvs(bot, msg, value, config) {
                     callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
                 };
             });
+        
+        console.log(tempData[id][subid]);
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
         if (buttonData.length === 0) return bot.sendMessage(msg.chat.id, 'Tidak ada format yang sesuai.');
