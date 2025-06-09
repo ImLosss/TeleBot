@@ -93,8 +93,7 @@ async function dlvs(bot, msg, value, config) {
                     callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
                 };
             });
-        
-        console.log(tempData[id]);
+            
         // Bagi menjadi baris berisi maksimal 2 tombol
         const buttons = [];
         if (buttonData.length === 0) return bot.sendMessage(msg.chat.id, 'Tidak ada format yang sesuai.');
@@ -178,6 +177,8 @@ async function dlvs_downloadVideo(bot, query, data) {
     tempData[id] = null;
     console.log(`${format_id}, ${url}`);
     console.log(`${ext_lang}, ${lang}`);
+
+    return console.log(tempData[id][subid], 'tempData');
 
     let hardsub = tempData[id][subid].hardsub;
     let fontSize, y, outline;
