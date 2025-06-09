@@ -11,6 +11,18 @@ let tempData = {};
 async function dlvs(bot, msg, value, config) {
     if (!value) return bot.sendMessage(msg.chat.id, 'Silakan kirim link video yang valid.');
 
+    let url = value;
+    let hardsub = false;
+    let fontSize, y, outline;
+    if (value.startsWith('true')) {
+        value = value.split(' ');
+        url = value[1];
+        hardsub = true;
+        fontSize = value[2];
+        y  = value[3];
+        outline = value[4];
+    }
+
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
@@ -70,7 +82,12 @@ async function dlvs(bot, msg, value, config) {
                 let res = (fmt.resolution || fmt.format_note || '').toLowerCase();
                 let subid = Math.random().toString(36).substr(2, 5);
                 if (tempData[id] == undefined) tempData[id] = {};
-                tempData[id][subid] = {title: info.title, res: res, thumbnail: info.thumbnail, url: value, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
+                tempData[id][subid] = {title: info.title, res: res, thumbnail: info.thumbnail, url: url, hardsub: hardsub, format_id: fmt.format_id, acodec: fmt.acodec == 'none' ? false : true, ext: fmt.ext, sender_id: msg.from.id, chat_id: msg.chat.id}; 
+                if (hardsub) {
+                    tempData[id][subid].fontSize = fontSize;
+                    tempData[id][subid].y = y;
+                    tempData[id][subid].outline = outline;
+                }
                 return {
                     text: `${fmt.ext} | ${fmt.resolution || fmt.format_note || ''}${sizeMB}`,
                     callback_data: JSON.stringify({ function: 'dlvs_choose_sub', arg1: id, arg2: subid })
@@ -157,9 +174,17 @@ async function dlvs_downloadVideo(bot, query, data) {
     let ext = 'mkv';
     let lang = tempData[id][subid2].lang;
     tempData[id] = null;
-    console.log(acodec);
     console.log(`${format_id}, ${url}`);
     console.log(`${ext_lang}, ${lang}`);
+
+    let hardsub = tempData[id][subid].hardsub;
+    let fontSize, y, outline;
+    if( hardsub ) {
+        fontSize = tempData[id][subid].fontSize;
+        y = tempData[id][subid].y;
+        outline = tempData[id][subid].outline;
+        ext = 'mp4';
+    }
 
     if (!url) {
         return bot.answerCallbackQuery(url, { text: 'URL tidak ditemukan.' });
@@ -168,9 +193,13 @@ async function dlvs_downloadVideo(bot, query, data) {
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
-    const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
-    let cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
-    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    const outputTemplate = path.join(outputDir, `${id}.${ext}`);
+    let cmd = `yt-dlp -f ${format_id}+bestaudio --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    if(acodec) cmd = `yt-dlp -f ${format_id} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+
+    if (hardsub) {
+        cmd = `yt-dlp -f ${format_id}+bestaudio --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "${id}.${ext}" -vf "subtitles=${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=${y}" -c:a copy "${id}_hardsub.${ext}"`;
+    }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
 
