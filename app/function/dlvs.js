@@ -13,14 +13,18 @@ async function dlvs(bot, msg, value, config) {
 
     let url = value;
     let hardsub = false;
-    let fontSize, y, outline;
+    let fontSize, y, outline, wmSize;
     if (value.startsWith('true')) {
         value = value.split(' ');
+
+        if (value.length < 6) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/dlvs true <url> <fontSize> <y> <outline> <wmSize>`');
+
         url = value[1];
         hardsub = true;
         fontSize = value[2];
         y  = value[3];
         outline = value[4];
+        wmSize = value[5];
     }
 
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
@@ -87,6 +91,7 @@ async function dlvs(bot, msg, value, config) {
                     tempData[id][subid].fontSize = fontSize;
                     tempData[id][subid].y = y;
                     tempData[id][subid].outline = outline;
+                    tempData[id][subid].wmSize = wmSize;
                 }
                 return {
                     text: `${fmt.ext} | ${fmt.resolution || fmt.format_note || ''}${sizeMB}`,
@@ -178,12 +183,13 @@ async function dlvs_downloadVideo(bot, query, data) {
     console.log(`${ext_lang}, ${lang}`);
 
     let hardsub = tempData[id][subid].hardsub;
-    let fontSize, y, outline;
+    let fontSize, y, outline, wmSize;
     if( hardsub ) {
         fontSize = tempData[id][subid].fontSize;
         y = tempData[id][subid].y;
         outline = tempData[id][subid].outline;
         ext = 'mp4';
+        wmSize = tempData[id][subid].wmSize;
     }
 
     tempData[id] = null;
@@ -196,12 +202,11 @@ async function dlvs_downloadVideo(bot, query, data) {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
-    let cmd = `yt-dlp -f ${format_id}+bestaudio --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
-    if(acodec) cmd = `yt-dlp -f ${format_id} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    let cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     if (hardsub) {
-        console.log('hardsub');
-        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y}',drawtext=text='DongWorld':font=Verdana:fontsize=20:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y}',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
@@ -212,7 +217,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
         }
 
-        // console.log(stdout, 'stdout');
+        console.log(stdout, 'stdout');
         // Cari file hasil download
         fs.readdir(outputDir, async (err, files) => {
             if (err) return bot.sendMessage(query.message.chat.id, 'Gagal membaca file hasil unduhan.');
@@ -226,8 +231,6 @@ async function dlvs_downloadVideo(bot, query, data) {
             if (!userFiles.length) {
                 return bot.sendMessage(query.message.chat.id, 'File video tidak ditemukan.');
             }
-
-            console.log(userFiles, 'userFiles');
 
             const videoPath = path.join(outputDir, userFiles[0].file);
             let durationStr = getDuration(videoPath);
