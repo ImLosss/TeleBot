@@ -16,7 +16,7 @@ async function dla(bot, msg, value) {
     let detail;
     try {
         detail = await new Promise((resolve, reject) => {
-            exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox "${url}"`, (error, stdout, stderr) => {
+            exec(`yt-dlp -vU -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox "${url}"`, (error, stdout, stderr) => {
                 if (error) {
                     console.log('stderr:', stderr);
                     return reject('Gagal mengambil info audio');
