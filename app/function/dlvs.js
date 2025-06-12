@@ -174,7 +174,7 @@ async function dlvs_downloadVideo(bot, query, data) {
     let format_id = tempData[id][subid].format_id;
     let title = tempData[id][subid].title;
     let res = tempData[id][subid].res;
-    let url_thumbnail = tempData[id][subid].thumbnail;
+    let url_thumbnail = tempData[id][subid].thumbnail || "https://thumbs.dreamstime.com/b/no-thumbnail-images-placeholder-forums-blogs-websites-148010338.jpg?w=768";
     let url = tempData[id][subid].url;
     let acodec = tempData[id][subid].acodec;
     let ext_lang = tempData[id][subid2].ext_lang;
