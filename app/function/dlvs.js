@@ -33,6 +33,7 @@ async function dlvs(bot, msg, value, config) {
     exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${url}"`, (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
+            console.log('error:', error.message);
             return bot.sendMessage(msg.chat.id, `Gagal mengambil format`);
         }
 
