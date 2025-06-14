@@ -13,9 +13,10 @@ async function downloadIqiyi(bot, msg, value, config) {
     let hardsub = false;
     let fontSize, y, outline, wmSize;
     let format_id = value.split(' ')[1];
+    let ext = 'mkv';
     if (value.startsWith('true')) {
         value = value.split(' ');
-
+        ext = 'mp4';
         if (value.length < 6) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/dlvs true <url> <fontSize> <y> <outline> <wmSize>`');
 
         url = value[1];
