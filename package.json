@@ -6,12 +6,14 @@
   },
   "dependencies": {
     "googleapis": "^149.0.0",
+    "input": "^1.0.1",
     "mime-types": "^3.0.1",
     "module-alias": "^2.2.3",
     "moment-timezone": "^0.5.45",
     "node-id3": "^0.2.9",
     "node-telegram-bot-api": "^0.66.0",
-    "proper-lockfile": "^4.1.2"
+    "proper-lockfile": "^4.1.2",
+    "telegram": "^2.26.22"
   },
   "_moduleAliases": {
     "listeners": "./listeners",
