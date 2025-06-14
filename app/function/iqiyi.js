@@ -27,8 +27,7 @@ async function downloadIqiyi(bot, msg, value, config) {
         wmSize = value[5];
         format_id = value[6]
     }
-
-    const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mulai mendownload...');
+    
     let id = Math.random().toString(36).substr(2, 3);
 
     if (!url) {
@@ -43,7 +42,7 @@ async function downloadIqiyi(bot, msg, value, config) {
 
     if (hardsub) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.id.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
 
-    bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
+    const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mulai mendownload...');
 
     exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
