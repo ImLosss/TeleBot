@@ -12,7 +12,7 @@ async function downloadIqiyi(bot, msg, value, config) {
     let url = value;
     let hardsub = false;
     let fontSize, y, outline, wmSize;
-    let format_id = value.split(' ')[2];
+    let format_id = value.split(' ')[1];
     if (value.startsWith('true')) {
         value = value.split(' ');
 
