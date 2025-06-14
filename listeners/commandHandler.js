@@ -10,6 +10,7 @@ const prefixFunctions = {
     'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
+    'iq': withErrorHandling((bot, msg, value, config, fromId) => cmd.downloadIqiyi(bot, msg, value, config)),
 }
 
 const prefixFunctionsGroup = {

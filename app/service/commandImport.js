@@ -5,6 +5,7 @@ const ytdlp = require('function/ytdlp');
 const utils = require('function/utils');
 const dlvs = require('function/dlvs');
 const dla = require('function/dla');
+const downloadIqiyi = require('function/iqiyi');
 
 module.exports = {
     ...sendChannel,
@@ -12,5 +13,6 @@ module.exports = {
     ...utils,
     ...ytdlp,
     ...dlvs,
-    ...dla
+    ...dla,
+    ...downloadIqiyi
 };
