@@ -148,5 +148,5 @@ function getDuration (videoPath) {
 };
 
 module.exports = {
-    dlvs, downloadIqiyi
+    downloadIqiyi
 }
