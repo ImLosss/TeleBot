@@ -22,5 +22,5 @@ const merged = [...blocks1, ...blocks2]
     return lines.join('\n');
   });
 
-fs.writeFileSync('downloads/output.srt', merged.join('\n\n'), 'utf-8');
-console.log(`✅ Merged SRT written to downloads/output.srt`);
+fs.writeFileSync(path_srt, merged.join('\n\n'), 'utf-8');
+console.log(`✅ Merged SRT written to ${path_srt}`);
