@@ -27,7 +27,7 @@ async function downloadIqiyi(bot, msg, value, config) {
         wmSize = value[5];
         format_id = value[6]
     }
-    
+
     let id = Math.random().toString(36).substr(2, 3);
 
     if (!url) {
@@ -79,8 +79,7 @@ async function downloadIqiyi(bot, msg, value, config) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            bot.sendMessage(msg.chat.id, {
-                                caption: `File berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan`,
+                            bot.sendMessage(msg.chat.id, `File berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan`, {
                                 parse_mode: 'Markdown',
                                 reply_markup: {
                                     inline_keyboard: [
