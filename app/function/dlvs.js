@@ -9,7 +9,15 @@ const fs = require('fs');
 let tempData = {};
 
 async function dlvs(bot, msg, value, config) {
+const screenshots = [
+    { type: 'photo', media: 'downloads/ss1.png' },
+    { type: 'photo', media: 'downloads/ss2.png' },
+    { type: 'photo', media: 'downloads/ss3.png' }
+];
 
+    await bot.sendMediaGroup(msg.chat.id, screenshots);
+
+    return 
     if (!value) return bot.sendMessage(msg.chat.id, 'Silakan kirim link video yang valid.');
 
     let url = value;
@@ -249,9 +257,9 @@ async function dlvs_downloadVideo(bot, query, data) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             const screenshots = [
-                                { type: 'photo', media: 'downloads/ss1.jpg' },
-                                { type: 'photo', media: 'downloads/ss2.jpg' },
-                                { type: 'photo', media: 'downloads/ss3.jpg' }
+                                { type: 'photo', media: { source: 'downloads/ss1.jpg' } },
+                                { type: 'photo', media: { source: 'downloads/ss2.jpg' } },
+                                { type: 'photo', media: { source: 'downloads/ss3.jpg' } }
                             ];
 
                             await bot.sendMediaGroup(query.message.chat.id, screenshots);
