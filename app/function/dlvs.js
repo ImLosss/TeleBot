@@ -207,8 +207,8 @@ async function dlvs_downloadVideo(bot, query, data) {
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     if (hardsub) {
-        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
-        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.jpg" && ffmpeg -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.jpg" && ffmpeg -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.jpg`;
+        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.jpg" && ffmpeg -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.jpg" && ffmpeg -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.jpg`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
@@ -247,6 +247,13 @@ async function dlvs_downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
+                            const screenshots = [
+                                { type: 'photo', media: { source: 'downloads/ss1.jpg' } },
+                                { type: 'photo', media: { source: 'downloads/ss2.jpg' } },
+                                { type: 'photo', media: { source: 'downloads/ss3.jpg' } }
+                            ];
+
+                            await bot.sendMediaGroup(query.message.chat.id, screenshots);
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
                                 caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
                                 parse_mode: 'Markdown',
