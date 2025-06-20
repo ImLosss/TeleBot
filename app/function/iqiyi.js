@@ -40,7 +40,7 @@ async function downloadIqiyi(bot, msg, value, config) {
     const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
     cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
-    if (hardsub) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.id.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.id.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.jpg" && ffmpeg -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.jpg" && ffmpeg -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.jpg"`;
+    if (hardsub) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.id.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "26" -vf "subtitles=downloads/${id}.id.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
 
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mulai mendownload...');
 
@@ -80,9 +80,9 @@ async function downloadIqiyi(bot, msg, value, config) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             const screenshots = [
-                                { type: 'photo', media: 'downloads/ss1.jpg' },
-                                { type: 'photo', media: 'downloads/ss2.jpg' },
-                                { type: 'photo', media: 'downloads/ss3.jpg' }
+                                { type: 'photo', media: 'downloads/ss1.png' },
+                                { type: 'photo', media: 'downloads/ss2.png' },
+                                { type: 'photo', media: 'downloads/ss3.png' }
                             ];
 
                             await bot.sendMediaGroup(msg.chat.id, screenshots);
