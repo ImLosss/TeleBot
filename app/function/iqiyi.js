@@ -79,13 +79,13 @@ async function downloadIqiyi(bot, msg, value, config) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
-                            // const screenshots = [
-                            //     { type: 'photo', media: 'downloads/ss1.png' },
-                            //     { type: 'photo', media: 'downloads/ss2.png' },
-                            //     { type: 'photo', media: 'downloads/ss3.png' }
-                            // ];
+                            const screenshots = [
+                                { type: 'photo', media: 'downloads/ss1.png' },
+                                { type: 'photo', media: 'downloads/ss2.png' },
+                                { type: 'photo', media: 'downloads/ss3.png' }
+                            ];
 
-                            // await bot.sendMediaGroup(msg.chat.id, screenshots);
+                            await bot.sendMediaGroup(msg.chat.id, screenshots);
                             bot.sendMessage(msg.chat.id, `File berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan`, {
                                 parse_mode: 'Markdown',
                                 reply_markup: {
