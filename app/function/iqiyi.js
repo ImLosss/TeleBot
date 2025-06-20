@@ -113,6 +113,7 @@ async function downloadIqiyi(bot, msg, value, config) {
                         }
                     })
                     .catch((err) => {
+                        console.log(err);
                         bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
                         fs.unlink(videoPath, () => {});
                     });
