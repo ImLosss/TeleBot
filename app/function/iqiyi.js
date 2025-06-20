@@ -80,9 +80,9 @@ async function downloadIqiyi(bot, msg, value, config) {
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
                             const screenshots = [
-                                { type: 'photo', media: { source: 'downloads/ss1.jpg' } },
-                                { type: 'photo', media: { source: 'downloads/ss2.jpg' } },
-                                { type: 'photo', media: { source: 'downloads/ss3.jpg' } }
+                                { type: 'photo', media: 'downloads/ss1.jpg' },
+                                { type: 'photo', media: 'downloads/ss2.jpg' },
+                                { type: 'photo', media: 'downloads/ss3.jpg' }
                             ];
 
                             await bot.sendMediaGroup(msg.chat.id, screenshots);
