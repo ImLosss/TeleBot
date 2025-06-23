@@ -14,7 +14,7 @@ async function ytdlp(bot, msg, value, config) {
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 20 }, (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             return bot.sendMessage(msg.chat.id, `Gagal mengambil format`);
