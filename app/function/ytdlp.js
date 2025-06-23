@@ -16,7 +16,8 @@ async function ytdlp(bot, msg, value, config) {
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
     exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
-            console.log('stderr:', stderr);
+            console.log(stderr);
+            console.log('stderr:', stderr.message);
             return bot.sendMessage(msg.chat.id, `Gagal mengambil format`);
         }
 
