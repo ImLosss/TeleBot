@@ -91,8 +91,47 @@ async function dla(bot, msg, value) {
         }
         const stats = fs.statSync(outputTemplate);
         if (stats.size > 50 * 1024 * 1024) {
-            await bot.sendMessage(msg.chat.id, `File terlalu besar (${Math.floor(stats.size / 1048576)} MB), tidak bisa dikirim lewat Telegram.`);
-            fs.unlink(outputTemplate, () => {});
+            let tempMsg = await bot.sendMessage(msg.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
+            uploadFile(videoPath, path.basename(videoPath))
+            .then(async (fileId) => {
+                if (!fileId) {
+                    bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
+                    fs.unlink(videoPath, () => {});
+                    return;
+                }
+                const linkData = await generatePublicURL(fileId);
+                if (linkData && linkData.webViewLink) {
+                    bot.sendPhoto(msg.chat.id, url_thumbnail, {
+                        caption: `File *${safeTitle}.mp3* berhasil diupload ke Google Drive\n\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan:`,
+                        parse_mode: 'Markdown',
+                        reply_markup: {
+                            inline_keyboard: [
+                                [
+                                    { text: 'Download', url: linkData.webViewLink }
+                                ]
+                            ]
+                        }
+                    })
+                    .then((msg) => {
+                        bot.deleteMessage(msg.chat.id, tempMsg.message_id)
+                        fs.unlink(outputTemplate, () => {});
+
+                        setTimeout(() => {
+                            deleteFileDrive(fileId).then(() => { 
+                                emptyTrash();
+                                bot.deleteMessage(msg.chat.id, msg.message_id)
+                            })
+                        }, 3600000);
+                    });
+                } else {
+                    bot.sendMessage(msg.chat.id, 'Terjadi kesalahan saat mengupload file anda');
+                    fs.unlink(outputTemplate, () => {});
+                }
+            })
+            .catch((err) => {
+                bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                fs.unlink(outputTemplate, () => {});
+            });
         } else {
             bot.sendChatAction(msg.chat.id, 'upload_audio');
             bot.sendAudio(msg.chat.id, outputTemplate, { caption: `File *${safeTitle}.mp3* berhasil diunduh`, parse_mode: 'Markdown' })

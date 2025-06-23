@@ -31,7 +31,7 @@ module.exports = (function() {
 
             if(!text) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username == 'GroupAnonymousBot' ? "admin" : msg.from.username }`);
+            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username ? msg.from.username : msg.from.first_name }`);
             const value = cutVal(text, 1);
 
             if(msg.text != "") {

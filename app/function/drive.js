@@ -76,6 +76,7 @@ async function cekMime(path){
     // Perbaiki jika hasilnya salah
     if (path.endsWith('.mp4')) mimeType = 'video/mp4';
     if (path.endsWith('.mkv')) mimeType = 'video/x-matroska';
+    if (path.endsWith('.mp3')) mimeType = 'audio/mpeg';
     // Tambahkan format lain jika perlu
     return mimeType || 'application/octet-stream';
 }
