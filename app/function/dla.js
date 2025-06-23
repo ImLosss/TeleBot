@@ -1,6 +1,7 @@
 require('module-alias/register');
 const console = require('console');
 const { exec } = require('child_process');
+const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
 const path = require('path');
 const fs = require('fs');
 const { cutVal } = require('function/utils');
