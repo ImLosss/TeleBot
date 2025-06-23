@@ -16,7 +16,7 @@ async function dla(bot, msg, value) {
     let detail;
     try {
         detail = await new Promise((resolve, reject) => {
-            exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox "${url}"`, (error, stdout, stderr) => {
+            exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox "${url}"`, { maxBuffer: 1024 * 1024 * 200 }, (error, stdout, stderr) => {
                 if (error) {
                     console.log('stderr:', stderr);
                     return reject('Gagal mengambil info audio');
@@ -69,7 +69,7 @@ async function dla(bot, msg, value) {
     const cmd = `yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o "${outputTemplate}" "${detail.url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     let loadingMsg = await bot.sendMessage(msg.chat.id, 'Sedang mengunduh dan mengkonversi audio ke mp3...');
-    exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, async (error, stdout, stderr) => {
+    exec(cmd, { maxBuffer: 1024 * 1024 * 200 }, async (error, stdout, stderr) => {
         if (error) {
             console.log(stderr, 'stderr');
             await bot.sendMessage(msg.chat.id, `Gagal mengunduh audio.`);

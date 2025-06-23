@@ -14,7 +14,7 @@ async function ytdlp(bot, msg, value, config) {
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 1000 }, (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 200 }, (error, stdout, stderr) => {
         if (error) {
             console.log(stderr);
             console.log('stderr:', stderr.message);
@@ -123,7 +123,7 @@ async function downloadVideo(bot, query, data) {
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
 
-    exec(cmd, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
+    exec(cmd, { maxBuffer: 1024 * 1024 * 200 }, (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             // return bot.sendMessage(query.message.chat.id, `Gagal mengunduh video: ${stderr || error.message}`);
