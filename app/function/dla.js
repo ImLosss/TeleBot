@@ -93,11 +93,11 @@ async function dla(bot, msg, value) {
         const stats = fs.statSync(outputTemplate);
         if (stats.size > 50 * 1024 * 1024) {
             let tempMsg = await bot.sendMessage(msg.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
-            uploadFile(videoPath, path.basename(videoPath))
+            uploadFile(outputTemplate, path.basename(outputTemplate))
             .then(async (fileId) => {
                 if (!fileId) {
                     bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
-                    fs.unlink(videoPath, () => {});
+                    fs.unlink(outputTemplate, () => {});
                     return;
                 }
                 const linkData = await generatePublicURL(fileId);
@@ -130,7 +130,7 @@ async function dla(bot, msg, value) {
                 }
             })
             .catch((err) => {
-                bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
                 fs.unlink(outputTemplate, () => {});
             });
         } else {
