@@ -7,6 +7,7 @@ const prefixFunctions = {
     'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
     'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
     'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
+    'bw': withErrorHandling((bot, msg, value, config, fromId) => cmd.bw(bot, value, config, fromId)),
     'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
@@ -16,6 +17,7 @@ const prefixFunctions = {
 const prefixFunctionsGroup = {
     'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
+    'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
 }
 
 module.exports = (function() {
@@ -32,6 +34,14 @@ module.exports = (function() {
             if(!text) return;
 
             if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username ? msg.from.username : msg.from.first_name }`);
+
+            if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
+            if(config.ID_CHANNEL == msg.chat.id && config.BLACKLIST_WORDS.some(word => text.toLowerCase().includes(word.toLowerCase()))) {
+                setTimeout(() => {
+                    bot.deleteMessage(msg.chat.id, msg.message_id);
+                }, 3000);
+            }
+
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
