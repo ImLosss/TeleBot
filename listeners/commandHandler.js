@@ -53,6 +53,10 @@ module.exports = (function() {
                         if(msg.chat.type == 'private') {
                             if(!config.OWNER.includes(msg.from.id)) return
 
+                            bot.sendMessage(fromId, `Command: ${text}`, {
+                                reply_to_message_id: msg.message_id,
+                            });
+
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
                             }
