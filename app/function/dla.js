@@ -60,8 +60,6 @@ async function dla(bot, msg, value) {
         return bot.sendMessage(msg.chat.id, typeof err === 'string' ? err : 'Gagal mengambil detail audio');
     }
 
-    console.log(detail.duration, 'duration');
-
     // Download audio bestaudio dan langsung convert ke mp3 dengan nama customTitle
     const outputDir = path.resolve(__dirname, '../../downloads');
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
