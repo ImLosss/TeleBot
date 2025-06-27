@@ -24,8 +24,6 @@ module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
             console.log(msg);
-
-            console.log('tess');
             
             let config = readJSONFileSync(`./config.json`);
             if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
