@@ -42,10 +42,11 @@ module.exports = (function() {
                 }, 3000);
             }
 
+            onsole.log('tess');
+
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
-                console.log('tess');
                 for (const pre of prefix) {
                     if (text.startsWith(`${pre}`)) {
                         const funcName = text.replace(pre, '').trim().split(' ');
