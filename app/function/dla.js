@@ -130,6 +130,7 @@ async function dla(bot, msg, value) {
                 }
             })
             .catch((err) => {
+                console.log(err.message);
                 bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
                 fs.unlink(outputTemplate, () => {});
             });
