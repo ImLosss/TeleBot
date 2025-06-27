@@ -45,9 +45,9 @@ module.exports = (function() {
             const value = cutVal(text, 1);
 
             if(msg.text != "") {
+                console.log('tess');
                 for (const pre of prefix) {
                     if (text.startsWith(`${pre}`)) {
-                        console.log('tess');
                         const funcName = text.replace(pre, '').trim().split(' ');
                         const fromId = msg.chat.id;
 
