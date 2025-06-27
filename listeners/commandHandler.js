@@ -35,14 +35,14 @@ module.exports = (function() {
 
             if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username ? msg.from.username : msg.from.first_name }`);
 
+            console.log('tess');
+            
             if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
             if(config.ID_CHANNEL == msg.chat.id && config.BLACKLIST_WORDS.some(word => text.toLowerCase().includes(word.toLowerCase()))) {
                 setTimeout(() => {
                     bot.deleteMessage(msg.chat.id, msg.message_id);
                 }, 3000);
             }
-
-            console.log('tess');
 
             const value = cutVal(text, 1);
 
