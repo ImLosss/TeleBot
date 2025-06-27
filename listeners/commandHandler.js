@@ -24,6 +24,8 @@ module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
             console.log(msg);
+
+            console.log('tess');
             
             let config = readJSONFileSync(`./config.json`);
             if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
@@ -35,8 +37,6 @@ module.exports = (function() {
 
             if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username ? msg.from.username : msg.from.first_name }`);
 
-            console.log('tess');
-            
             if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
             if(config.ID_CHANNEL == msg.chat.id && config.BLACKLIST_WORDS.some(word => text.toLowerCase().includes(word.toLowerCase()))) {
                 setTimeout(() => {
