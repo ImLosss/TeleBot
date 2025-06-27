@@ -46,7 +46,7 @@ async function dla(bot, msg, value) {
                 }
                 resolve({
                     title: info.title,
-                    thumbnail: info.thumbnail,
+                    thumbnail: info.thumbnail || "https://thumbs.dreamstime.com/b/no-thumbnail-images-placeholder-forums-blogs-websites-148010338.jpg?w=768";,
                     url: url,
                     format_id: audioFormat.format_id,
                     ext: audioFormat.ext,
@@ -59,6 +59,8 @@ async function dla(bot, msg, value) {
     } catch (err) {
         return bot.sendMessage(msg.chat.id, typeof err === 'string' ? err : 'Gagal mengambil detail audio');
     }
+
+    console.log(detail.duration, 'duration');
 
     // Download audio bestaudio dan langsung convert ke mp3 dengan nama customTitle
     const outputDir = path.resolve(__dirname, '../../downloads');
@@ -102,7 +104,7 @@ async function dla(bot, msg, value) {
                 }
                 const linkData = await generatePublicURL(fileId);
                 if (linkData && linkData.webViewLink) {
-                    bot.sendPhoto(msg.chat.id, url_thumbnail, {
+                    bot.sendPhoto(msg.chat.id, detail.thumbnail, {
                         caption: `File *${safeTitle}.mp3* berhasil diupload ke Google Drive\n\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan:`,
                         parse_mode: 'Markdown',
                         reply_markup: {
