@@ -46,7 +46,7 @@ async function dla(bot, msg, value) {
                 }
                 resolve({
                     title: info.title,
-                    thumbnail: info.thumbnail || "https://thumbs.dreamstime.com/b/no-thumbnail-images-placeholder-forums-blogs-websites-148010338.jpg?w=768";,
+                    thumbnail: info.thumbnail || "https://thumbs.dreamstime.com/b/no-thumbnail-images-placeholder-forums-blogs-websites-148010338.jpg?w=768",
                     url: url,
                     format_id: audioFormat.format_id,
                     ext: audioFormat.ext,
