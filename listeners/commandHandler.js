@@ -42,7 +42,7 @@ module.exports = (function() {
                 }, 3000);
             }
 
-            onsole.log('tess');
+            console.log('tess');
 
             const value = cutVal(text, 1);
 
