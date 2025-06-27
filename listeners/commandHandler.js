@@ -47,15 +47,12 @@ module.exports = (function() {
             if(msg.text != "") {
                 for (const pre of prefix) {
                     if (text.startsWith(`${pre}`)) {
+                        console.log('tess');
                         const funcName = text.replace(pre, '').trim().split(' ');
                         const fromId = msg.chat.id;
 
                         if(msg.chat.type == 'private') {
                             if(!config.OWNER.includes(msg.from.id)) return
-
-                            bot.sendMessage(fromId, `Command: ${text}`, {
-                                reply_to_message_id: msg.message_id,
-                            });
 
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
