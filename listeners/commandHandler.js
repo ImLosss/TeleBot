@@ -31,13 +31,16 @@ module.exports = (function() {
 
             const text = msg.text || msg.caption;
 
+            const username = msg.from.username ? `@${msg.from.username}` : msg.from.first_name;
+
             if(!text) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username ? msg.from.username : msg.from.first_name }`);
+            if(msg.body != "") console.log(text, `MessageFrom:${username}`);
 
             if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
             if(config.ID_CHANNEL == msg.chat.id && config.BLACKLIST_WORDS.some(word => text.toLowerCase().includes(word.toLowerCase()))) {
                 setTimeout(() => {
+                    bot.sendMessage(config.OWNER[0], `Pesan dari ${username} telah dihapus karena mengandung kata terlarang: ${text}`);
                     bot.deleteMessage(msg.chat.id, msg.message_id);
                 }, 3000);
             }

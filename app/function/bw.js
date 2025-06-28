@@ -9,6 +9,10 @@ async function bw(bot, value, config, fromId) {
     if(value.startsWith('add')) {
         value = cutVal(value, 1);
 
+        if(config.BLACKLIST_WORDS.includes(value)) {
+            return bot.sendMessage(fromId, `Kata *${value}* sudah ada dalam blacklist.`, { parse_mode: 'Markdown' });
+        }
+
         config.BLACKLIST_WORDS.push(value);
 
         bot.sendMessage(fromId, `Kata *${value}* berhasil ditambahkan ke blacklist.`, { parse_mode: 'Markdown' });
