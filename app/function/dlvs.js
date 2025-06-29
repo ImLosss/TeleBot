@@ -271,7 +271,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                             .then((msg) => {
                                 bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
 
-                                if(query.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
+                                if(query.message.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
 
                                 deleteFiles(outputDir, id);
 
