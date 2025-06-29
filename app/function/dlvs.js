@@ -242,7 +242,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                     .then(async (fileId) => {
                         if (!fileId) {
                             bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
-                            fs.unlink(videoPath, () => {});
+                            deleteFiles(outputDir, id);
                             return;
                         }
                         const linkData = await generatePublicURL(fileId);
@@ -267,7 +267,10 @@ async function dlvs_downloadVideo(bot, query, data) {
                             })
                             .then((msg) => {
                                 bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-                                fs.unlink(videoPath, () => {});
+
+                                bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
+
+                                deleteFiles(outputDir, id);
 
                                 setTimeout(() => {
                                     deleteFileDrive(fileId).then(() => { 
@@ -278,28 +281,23 @@ async function dlvs_downloadVideo(bot, query, data) {
                             });
                         } else {
                             bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
-                            fs.unlink(videoPath, () => {});
+                            deleteFiles(outputDir, id);
                         }
                     })
                     .catch((err) => {
                         bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
-                        fs.unlink(videoPath, () => {});
+                        deleteFiles(outputDir, id);
                     });
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
                 bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } ${res} SOFTSUB ${lang}* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
                 .then(() => {
-                    fs.readdir(outputDir, (err, files) => {
-                        if (err) return;
-                        files
-                            .filter(f => f.startsWith(id))
-                            .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
-                    });
+                    deleteFiles(outputDir, id);
                 })
                 .catch(() => {
                     bot.sendMessage(query.message.chat.id, `Hanya bisa mengirim file dengan ukuran maksimal 50 MB. (${ Math.floor(stats.size / 1048576) } MB)`);
-                    fs.unlink(videoPath, () => {});
+                    deleteFiles(outputDir, id);
                 });
             }
         });
@@ -371,6 +369,15 @@ function getDuration (videoPath) {
         return '';
     }
 };
+
+function deleteFiles(outputDir, id) {
+    fs.readdir(outputDir, (err, files) => {
+        if (err) return;
+        files
+            .filter(f => f.startsWith(id))
+            .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
+    });
+}
 
 module.exports = {
     dlvs, dlvs_choose_sub, dlvs_downloadVideo

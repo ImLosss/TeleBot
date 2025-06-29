@@ -74,7 +74,7 @@ async function downloadIqiyi(bot, msg, value, config) {
                     .then(async (fileId) => {
                         if (!fileId) {
                             bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
-                            fs.unlink(videoPath, () => {});
+                            deleteFiles(outputDir, id);
                             return;
                         }
                         const linkData = await generatePublicURL(fileId);
@@ -98,9 +98,9 @@ async function downloadIqiyi(bot, msg, value, config) {
                             })
                             .then((msg) => {
                                 bot.deleteMessage(msg.chat.id, tempMsg.message_id)
-                                fs.unlink(videoPath, () => {});
 
                                 bot.sendDocument(msg.chat.id, `downloads/${id}.id.srt`);
+                                deleteFiles(outputDir, id);
 
                                 setTimeout(() => {
                                     deleteFileDrive(fileId).then(() => { 
@@ -111,29 +111,24 @@ async function downloadIqiyi(bot, msg, value, config) {
                             });
                         } else {
                             bot.sendMessage(msg.chat.id, 'Terjadi kesalahan saat mengupload file anda');
-                            fs.unlink(videoPath, () => {});
+                            deleteFiles(outputDir, id);
                         }
                     })
                     .catch((err) => {
                         console.log(err);
                         bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
-                        fs.unlink(videoPath, () => {});
+                        deleteFiles(outputDir, id);
                     });
             }
             else {
                 bot.sendChatAction(msg.chat.id, 'upload_video');
                 bot.sendVideo(msg.chat.id, videoPath, { caption: `File berhasil diunduh`, parse_mode: 'Markdown' })
                 .then(() => {
-                    fs.readdir(outputDir, (err, files) => {
-                        if (err) return;
-                        files
-                            .filter(f => f.startsWith(id))
-                            .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
-                    });
+                    deleteFiles(outputDir, id);
                 })
                 .catch(() => {
                     bot.sendMessage(msg.chat.id, `Hanya bisa mengirim file dengan ukuran maksimal 50 MB. (${ Math.floor(stats.size / 1048576) } MB)`);
-                    fs.unlink(videoPath, () => {});
+                    deleteFiles(outputDir, id);
                 });
             }
         });
@@ -155,6 +150,15 @@ function getDuration (videoPath) {
         return '';
     }
 };
+
+function deleteFiles(outputDir, id) {
+    fs.readdir(outputDir, (err, files) => {
+        if (err) return;
+        files
+            .filter(f => f.startsWith(id))
+            .forEach(f => fs.unlink(path.join(outputDir, f), () => {}));
+    });
+}
 
 module.exports = {
     downloadIqiyi
