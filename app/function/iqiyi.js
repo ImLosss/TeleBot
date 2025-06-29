@@ -100,6 +100,8 @@ async function downloadIqiyi(bot, msg, value, config) {
                                 bot.deleteMessage(msg.chat.id, tempMsg.message_id)
                                 fs.unlink(videoPath, () => {});
 
+                                bot.sendDocument(msg.chat.id, `downloads/${id}.id.srt`);
+
                                 setTimeout(() => {
                                     deleteFileDrive(fileId).then(() => { 
                                         emptyTrash();
