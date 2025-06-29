@@ -120,7 +120,6 @@ async function dlvs(bot, msg, value, config) {
 }
 
 async function dlvs_choose_sub(bot, query, data) {
-    console.log(query);
     let id = data.arg1;
     let subid = data.arg2;
     let url = tempData[id][subid].url;
@@ -272,7 +271,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                             .then((msg) => {
                                 bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
 
-                                bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
+                                if(query.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
 
                                 deleteFiles(outputDir, id);
 
