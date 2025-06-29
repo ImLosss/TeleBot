@@ -247,6 +247,17 @@ async function dlvs_downloadVideo(bot, query, data) {
                         }
                         const linkData = await generatePublicURL(fileId);
                         if (linkData && linkData.webViewLink) {
+                            if (hardsub) {
+                                const screenshots = [
+                                    { type: 'photo', media: 'downloads/ss1.png' },
+                                    { type: 'photo', media: 'downloads/ss2.png' },
+                                    { type: 'photo', media: 'downloads/ss3.png' }
+                                ];
+
+                                await bot.sendMediaGroup(query.message.chat.id, screenshots);
+                            }
+
+                            console.log(linkData.webViewLink, 'webViewLink');
 
                             bot.sendPhoto(query.message.chat.id, url_thumbnail, {
                                 caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
