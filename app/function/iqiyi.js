@@ -73,7 +73,7 @@ async function downloadIqiyi(bot, msg, value, config) {
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
                         if (!fileId) {
-                            bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
+                            bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive, fileId tidak ditemukan.');
                             deleteFiles(outputDir, id);
                             return;
                         }

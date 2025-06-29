@@ -241,7 +241,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
                         if (!fileId) {
-                            bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
+                            bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive, fileId tidak ditemukan.');
                             deleteFiles(outputDir, id);
                             return;
                         }
@@ -285,6 +285,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                         }
                     })
                     .catch((err) => {
+                        console.log(err);
                         bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
                         deleteFiles(outputDir, id);
                     });
