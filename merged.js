@@ -167,7 +167,7 @@ if (gaps.length > 0) {
   for (let i = gaps.length - 1; i >= 0; i--) {
     const gap = gaps[i];
     console.log(i);
-    blocks = insertSubtitleInGap(blocks, gap, "Join Channel t.me/dongworld agar tidak ketinggalan update.");
+    blocks = insertSubtitleInGap(blocks, gap, "Join Channel telegram @dongworld agar tidak ketinggalan update.");
     console.log(`✅ Subtitle berhasil disisipkan pada gap ${i + 1} (${gap.gapDuration.toFixed(1)} detik)!`);
   }
 
