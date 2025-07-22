@@ -40,7 +40,7 @@ Edit `config.json` to set your API key and other settings.
 | `/send <caption>`               | Send content with a caption to the channel. Make sure to reply to the video message. Returns message info as JSON, used later for `/updatebs`. |
 | `/updatebs <link_bstation>`     | Update a message with a button. *Reply to the bot's message to select which message to update.*               |
 | `/changechannel <@username>`    | Change the discussion channel username.                                                                       |
-| `/iq <link>`                    | Download content from iQIYI. Requires VIP access and login via installed Firefox.                             |
+| `/iq <link>`                    | Download content from iqi. Requires VIP access and login via installed Firefox.                             |
 | `/bw <add/rm/list>`             | Add, remove, or list banned words for the discussion channel. Messages containing these words will be automatically deleted by the bot. |
 | **Group Commands**              |                                                                                                               |
 | `/dl <link>`                    | Download video from any supported link (YouTube, Dailymotion, Instagram, etc.).                               |
