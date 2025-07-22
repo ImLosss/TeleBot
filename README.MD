@@ -41,7 +41,8 @@ Edit `config.json` to set your API key and other settings.
 | `/updatebs <link_bstation>`     | Update a message with a button. *Reply to the bot's message to select which message to update.*               |
 | `/changechannel <@username>`    | Change the discussion channel username.                                                                       |
 | `/iq <link>`                    | Download content from iQIYI. Requires VIP access and login via installed Firefox.                             |
+| `/bw <add/rm/list>`             | Add, remove, or list banned words for the discussion channel. Messages containing these words will be automatically deleted by the bot. |
 | **Group Commands**              |                                                                                                               |
 | `/dl <link>`                    | Download video from any supported link (YouTube, Dailymotion, Instagram, etc.).                               |
 | `/dlvs <link>`                  | Download video along with subtitles if available (softsub).                                                   |
-| `/dla <link>`                   | Download high-
+| `/dla <link>`                   | Download high-quality audio from YouTube.                                                                     |
