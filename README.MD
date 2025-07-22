@@ -8,6 +8,7 @@ Follow these steps to set up and run the Telegram Bot project locally:
 - NodeJs latest (v22.16.0 recommended)
 - yt-dlp installed on linux | [Download yt-dlp](https://github.com/yt-dlp/yt-dlp)
 - ffmpeg installed on linux | [Download FFmpeg](https://ffmpeg.org/download.html)
+- firefox installed on linux
 
 ### Installation Steps
 
