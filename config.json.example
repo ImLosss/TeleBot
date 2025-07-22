@@ -1,10 +1,18 @@
 {
-  "API_TELEGRAM": YOUT_TOKEN_HERE,
-  "ID_CHANNEL": "dong",
+  "API_TELEGRAM": "PASTE_APIKEY_HERE",
+  "ID_CHANNEL": "ID_MAIN_CHANNEL_DISCUSSION",
+  "USERNAME_CHANNEL": "@username_main_channel",
   "OWNER": [
-    5443421174
+    OWNER_ID,
+    ...
   ],
   "MAINTENANCE": false,
   "MAINTENANCE_WHITELIST": [],
-  "DONATE_LINK": "https://sociabuzz.com/dongworld/tribe"
+  "DONATE_LINK": "https://sociabuzz.com/...",
+  "CLIENT_ID": "YOUR_CLIENT_ID_GDRIVE",
+  "CLIENT_SECRET": "YOUR_CLIENT_SECRET_GDRIVE",
+  "REDIRECT_URI": "https://developers.google.com/oauthplayground",
+  "REFRESH_TOKEN": "YOUR_REFRESH_TOKEN_GDRIVE",
+  "RECEIVE_MESSAGE": true,
+  "BLACKLIST_WORDS": [ AUTOMATICALLY_DELETE_MESSAGE_CONTAINED_IN_THIS_LIST ]
 }
