@@ -9,7 +9,16 @@ async function cekBw(text, config, bot, msg, username) {
         let warning = readJSONFileSync('./database/warning.json');
 
         setTimeout(() => {
-            bot.sendMessage(config.OWNER[0], `Pesan dari ${username} telah dihapus karena mengandung kata terlarang:\n\`\`\`\n${ escapeMarkdownV2(text) }\n\`\`\``, { parse_mode: 'MarkdownV2' });
+            bot.sendMessage(config.OWNER[0], `Pesan dari ${username} telah dihapus karena mengandung kata terlarang:\n\`\`\`\n${ escapeMarkdownV2(text) }\n\`\`\``, {
+                parse_mode: 'MarkdownV2',
+                reply_markup: {
+                    inline_keyboard: [
+                        [
+                            { text: "Reset warning⚠️", callback_data: JSON.stringify({ function: "01", id: data.id, action: 'reset_warning' }) }
+                        ]
+                    ]
+                }
+            });
             bot.deleteMessage(msg.chat.id, msg.message_id);
 
             if(warning[msg.from.id] == undefined || warning[msg.from.id].count == 0) {
