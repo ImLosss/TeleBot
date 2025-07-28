@@ -14,7 +14,7 @@ async function cekBw(text, config, bot, msg, username) {
                 reply_markup: {
                     inline_keyboard: [
                         [
-                            { text: "Reset warning⚠️", callback_data: JSON.stringify({ function: "01", id: data.id, action: 'reset_warning' }) }
+                            { text: "Reset warning⚠️", callback_data: JSON.stringify({ function: "01", id: msg.from.id, action: 'reset_warning' }) }
                         ]
                     ]
                 }
