@@ -149,6 +149,10 @@ async function changeChannel(bot, value, config, fromId) {
     return bot.sendMessage(fromId, `Channel berhasil diganti ke ${ value }`)
 }
 
+function escapeMarkdownV2(text) {
+    return text.replace(/([_*\[\]()~`>#+\-=|{}.!\\])/g, '\\$1');
+}
+
 const withErrorHandling = (fn) => {
     return async (...args) => {
         try {
@@ -160,5 +164,5 @@ const withErrorHandling = (fn) => {
 };
 
 module.exports = {
-    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel, isJSON
+    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel, isJSON, escapeMarkdownV2
 };

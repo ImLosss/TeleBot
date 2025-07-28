@@ -9,6 +9,7 @@
     "mime-types": "^3.0.1",
     "module-alias": "^2.2.3",
     "moment-timezone": "^0.5.45",
+    "node-cache": "^5.1.2",
     "node-id3": "^0.2.9",
     "node-telegram-bot-api": "^0.66.0",
     "proper-lockfile": "^4.1.2"
@@ -19,6 +20,7 @@
     "function": "./app/function",
     "console": "./app/logs/console",
     "controller": "./app/controller",
-    "service": "./app/service"
+    "service": "./app/service",
+    "cache": "./app/service/cache"
   }
 }

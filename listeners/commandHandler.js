@@ -1,7 +1,9 @@
 require('module-alias/register');
 const console = require('console');
 const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = require("function/utils");
-const cmd = require('service/commandImport');
+const { parse } = require('path');
+const cmd = require('service/commandImport')
+const { cekBw } = require('function/cekBw');
 
 const prefixFunctions = {
     'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
@@ -38,12 +40,7 @@ module.exports = (function() {
             if(msg.body != "") console.log(text, `MessageFrom:${username}`);
 
             if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
-            if(config.ID_CHANNEL == msg.chat.id && config.BLACKLIST_WORDS.some(word => text.toLowerCase().includes(word.toLowerCase()))) {
-                setTimeout(() => {
-                    bot.sendMessage(config.OWNER[0], `Pesan dari ${username} telah dihapus karena mengandung kata terlarang: ${text}`);
-                    bot.deleteMessage(msg.chat.id, msg.message_id);
-                }, 3000);
-            }
+            cekBw(text, config, bot, msg, username);
 
             const value = cutVal(text, 1);
 

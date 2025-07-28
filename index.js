@@ -3,6 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const console = require('console');
 const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 const fs = require('fs');
+const cache = require('cache');
 
 // Ganti token ini dengan token bot Anda
 let config = readJSONFileSync('./config.json');
@@ -19,13 +20,11 @@ setTimeout(() => {
 // Buat instance bot
 const bot = new TelegramBot(config.API_TELEGRAM, { polling: false });
 
-if(!fs.existsSync('./app/logs/log.json')){
-    writeJSONFileSync('./app/logs/log.json', []);
-}
+if(!fs.existsSync('./app/logs/log.json')) writeJSONFileSync('./app/logs/log.json', []);
 
-if(!fs.existsSync('./app/logs/error.json')){
-    writeJSONFileSync('./app/logs/error.json', []);
-}
+if(!fs.existsSync('./app/logs/error.json')) writeJSONFileSync('./app/logs/error.json', []);
+
+if(!fs.existsSync('./database/warning.json')) writeJSONFileSync('./database/warning.json', {})
 
 // Fungsi untuk memulai bot setelah pesan lama dihapus
 async function startBot() {

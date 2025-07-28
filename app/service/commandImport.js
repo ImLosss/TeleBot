@@ -7,6 +7,7 @@ const dlvs = require('function/dlvs');
 const dla = require('function/dla');
 const downloadIqiyi = require('function/iqiyi');
 const bw = require('function/bw');
+const appleReq = require('function/appleReq');
 
 module.exports = {
     ...sendChannel,
@@ -16,5 +17,6 @@ module.exports = {
     ...ytdlp,
     ...dlvs,
     ...dla,
-    ...downloadIqiyi
+    ...downloadIqiyi,
+    ...appleReq
 };

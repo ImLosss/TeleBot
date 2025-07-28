@@ -7,6 +7,7 @@ const callbackFunctions = {
     downloadVideo: cmd.downloadVideo,
     dlvs_choose_sub: cmd.dlvs_choose_sub,
     dlvs_downloadVideo: cmd.dlvs_downloadVideo,
+    '01': cmd.appleReq,
 };
 
 module.exports = (function() {
