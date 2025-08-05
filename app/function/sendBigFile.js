@@ -81,7 +81,7 @@ function getDuration (videoPath) {
         const output = execSync(ffprobeCmd).toString().trim();
         const seconds = parseFloat(output);
         if (isNaN(seconds)) return 0;
-
+        console.log(seconds);
         return seconds;
     } catch (e) {
         console.log(`gagal mengambil durasi: ${ e.message }`, 'error');
