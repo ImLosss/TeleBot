@@ -16,8 +16,6 @@ async function sendBigFile(filePath) {
         let config = readJSONFileSync('./config.json');
 
         const info = await getVideoInfo(filePath);
-
-        console.log(info);
         
         if (!client.connected) {
             await client.connect();
