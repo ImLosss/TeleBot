@@ -35,9 +35,9 @@ async function sendBigFile(filePath) {
                 mimeType: "video/mp4",
                 attributes: [
                 new Api.DocumentAttributeVideo({
-                    duration: 0, // opsional, detik
-                    w: 0,        // opsional, lebar
-                    h: 0,        // opsional, tinggi
+                    duration: info.duration, // opsional, detik
+                    w: info.width,        // opsional, lebar
+                    h: info.height,        // opsional, tinggi
                     supportsStreaming: true,
                 }),
                 ],
@@ -47,7 +47,7 @@ async function sendBigFile(filePath) {
             randomId: BigInt(Date.now()), // randomId harus unik
             })
         );
-        console.log(result.updates[0]);
+        console.log(result.updates);
 
         await client.disconnect();
 
