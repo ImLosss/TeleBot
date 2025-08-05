@@ -22,7 +22,7 @@ async function sendBigFile(filePath) {
 
         const result = await client.invoke(
             new Api.messages.SendMedia({
-            peer: config, // bisa juga message.peerId
+            peer: config.DB_ID, // bisa juga message.peerId
             media: new Api.InputMediaUploadedDocument({
                 file: await client.uploadFile({
                 file: new CustomFile(
@@ -48,6 +48,8 @@ async function sendBigFile(filePath) {
             })
         );
         console.log(result);
+
+        await client.disconnect();
 
     } catch (error) {
         console.error('Error sending video:', error);
