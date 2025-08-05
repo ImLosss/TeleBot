@@ -64,7 +64,10 @@ function getVideoInfo(path) {
     return new Promise((resolve, reject) => {
         ffmpeg.ffprobe(path, (err, metadata) => {
             if (err) return reject(err);
-            let { duration, width, height } = metadata.streams.find(s => s.codec_type === 'video');
+            const videoStream = metadata.streams.find(s => s.codec_type === 'video');
+            if (!videoStream) resolve({ duration: 0, width: 0, height: 0 });
+            let { duration, width, height } = videoStream;
+            // Pastikan duration adalah number
             duration = typeof duration === "number"
                 ? duration
                 : (typeof duration === "string" && !isNaN(Number(duration)) ? Number(duration) : 0);
