@@ -6,6 +6,7 @@ const { StringSession } = require("telegram/sessions");
 const { CustomFile } = require("telegram/client/uploads");
 const fs = require("fs");
 const ffmpeg = require('fluent-ffmpeg');
+const { get } = require('http');
 
 let config = readJSONFileSync('./config.json');
 const session = new StringSession(config.STRING_SESSION);
@@ -68,13 +69,25 @@ function getVideoInfo(path) {
             if (!videoStream) resolve({ duration: 0, width: 0, height: 0 });
             let { duration, width, height } = videoStream;
             // Pastikan duration adalah number
-            duration = typeof duration === "number"
-                ? duration
-                : (typeof duration === "string" && !isNaN(Number(duration)) ? Number(duration) : 0);
+            duration = getDuration(path);
             resolve({ duration, width, height });
         });
     });
 }
+
+function getDuration (videoPath) {
+    try {
+        const ffprobeCmd = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${videoPath}"`;
+        const output = execSync(ffprobeCmd).toString().trim();
+        const seconds = parseFloat(output);
+        if (isNaN(seconds)) return 0;
+
+        return seconds;
+    } catch (e) {
+        console.log(`gagal mengambil durasi: ${ e.message }`, 'error');
+        return 0;
+    }
+};
 
 module.exports = {
     sendBigFile
