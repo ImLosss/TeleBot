@@ -150,7 +150,6 @@ async function downloadVideo(bot, query, data) {
             const stats = fs.statSync(videoPath);
 
             if (stats.size > 50 * 1024 * 1024) {
-                await sendBigFile(videoPath);
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                 .then(async (fileId) => {
@@ -172,8 +171,9 @@ async function downloadVideo(bot, query, data) {
                                 ]
                             }
                         })
-                        .then((msg) => {
+                        .then(async (msg) => {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
+                            await sendBigFile(videoPath);
                             fs.unlink(videoPath, () => {});
 
                             setTimeout(() => {

@@ -238,7 +238,6 @@ async function dlvs_downloadVideo(bot, query, data) {
             let durationStr = getDuration(videoPath);
             const stats = fs.statSync(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
-                await sendBigFile(videoPath);
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
@@ -270,10 +269,12 @@ async function dlvs_downloadVideo(bot, query, data) {
                                     ]
                                 }
                             })
-                            .then((msg) => {
+                            .then(async (msg) => {
                                 bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
 
                                 if(query.message.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
+
+                                await sendBigFile(videoPath);
 
                                 deleteFiles(outputDir, id);
 

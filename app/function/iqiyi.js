@@ -70,7 +70,6 @@ async function downloadIqiyi(bot, msg, value, config) {
             const stats = fs.statSync(videoPath);
             bot.deleteMessage(msg.chat.id, loadingMsg.message_id);
             if (stats.size > 50 * 1024 * 1024) {
-                await sendBigFile(videoPath);
                 let tempMsg = await bot.sendMessage(msg.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
@@ -98,10 +97,12 @@ async function downloadIqiyi(bot, msg, value, config) {
                                     ]
                                 }
                             })
-                            .then((msg) => {
+                            .then(async (msg) => {
                                 bot.deleteMessage(msg.chat.id, tempMsg.message_id)
 
                                 bot.sendDocument(msg.chat.id, `downloads/${id}.id.srt`);
+
+                                await sendBigFile(videoPath);
                                 deleteFiles(outputDir, id);
 
                                 setTimeout(() => {
