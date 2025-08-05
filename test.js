@@ -2,7 +2,7 @@ const { TelegramClient } = require("telegram");
 const { StringSession } = require("telegram/sessions");
 const { NewMessage } = require("telegram/events");
 const input = require("input");
-const config = require("./config.json");
+const config = require("./config2.json");
 const { Api } = require("telegram");
 
 const apiId = 22345648; // ganti
@@ -14,12 +14,7 @@ const client = new TelegramClient(stringSession, apiId, apiHash, {
 });
 
 (async () => {
-  await client.start({
-    phoneNumber: async () => await input.text("Nomor (+62...): "),
-    password: async () => await input.text("Password 2FA (jika ada): "),
-    phoneCode: async () => await input.text("Kode dari Telegram: "),
-    onError: (err) => console.log("❌ Login error:", err),
-  });
+  await client.start();
 
   console.log("🔓 Login sebagai:", await client.getMe());
 

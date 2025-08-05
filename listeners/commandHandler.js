@@ -2,6 +2,7 @@ require('module-alias/register');
 const console = require('console');
 const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = require("function/utils");
 const cmd = require('service/commandImport');
+const { NewMessage } = require("telegram/events");
 
 const prefixFunctions = {
     'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
@@ -19,44 +20,36 @@ const prefixFunctionsGroup = {
 }
 
 module.exports = (function() {
-    return function(bot) {
-        bot.on('message', async (msg) => {
-            console.log(msg);
-            
-            let config = readJSONFileSync(`./config.json`);
+    return function(client) {
+        client.addEventHandler(async (event) => {
+            const message = event.message
+            let config = readJSONFileSync(`./config2.json`);
             if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
             const prefix = ['/'];
 
-            const text = msg.text || msg.caption;
+            console.log(message.message);
 
-            if(!text) return;
+            if(!message.message) return;
 
-            if(msg.body != "") console.log(text, `MessageFrom:@${ msg.from.username == 'GroupAnonymousBot' ? "admin" : msg.from.username }`);
-            const value = cutVal(text, 1);
+            const value = cutVal(message.message, 1);
 
-            if(msg.text != "") {
+            if(message.message != "") {
                 for (const pre of prefix) {
-                    if (text.startsWith(`${pre}`)) {
-                        const funcName = text.replace(pre, '').trim().split(' ');
-                        const fromId = msg.chat.id;
+                    if (message.message.startsWith(`${pre}`)) {
+                        const funcName = message.message.replace(pre, '').trim().split(' ');
+                        const fromId = message.fromId.userId;
 
-                        if(msg.chat.type == 'private') {
-                            if(!config.OWNER.includes(msg.from.id)) return
+                        console.log(fromId);
 
-                            if (prefixFunctions[funcName[0]]) {
-                                return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
-                            }
-                        } else {
-                            if(config.ID_CHANNEL != msg.chat.id) return
+                        if(!config.OWNER.includes(fromId)) return
 
-                            if (prefixFunctionsGroup[funcName[0]]) {
-                                return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
-                            }
+                        if (prefixFunctions[funcName[0]]) {
+                            return console.log('jalan');
                         }
                         
                     }
                 }
             }
-        });
+        }, new NewMessage({ incoming: true }));
     };
 })();
