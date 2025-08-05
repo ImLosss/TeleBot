@@ -3,6 +3,7 @@ const console = require('console');
 const { exec, execSync } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
+const { sendBigFile } = require('function/sendBigFile');
 const path = require('path');
 const fs = require('fs');
 
@@ -69,6 +70,7 @@ async function downloadIqiyi(bot, msg, value, config) {
             const stats = fs.statSync(videoPath);
             bot.deleteMessage(msg.chat.id, loadingMsg.message_id);
             if (stats.size > 50 * 1024 * 1024) {
+                await sendBigFile(videoPath);
                 let tempMsg = await bot.sendMessage(msg.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
                     .then(async (fileId) => {
