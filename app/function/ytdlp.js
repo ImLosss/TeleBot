@@ -3,8 +3,10 @@ const console = require('console');
 const { exec, execSync } = require('child_process');
 const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
+const { sendBigFile } = require('function/sendBigFile');
 const path = require('path');
 const fs = require('fs');
+const { send } = require('process');
 
 let tempData = {};
 
@@ -146,6 +148,8 @@ async function downloadVideo(bot, query, data) {
             const videoPath = path.join(outputDir, userFiles[0].file);
             let durationStr = getDuration(videoPath);
             const stats = fs.statSync(videoPath);
+
+            await sendBigFile(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
                 uploadFile(videoPath, path.basename(videoPath))
