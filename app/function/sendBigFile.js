@@ -7,16 +7,19 @@ const { CustomFile } = require("telegram/client/uploads");
 const fs = require("fs");
 const ffmpeg = require('fluent-ffmpeg');
 
+let config = readJSONFileSync('./config.json');
+const session = new StringSession(config.STRING_SESSION);
+const client = new TelegramClient(session, config.API_ID, config.API_HASH, {});
+
 async function sendBigFile(filePath) {
     try {
         let config = readJSONFileSync('./config.json');
 
-        const session = new StringSession(config.STRING_SESSION);
-        const client = new TelegramClient(session, config.API_ID, config.API_HASH, {});
-
         const info = await getVideoInfo(filePath);
         
-        await client.connect();
+        if (!client.connected) {
+            await client.connect();
+        }
 
         const fileStats = fs.statSync(filePath);
 
@@ -48,8 +51,6 @@ async function sendBigFile(filePath) {
             })
         );
         console.log(result.updates);
-
-        await client.disconnect();
 
         return
     } catch (error) {
