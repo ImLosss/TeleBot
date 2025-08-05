@@ -4,3 +4,4 @@ config.json
 yt-dlp.exe
 ffmpeg.exe
 downloads/
+*.mp4
