@@ -51,6 +51,7 @@ async function sendBigFile(filePath) {
 
         await client.disconnect();
 
+        return
     } catch (error) {
         console.error('Error sending video:', error);
     }
