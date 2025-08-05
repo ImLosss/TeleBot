@@ -7,6 +7,7 @@ const { CustomFile } = require("telegram/client/uploads");
 const fs = require("fs");
 const ffmpeg = require('fluent-ffmpeg');
 const { get } = require('http');
+const { execSync } = require('child_process');
 
 let config = readJSONFileSync('./config.json');
 const session = new StringSession(config.STRING_SESSION);
@@ -81,7 +82,6 @@ function getDuration (videoPath) {
         const output = execSync(ffprobeCmd).toString().trim();
         const seconds = parseFloat(output);
         if (isNaN(seconds)) return 0;
-        console.log(seconds);
         return seconds;
     } catch (e) {
         console.log(`gagal mengambil durasi: ${ e.message }`, 'error');
