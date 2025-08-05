@@ -75,6 +75,7 @@ module.exports = (function() {
                             randomId: BigInt(Date.now()), // randomId harus unik
                             })
                         );
+                        
                         console.log(result);
 
                         if (prefixFunctions[funcName[0]]) {
