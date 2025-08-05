@@ -46,7 +46,7 @@ async function sendBigFile(filePath) {
                 ],
                 // caption bisa juga di sini jika mau
             }),
-            message: "Ini video dari invoke!",
+            message: "",
             randomId: BigInt(Date.now()), // randomId harus unik
             })
         );
