@@ -15,6 +15,8 @@ async function sendBigFile(filePath) {
         const client = new TelegramClient(session, config.API_ID, config.API_HASH, {});
 
         const info = await getVideoInfo(filePath);
+
+        console.log(info);
         
         await client.connect();
 
