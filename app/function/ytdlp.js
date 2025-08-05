@@ -16,7 +16,7 @@ async function ytdlp(bot, msg, value, config) {
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
-    exec(`yt-dlp-custom -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 200 }, (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${value}"`, { maxBuffer: 1024 * 1024 * 200 }, (error, stdout, stderr) => {
         if (error) {
             console.log(stderr);
             console.log('stderr:', stderr.message);
@@ -120,8 +120,8 @@ async function downloadVideo(bot, query, data) {
     if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
 
     const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
-    let cmd = `yt-dlp-custom -f ${format_id}+bestaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
-    if(acodec) cmd = `yt-dlp-custom -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    let cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
+    if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
 
