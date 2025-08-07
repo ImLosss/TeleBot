@@ -173,7 +173,9 @@ async function downloadVideo(bot, query, data) {
                         })
                         .then(async (msg) => {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-                            await sendBigFile(videoPath);
+                            const file_id = await sendBigFile(videoPath);
+
+                            console.log(file_id);
                             fs.unlink(videoPath, () => {});
 
                             setTimeout(() => {

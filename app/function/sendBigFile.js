@@ -71,7 +71,7 @@ async function sendBigFile(filePath) {
 
         fs.unlink(thumbPath, () => {});
 
-        return
+        return result.updates[0].id;
     } catch (error) {
         console.error('Error sending video:', error);
     }
