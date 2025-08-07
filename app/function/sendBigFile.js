@@ -76,8 +76,7 @@ async function sendBigFile(filePath) {
         if (messages.length > 0) {
             const message = messages[0];
             if (message.document) {
-                const fileId = message.document.id; // Ini file_id (BigInt)
-                return fileId.toString();
+                console.log(message, 'detail_message');
             }
         }
 
