@@ -178,6 +178,7 @@ async function downloadVideo(bot, query, data) {
 
                             const fileId = readJSONFileSync('./database/temp_file_id.json');
                             if(fileId.time == getTime()) {
+                                console.log(fileId.file_id, 'file_id');
                                 bot.sendVideo(query.message.chat.id, fileId.file_id);
                             }
 
