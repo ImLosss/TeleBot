@@ -71,7 +71,17 @@ async function sendBigFile(filePath) {
 
         fs.unlink(thumbPath, () => {});
 
-        return result.updates[0].id;
+        const messageId = result.updates[0].id;
+        const messages = await client.getMessages(config.DB_ID, { ids: messageId });
+        if (messages.length > 0) {
+            const message = messages[0];
+            if (message.document) {
+                const fileId = message.document.id; // Ini file_id (BigInt)
+                return fileId.toString();
+            }
+        }
+
+        return;
     } catch (error) {
         console.error('Error sending video:', error);
     }

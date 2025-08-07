@@ -7,6 +7,7 @@ const { sendBigFile } = require('function/sendBigFile');
 const path = require('path');
 const fs = require('fs');
 const { send } = require('process');
+const { config } = require('googleapis/build/src/apis/config');
 
 let tempData = {};
 
