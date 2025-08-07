@@ -71,15 +71,6 @@ async function sendBigFile(filePath) {
 
         fs.unlink(thumbPath, () => {});
 
-        const messageId = result.updates[0].id;
-        const messages = await client.getMessages(config.DB_ID, { ids: messageId });
-        if (messages.length > 0) {
-            const message = messages[0];
-            if (message.document) {
-                console.log(message, 'detail_message');
-            }
-        }
-
         return;
     } catch (error) {
         console.error('Error sending video:', error);

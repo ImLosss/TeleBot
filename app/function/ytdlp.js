@@ -7,7 +7,6 @@ const { sendBigFile } = require('function/sendBigFile');
 const path = require('path');
 const fs = require('fs');
 const { send } = require('process');
-const { config } = require('googleapis/build/src/apis/config');
 
 let tempData = {};
 
@@ -174,9 +173,7 @@ async function downloadVideo(bot, query, data) {
                         })
                         .then(async (msg) => {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-                            const file_id = await sendBigFile(videoPath);
-
-                            console.log(file_id);
+                            await sendBigFile(videoPath);
                             fs.unlink(videoPath, () => {});
 
                             setTimeout(() => {
