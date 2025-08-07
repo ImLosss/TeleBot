@@ -146,6 +146,8 @@ function updateFileId(fileId) {
     tempFileId.file_id = fileId.toString(); 
     tempFileId.time = getTime();
 
+    console.log(tempFileId);
+
     writeJSONFileSync('./database/temp_file_id.json', tempFileId);
 }
 
