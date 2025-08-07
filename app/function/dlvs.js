@@ -274,7 +274,14 @@ async function dlvs_downloadVideo(bot, query, data) {
 
                                 if(query.message.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
 
-                                await sendBigFile(videoPath);
+                                const message_id = await sendBigFile(videoPath);
+
+                                setTimeout(() => {
+                                    const fileId = readJSONFileSync('./database/temp_file_id.json');
+                                    if(fileId.message_id == message_id) {
+                                        bot.sendVideo(query.message.chat.id, fileId.file_id);
+                                    }
+                                }, 1000);
 
                                 deleteFiles(outputDir, id);
 

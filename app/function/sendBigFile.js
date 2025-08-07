@@ -67,7 +67,7 @@ async function sendBigFile(filePath) {
             randomId: BigInt(Date.now()), // randomId harus unik
             })
         );
-        console.log(result.updates);
+        // console.log(result.updates);
 
         fs.unlink(thumbPath, () => {});
 

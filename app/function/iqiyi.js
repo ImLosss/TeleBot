@@ -102,7 +102,15 @@ async function downloadIqiyi(bot, msg, value, config) {
 
                                 bot.sendDocument(msg.chat.id, `downloads/${id}.id.srt`);
 
-                                await sendBigFile(videoPath);
+                                const message_id = await sendBigFile(videoPath);
+
+                                setTimeout(() => {
+                                    const fileId = readJSONFileSync('./database/temp_file_id.json');
+                                    if(fileId.message_id == message_id) {
+                                        bot.sendVideo(query.message.chat.id, fileId.file_id);
+                                    }
+                                }, 1000);
+                                
                                 deleteFiles(outputDir, id);
 
                                 setTimeout(() => {
