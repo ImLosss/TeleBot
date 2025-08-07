@@ -107,7 +107,7 @@ async function downloadIqiyi(bot, msg, value, config) {
                                 setTimeout(() => {
                                     const fileId = readJSONFileSync('./database/temp_file_id.json');
                                     if(fileId.message_id == message_id) {
-                                        bot.sendVideo(query.message.chat.id, fileId.file_id);
+                                        bot.sendVideo(msg.chat.id, fileId.file_id);
                                     }
                                 }, 1000);
                                 
