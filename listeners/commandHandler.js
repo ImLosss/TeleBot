@@ -35,7 +35,7 @@ module.exports = (function() {
 
             const username = msg.from.username ? `@${msg.from.username}` : msg.from.first_name;
 
-            if(msg.chat.id == config.DB_ID && msg.video) updateFileId(msg.video.file_id);
+            if(msg.chat.id == config.DB_ID && msg.video) updateFileId(msg.video.file_id, msg.message_id);
 
             if(!text) return;
 

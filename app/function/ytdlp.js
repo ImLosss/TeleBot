@@ -173,14 +173,18 @@ async function downloadVideo(bot, query, data) {
                         })
                         .then(async (msg) => {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-                            await sendBigFile(videoPath);
-                            fs.unlink(videoPath, () => {});
 
-                            const fileId = readJSONFileSync('./database/temp_file_id.json');
-                            if(fileId.time == getTime()) {
-                                console.log(fileId.file_id, 'file_id');
-                                bot.sendVideo(query.message.chat.id, fileId.file_id);
-                            }
+                            const message_id = await sendBigFile(videoPath);
+
+                            setTimeout(() => {
+                                const fileId = readJSONFileSync('./database/temp_file_id.json');
+                                if(fileId.message_id == message_id) {
+                                    console.log(fileId.file_id, 'file_id');
+                                    bot.sendVideo(query.message.chat.id, fileId.file_id);
+                                }
+                            }, 1000);
+
+                            fs.unlink(videoPath, () => {});
 
                             setTimeout(() => {
                                 deleteFileDrive(fileId).then(() => { 

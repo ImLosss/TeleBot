@@ -140,11 +140,12 @@ function cutVal(value, index) {
     return words.slice(index).join(' '); // Gabungkan kembali kata-kata dari indeks yang ditentukan
 }
 
-function updateFileId(fileId) {
+function updateFileId(fileId, messageId) {
     let tempFileId = readJSONFileSync('./database/temp_file_id.json');
 
     tempFileId.file_id = fileId.toString(); 
     tempFileId.time = getTime();
+    tempFileId.message_id = messageId;
 
     console.log(tempFileId);
 
