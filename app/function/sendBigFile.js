@@ -110,8 +110,7 @@ function extractThumbnail(videoPath, outputPath, seek = 300) {
             .screenshots({
                 timestamps: [seek],
                 filename: path.basename(outputPath),
-                folder: path.dirname(outputPath),
-                size: '320x?'
+                folder: path.dirname(outputPath)
             })
             .on('end', () => resolve(outputPath))
             .on('error', reject);
