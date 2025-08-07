@@ -1,6 +1,6 @@
 require('module-alias/register');
 const console = require('console');
-const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = require("function/utils");
+const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, updateFileId } = require("function/utils");
 const { parse } = require('path');
 const cmd = require('service/commandImport')
 const { cekBw } = require('function/cekBw');
@@ -43,6 +43,8 @@ module.exports = (function() {
             cekBw(text, config, bot, msg, username);
 
             const value = cutVal(text, 1);
+
+            if(msg.chat.id == config.DB_ID && msg.video) updateFileId(msg.video.file_id);
 
             if(msg.text != "") {
                 for (const pre of prefix) {

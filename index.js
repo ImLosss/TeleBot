@@ -26,6 +26,8 @@ if(!fs.existsSync('./app/logs/error.json')) writeJSONFileSync('./app/logs/error.
 
 if(!fs.existsSync('./database/warning.json')) writeJSONFileSync('./database/warning.json', {})
 
+if(!fs.existsSync('./database/temp_file_id.json')) writeJSONFileSync('./database/temp_file_id.json', {})
+
 // Fungsi untuk memulai bot setelah pesan lama dihapus
 async function startBot() {
 

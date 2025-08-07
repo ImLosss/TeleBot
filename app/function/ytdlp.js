@@ -1,7 +1,7 @@
 require('module-alias/register');
 const console = require('console');
 const { exec, execSync } = require('child_process');
-const { readJSONFileSync, cutVal, isJSON } = require('function/utils');
+const { readJSONFileSync, cutVal, isJSON, getTime } = require('function/utils');
 const { uploadFile, generatePublicURL, deleteFileDrive, emptyTrash } = require('function/drive');
 const { sendBigFile } = require('function/sendBigFile');
 const path = require('path');
@@ -175,6 +175,11 @@ async function downloadVideo(bot, query, data) {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
                             await sendBigFile(videoPath);
                             fs.unlink(videoPath, () => {});
+
+                            const fileId = readJSONFileSync('./database/temp_file_id.json');
+                            if(fileId.time == getTime()) {
+                                bot.sendVideo(query.message.chat.id, fileId.file_id);
+                            }
 
                             setTimeout(() => {
                                 deleteFileDrive(fileId).then(() => { 

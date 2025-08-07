@@ -139,6 +139,27 @@ function cutVal(value, index) {
     return words.slice(index).join(' '); // Gabungkan kembali kata-kata dari indeks yang ditentukan
 }
 
+function updateFileId(fileId) {
+    let tempFileId = readJSONFileSync('./database/temp_file_id.json');
+
+    tempFileId.file_id = fileId.toString(); 
+    tempFileId.time = getTime();
+
+    writeJSONFileSync('./database/temp_file_id.json', tempFileId);
+}
+
+function getTime() {
+    // Tentukan zona waktu Makassar
+    const time = moment().tz('Asia/Makassar');
+
+    // Ambil tanggal, jam, dan menit
+    const tanggal = time.format('YYYY-MM-DD');
+    const jam = time.format('HH');
+    const menit = time.format('mm');
+
+    return `${ tanggal } / ${ jam }:${ menit }`;
+}
+
 async function changeChannel(bot, value, config, fromId) {
     config.USERNAME_CHANNEL = value;
 
@@ -164,5 +185,5 @@ const withErrorHandling = (fn) => {
 };
 
 module.exports = {
-    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel, isJSON, escapeMarkdownV2
+    getLocation, injectTitle, deleteFile, removeFromArray, readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, changeChannel, isJSON, escapeMarkdownV2, updateFileId, getTime
 };
