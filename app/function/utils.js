@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const lockfile = require('proper-lockfile');
+const moment = require('moment-timezone');
 
 function getLocation() {
     const error = new Error();
