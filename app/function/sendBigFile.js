@@ -6,8 +6,8 @@ const { StringSession } = require("telegram/sessions");
 const { CustomFile } = require("telegram/client/uploads");
 const fs = require("fs");
 const ffmpeg = require('fluent-ffmpeg');
-const { get } = require('http');
 const { execSync } = require('child_process');
+const path = require("path");
 
 let config = readJSONFileSync('./config.json');
 const session = new StringSession(config.STRING_SESSION);
@@ -27,6 +27,18 @@ async function sendBigFile(filePath) {
 
         const fileStats = fs.statSync(filePath);
 
+        const thumbPath = filePath + ".thumb.jpg";
+        await extractThumbnail(filePath, thumbPath);
+
+        const thumbFile = await client.uploadFile({
+            file: new CustomFile(
+                path.basename(thumbPath),
+                fs.statSync(thumbPath).size,
+                thumbPath
+            ),
+            workers: 1,
+        });
+
         const result = await client.invoke(
             new Api.messages.SendMedia({
             peer: config.DB_ID, // bisa juga message.peerId
@@ -40,6 +52,7 @@ async function sendBigFile(filePath) {
                 workers: 1,
                 }),
                 mimeType: "video/mp4",
+                thumb: thumbFile,
                 attributes: [
                 new Api.DocumentAttributeVideo({
                     duration: info.duration, // opsional, detik
@@ -55,6 +68,8 @@ async function sendBigFile(filePath) {
             })
         );
         console.log(result.updates);
+
+        fs.unlink(thumbPath, () => {});
 
         return
     } catch (error) {
@@ -88,6 +103,20 @@ function getDuration (videoPath) {
         return 0;
     }
 };
+
+function extractThumbnail(videoPath, outputPath, seek = 300) {
+    return new Promise((resolve, reject) => {
+        ffmpeg(videoPath)
+            .screenshots({
+                timestamps: [seek],
+                filename: path.basename(outputPath),
+                folder: path.dirname(outputPath),
+                size: '320x?'
+            })
+            .on('end', () => resolve(outputPath))
+            .on('error', reject);
+    });
+}
 
 module.exports = {
     sendBigFile
