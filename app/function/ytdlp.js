@@ -174,6 +174,7 @@ async function downloadVideo(bot, query, data) {
                         .then(async (msg) => {
                             bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
                             const message_id = await sendBigFile(videoPath);
+                            let config = readJSONFileSync('./config.json');
 
                             let file_id = bot.editMessageCaption(
                                 "", 
