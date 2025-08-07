@@ -177,7 +177,7 @@ async function downloadVideo(bot, query, data) {
                             let config = readJSONFileSync('./config.json');
 
                             let file_id = bot.editMessageCaption(
-                                "", 
+                                "tess", 
                                 {
                                     chat_id: config.DB_ID,
                                     message_id: message_id
