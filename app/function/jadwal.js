@@ -2,6 +2,7 @@ require('module-alias/register');
 const console = require('console');
 const { readJSONFileSync, writeJSONFileSync } = require('function/utils');
 const moment = require('moment-timezone');
+moment.locale('id');
 
 const schedulePath = './database/jadwal.json';
 const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
@@ -12,7 +13,7 @@ function getKeyboard() {
     for (let i = 0; i < buttons.length; i += 3) {
         keyboard.push(buttons.slice(i, i + 3));
     }
-    keyboard.push([{ text: 'Hari ini', callback_data: JSON.stringify({ function: 'jadwal_select', day: 'today' }) }]);
+    // keyboard.push([{ text: 'Hari ini', callback_data: JSON.stringify({ function: 'jadwal_select', day: 'today' }) }]);
     return keyboard;
 }
 
