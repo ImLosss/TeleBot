@@ -100,7 +100,7 @@ async function jadwal(bot, msg, value, config) {
 async function jadwal_select(bot, query, data) {
     const schedule = readSchedule();
     const day = data.day === 'today' ? getToday() : data.day;
-    return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { reply_markup: { inline_keyboard: getKeyboard() } });
+    return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
 }
 
 module.exports = {
