@@ -6,6 +6,8 @@ moment.locale('id');
 
 const schedulePath = './database/jadwal.json';
 const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
+let status = true;
+let timeout;
 
 function getKeyboard() {
     const buttons = days.map(d => ({ text: capitalize(d), callback_data: JSON.stringify({ function: 'jadwal_select', day: d }) }));
@@ -98,12 +100,20 @@ async function jadwal(bot, msg, value, config) {
 }
 
 async function jadwal_select(bot, query, data) {
+    if (!status) return bot.answerCallbackQuery(query.id, { text: 'Terlalu sering, coba lagi dalam 3 detik...' });
+
     let config = readJSONFileSync(`./config.json`);
     if(query.message.chat.id != config.ID_CHANNEL) return;
     const schedule = readSchedule();
     const day = data.day === 'today' ? getToday() : data.day;
 
     bot.answerCallbackQuery(query.id).catch(()=>{});
+
+    status = false;
+
+    timeout = setTimeout(() => {
+        status = true;
+    }, 3000);
 
     return bot.editMessageText(formatText(day, schedule), {
         chat_id: query.message.chat.id,
