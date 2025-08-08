@@ -4,11 +4,11 @@ const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling } = requi
 const cmd = require('service/commandImport');
 
 const callbackFunctions = {
-    downloadVideo: cmd.downloadVideo,
-    dlvs_choose_sub: cmd.dlvs_choose_sub,
-    dlvs_downloadVideo: cmd.dlvs_downloadVideo,
-    '01': cmd.appleReq,
-    jadwal_select: cmd.jadwal_select,
+    downloadVideo: { handler: cmd.downloadVideo, delete: true },
+    dlvs_choose_sub: { handler: cmd.dlvs_choose_sub, delete: true },
+    dlvs_downloadVideo: { handler: cmd.dlvs_downloadVideo, delete: true },
+    '01': { handler: cmd.appleReq, delete: true },
+    jadwal_select: { handler: cmd.jadwal_select, delete: false },
 };
 
 module.exports = (function() {
@@ -24,15 +24,13 @@ module.exports = (function() {
                 return bot.answerCallbackQuery(query.id, { text: 'Invalid callback data' });
             }
 
-            if (query.message) {
-                bot.deleteMessage(query.message.chat.id, query.message.message_id);
-            }
-
-            const fn = callbackFunctions[data.function];
+            const fn = callbackFunctions[data.function]?.handler || false;
             if (typeof fn === 'function') {
+                if (callbackFunctions[data.function].delete) bot.deleteMessage(query.message.chat.id, query.message.message_id);
                 fn(bot, query, data);
             } else {
                 bot.answerCallbackQuery(query.id, { text: 'Unknown action' });
+                bot.deleteMessage(query.message.chat.id, query.message.message_id);
             }
         });
 
