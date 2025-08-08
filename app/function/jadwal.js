@@ -34,9 +34,9 @@ function writeSchedule(data) {
 }
 
 function formatText(day, schedule) {
-    const label = day === 'today' ? 'hari ini' : capitalize(day);
+    const label = day === getToday() ? 'hari ini' : capitalize(day);
     const list = schedule[day] || [];
-    let text = `Jadwal ${label}:\n`;
+    let text = `Jadwal Donghua ${label}:\n`;
     if (list.length === 0) text += '- Tidak ada jadwal';
     else list.forEach(item => { text += `- ${item}\n`; });
     return text;
