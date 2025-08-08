@@ -102,6 +102,9 @@ async function jadwal_select(bot, query, data) {
     if(query.message.chat.id != config.ID_CHANNEL) return;
     const schedule = readSchedule();
     const day = data.day === 'today' ? getToday() : data.day;
+
+    bot.answerCallbackQuery(query.id).catch(()=>{});
+    
     return bot.editMessageText(formatText(day, schedule), {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
