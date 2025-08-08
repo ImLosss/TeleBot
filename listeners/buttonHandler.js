@@ -8,6 +8,7 @@ const callbackFunctions = {
     dlvs_choose_sub: cmd.dlvs_choose_sub,
     dlvs_downloadVideo: cmd.dlvs_downloadVideo,
     '01': cmd.appleReq,
+    jadwal_select: cmd.jadwal_select,
 };
 
 module.exports = (function() {
