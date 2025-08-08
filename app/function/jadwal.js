@@ -54,7 +54,7 @@ async function jadwal(bot, msg, value, config) {
     if (msg.chat.type !== 'private') {
         const day = args[0] ? args[0].toLowerCase() : 'today';
         const target = day === 'today' ? getToday() : day;
-        return bot.sendMessage(chatId, formatText(target, schedule), { reply_markup: { inline_keyboard: getKeyboard() } });
+        return bot.sendMessage(chatId, formatText(target, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
     }
 
     if (!config.OWNER.includes(msg.from.id)) {
@@ -94,7 +94,7 @@ async function jadwal(bot, msg, value, config) {
     if (!days.includes(target)) {
         return bot.sendMessage(chatId, 'Hari tidak valid.');
     }
-    return bot.sendMessage(chatId, formatText(target, schedule), { reply_markup: { inline_keyboard: getKeyboard() } });
+    return bot.sendMessage(chatId, formatText(target, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
 }
 
 async function jadwal_select(bot, query, data) {
