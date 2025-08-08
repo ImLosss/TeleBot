@@ -54,6 +54,9 @@ module.exports = (function() {
                         const funcName = text.replace(pre, '').trim().split(' ');
                         const fromId = msg.chat.id;
 
+                        if (!funcName[0]) return;
+                        if(funcName[0].includes('@')) funcName[0] = funcName[0].split('@')[0].toLowerCase();
+
                         if(msg.chat.type == 'private') {
                             if(!config.OWNER.includes(msg.from.id)) return
 
