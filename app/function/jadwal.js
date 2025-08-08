@@ -105,7 +105,7 @@ async function jadwal_select(bot, query, data) {
     let config = readJSONFileSync(`./config.json`);
     if(query.message.chat.id != config.ID_CHANNEL) return;
     const schedule = readSchedule();
-    const day = data.day === 'today' ? getToday() : data.day;
+    const day = data.day;
 
     bot.answerCallbackQuery(query.id).catch(()=>{});
 
@@ -121,6 +121,8 @@ async function jadwal_select(bot, query, data) {
         parse_mode: 'Markdown',
         reply_markup: { inline_keyboard: getKeyboard() }
     }).catch(err => {
+        if(err.message.includes('message is not modified')) return
+        console.log(err.message); 
         bot.deleteMessage(query.message.chat.id, query.message.message_id);
 
         return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
