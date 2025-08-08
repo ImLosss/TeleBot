@@ -104,17 +104,16 @@ async function jadwal_select(bot, query, data) {
     const day = data.day === 'today' ? getToday() : data.day;
 
     bot.answerCallbackQuery(query.id).catch(()=>{});
-    
+
     return bot.editMessageText(formatText(day, schedule), {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
         parse_mode: 'Markdown',
         reply_markup: { inline_keyboard: getKeyboard() }
     }).catch(err => {
-        // Jika gagal (misal konten sama), bisa diam / fallback kirim baru
-        if (err && !/message is not modified/i.test(err.message)) {
-            console.log('Edit gagal:', err.message);
-        }
+        bot.deleteMessage(query.message.chat.id, query.message.message_id);
+
+        return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
     });
 }
 
