@@ -56,7 +56,7 @@ async function jadwal(bot, msg, value, config) {
     if (msg.chat.type !== 'private') {
         const day = args[0] ? args[0].toLowerCase() : 'today';
         const target = day === 'today' ? getToday() : day;
-        return bot.sendMessage(chatId, formatText(target, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
+        return bot.sendMessage(chatId, formatText(target, schedule), { reply_to_message_id: msg.message_id, parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
     }
 
     if (!config.OWNER.includes(msg.from.id)) {
