@@ -9,8 +9,11 @@ const days = ['senin','selasa','rabu','kamis','jumat','sabtu','minggu'];
 let status = true;
 let timeout;
 
-function getKeyboard() {
-    const buttons = days.map(d => ({ text: capitalize(d), callback_data: JSON.stringify({ function: 'jadwal_select', day: d }) }));
+function getKeyboard(day = 'today') {
+    const exclude = day == 'today' ? getToday() : day; // hari yang disembunyikan
+    const list = days.filter(d => d !== exclude);
+
+    const buttons = list.map(d => ({ text: capitalize(d), callback_data: JSON.stringify({ function: 'jadwal_select', day: d }) }));
     const keyboard = [];
     for (let i = 0; i < buttons.length; i += 3) {
         keyboard.push(buttons.slice(i, i + 3));
@@ -56,7 +59,7 @@ async function jadwal(bot, msg, value, config) {
     if (msg.chat.type !== 'private') {
         const day = args[0] ? args[0].toLowerCase() : 'today';
         const target = day === 'today' ? getToday() : day;
-        return bot.sendMessage(chatId, formatText(target, schedule), { reply_to_message_id: msg.message_id, parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
+        return bot.sendMessage(chatId, formatText(target, schedule), { reply_to_message_id: msg.message_id, parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard(day) } });
     }
 
     if (!config.OWNER.includes(msg.from.id)) {
@@ -96,7 +99,7 @@ async function jadwal(bot, msg, value, config) {
     if (!days.includes(target)) {
         return bot.sendMessage(chatId, 'Hari tidak valid.');
     }
-    return bot.sendMessage(chatId, formatText(target, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
+    return bot.sendMessage(chatId, formatText(target, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard(day) } });
 }
 
 async function jadwal_select(bot, query, data) {
@@ -119,13 +122,13 @@ async function jadwal_select(bot, query, data) {
         chat_id: query.message.chat.id,
         message_id: query.message.message_id,
         parse_mode: 'Markdown',
-        reply_markup: { inline_keyboard: getKeyboard() }
+        reply_markup: { inline_keyboard: getKeyboard(day) }
     }).catch(err => {
         if(err.message.includes('message is not modified')) return
         console.log(err.message); 
         bot.deleteMessage(query.message.chat.id, query.message.message_id);
 
-        return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard() } });
+        return bot.sendMessage(query.message.chat.id, formatText(day, schedule), { parse_mode: 'Markdown', reply_markup: { inline_keyboard: getKeyboard(day) } });
     });
 }
 
