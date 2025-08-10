@@ -33,8 +33,8 @@ module.exports = function(bot) {
         res.end(JSON.stringify({ status: 'ok' }));
       });
     } else {
-      res.writeHead(404);
-      res.end();
+      res.writeHead(200, { 'Content-Type': 'text/plain' });
+      res.end('OK');
     }
   });
 
