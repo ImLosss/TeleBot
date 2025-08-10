@@ -1,7 +1,7 @@
 require('module-alias/register');
 const console = require('console');
 const { readJSONFileSync, writeJSONFileSync, cutVal, withErrorHandling, updateFileId } = require("function/utils");
-const { parse } = require('path');
+const { profileWatcher } = require('function/profilWatcher');
 const cmd = require('service/commandImport')
 const { cekBw } = require('function/cekBw');
 
@@ -45,6 +45,7 @@ module.exports = (function() {
 
             if(!config.BLACKLIST_WORDS) config.BLACKLIST_WORDS = [];
             cekBw(text, config, bot, msg, username);
+            if(config.ID_CHANNEL == msg.chat.id) profileWatcher(bot, msg);
 
             const value = cutVal(text, 1);
 

@@ -24,9 +24,11 @@ if(!fs.existsSync('./app/logs/log.json')) writeJSONFileSync('./app/logs/log.json
 
 if(!fs.existsSync('./app/logs/error.json')) writeJSONFileSync('./app/logs/error.json', []);
 
-if(!fs.existsSync('./database/warning.json')) writeJSONFileSync('./database/warning.json', {})
+if(!fs.existsSync('./database/warning.json')) writeJSONFileSync('./database/warning.json', {});
 
-if(!fs.existsSync('./database/temp_file_id.json')) writeJSONFileSync('./database/temp_file_id.json', {})
+if(!fs.existsSync('./database/temp_file_id.json')) writeJSONFileSync('./database/temp_file_id.json', {});
+
+if(!fs.existsSync('./database/users.json')) writeJSONFileSync('./database/users.json', {});
 
 if(!fs.existsSync('./database/jadwal.json')) writeJSONFileSync('./database/jadwal.json', {"senin": [], "selasa": [], "rabu": [], "kamis": [], "jumat": [], "sabtu": [], "minggu": []})
 
