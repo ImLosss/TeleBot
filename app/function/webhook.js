@@ -27,7 +27,7 @@ module.exports = function(bot) {
           const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
           const donorLine = `✨${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>.✨`;
           const noteBlock = (payload.message && String(payload.message).trim())
-            ? `\n\n<blockquote>${esc(String(payload.message).trim())}</blockquote>\n`
+            ? `\n\n<blockquote>Pesan: ${esc(String(payload.message).trim())}</blockquote>\n`
             : '';
 
           const config = readJSONFileSync('./config.json');
