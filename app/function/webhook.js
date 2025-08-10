@@ -30,7 +30,7 @@ module.exports = function(bot) {
             : '';
 
           const config = readJSONFileSync('./config.json');
-          const text = `🐉 ${donorLine}${noteBlock}\nTerima kasih atas dukungannya untuk rilisan donghua! 🙏`;
+          const text = `🐉 ${donorLine}${noteBlock}\nDukunganmu sangat membantu kami agar dapat rilis lebih cepat. ✨`;
 
           bot.sendMessage(config.ID_CHANNEL, text, { parse_mode: 'HTML' }).catch(err => console.error('Failed to send message:', err));
         } catch (e) {
