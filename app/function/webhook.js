@@ -24,13 +24,13 @@ module.exports = function(bot) {
 
           // Format dengan kutipan Telegram (blockquote)
           const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
-          const donorLine = `${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>.`;
+          const donorLine = `✨ ${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>. ✨`;
           const noteBlock = (payload.message && String(payload.message).trim())
-            ? `\nPesan:\n<blockquote>${esc(String(payload.message).trim())}</blockquote>`
+            ? `\n\n<blockquote>${esc(String(payload.message).trim())}</blockquote>\n`
             : '';
 
           const config = readJSONFileSync('./config.json');
-          const text = `🐉 ${donorLine}${noteBlock}\nDukunganmu sangat membantu kami agar dapat rilis lebih cepat. ✨`;
+          const text = `${donorLine}${noteBlock}\nDukunganmu sangat membantu kami agar dapat rilis lebih cepat. 🙏`;
 
           bot.sendMessage(config.ID_CHANNEL, text, { parse_mode: 'HTML' }).catch(err => console.error('Failed to send message:', err));
         } catch (e) {
