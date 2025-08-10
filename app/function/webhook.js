@@ -22,20 +22,17 @@ module.exports = function(bot) {
           const currency = payload.currency_settled || payload.currency || 'IDR';
           const formattedAmount = new Intl.NumberFormat('id-ID', { style: 'currency', currency }).format(Number(amountRaw) || 0);
 
-          // Susun pesan:
-          // "<nama> telah melakukan donasi sebesar <amount>."
-          // Tambah pesan (jika ada) pakai tanda kutip
-          // + ucapan terima kasih bertema donghua
-          const userNote = (payload.message && String(payload.message).trim())
-            ? `\nPesan: “${String(payload.message).trim()}”`
+          // Format dengan kutipan Telegram (blockquote)
+          const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
+          const donorLine = `${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>.`;
+          const noteBlock = (payload.message && String(payload.message).trim())
+            ? `\nPesan:\n<blockquote>${esc(String(payload.message).trim())}</blockquote>`
             : '';
 
           const config = readJSONFileSync('./config.json');
-          const text =
-            `${donor} telah melakukan donasi sebesar ${formattedAmount}.${userNote}\n` +
-            `Terima kasih atas dukungannya untuk rilisan donghua! 🙏`;
+          const text = `🐉 ${donorLine}${noteBlock}\nTerima kasih atas dukungannya untuk rilisan donghua! 🙏`;
 
-          bot.sendMessage(config.ID_CHANNEL, text).catch(err => console.error('Failed to send message:', err));
+          bot.sendMessage(config.ID_CHANNEL, text, { parse_mode: 'HTML' }).catch(err => console.error('Failed to send message:', err));
         } catch (e) {
           console.error('Error handling Sociabuzz webhook:', e);
         }
