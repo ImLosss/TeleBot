@@ -25,7 +25,7 @@ module.exports = function(bot) {
 
           // Format dengan kutipan Telegram (blockquote)
           const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;' }[c]));
-          const donorLine = `✨ ${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>. ✨`;
+          const donorLine = `✨${esc(donor)} telah melakukan donasi sebesar <b>${formattedAmount}</b>.✨`;
           const noteBlock = (payload.message && String(payload.message).trim())
             ? `\n\n<blockquote>${esc(String(payload.message).trim())}</blockquote>\n`
             : '';
