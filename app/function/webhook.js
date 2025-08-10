@@ -14,7 +14,7 @@ module.exports = function(bot) {
         try {
           const payload = JSON.parse(body || '{}');
           console.log(payload, 'Sociabuzz payload');
-          const headerToken = req.headers;
+          const headerToken = req.headers["sb-webhook-token"];
           console.log(headerToken);
 
           // Ambil nama & jumlah donasi
