@@ -33,7 +33,7 @@ module.exports = function(bot) {
           const config = readJSONFileSync('./config.json');
           const text = `${donorLine}${noteBlock}\nDukunganmu sangat membantu kami agar dapat rilis lebih cepat. 🙏\n\n#donation`;
 
-          bot.sendMessage(config.ID_CHANNEL, text, { parse_mode: 'HTML', inline_keyboard: [[{ text: 'Dukung Kami', url: 'https://sociabuzz.com/your-project' }]] }).catch(err => console.error('Failed to send message:', err));
+          bot.sendMessage(config.ID_CHANNEL, text, { parse_mode: 'HTML', inline_keyboard: [[{ text: 'Dukung Kami', url: 'https://sociabuzz.com/dongworld/tribe' }]] }).catch(err => console.error('Failed to send message:', err));
         } catch (e) {
           console.error('Error handling Sociabuzz webhook:', e);
         }
