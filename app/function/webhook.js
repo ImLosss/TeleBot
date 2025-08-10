@@ -18,7 +18,7 @@ module.exports = function(bot) {
           console.log(payload, 'Sociabuzz payload');
 
           // Ambil nama & jumlah donasi
-          const donor = payload.supporter || payload.donor_name || payload.name || 'Seseorang';
+          const donor = payload.supporter == "Someone" ? 'Seseorang' : payload.supporter;
           const amountRaw = payload.amount_settled ?? payload.amount ?? payload.level?.price ?? payload.donation_amount ?? 0;
           const currency = payload.currency_settled || payload.currency || 'IDR';
           const formattedAmount = new Intl.NumberFormat('id-ID', { style: 'currency', currency }).format(Number(amountRaw) || 0);
