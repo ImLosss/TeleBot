@@ -14,7 +14,7 @@ module.exports = function(bot) {
       req.on('end', () => {
         try {
           const payload = JSON.parse(body || '{}');
-          console.log('Sociabuzz payload:', payload);
+          console.log(payload, 'Sociabuzz payload');
 
           const donor = payload.donor_name || payload.name || 'Seseorang';
           const amount = payload.amount || payload.donation_amount;
