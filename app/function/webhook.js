@@ -6,7 +6,6 @@ const { readJSONFileSync } = require('function/utils');
 module.exports = function(bot) {
   const server = http.createServer((req, res) => {
     if (req.method === 'POST') {
-      console.log(req.url);
       let body = '';
       req.on('data', chunk => {
         body += chunk;
@@ -15,6 +14,8 @@ module.exports = function(bot) {
         try {
           const payload = JSON.parse(body || '{}');
           console.log(payload, 'Sociabuzz payload');
+          const headerToken = req.headers['x-webhook-token'];
+          console.log(headerToken);
 
           // Ambil nama & jumlah donasi
           const donor = payload.supporter || payload.donor_name || payload.name || 'Seseorang';
