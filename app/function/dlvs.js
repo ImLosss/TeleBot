@@ -307,6 +307,7 @@ async function dlvs_downloadVideo(bot, query, data) {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
                 bot.sendVideo(query.message.chat.id, videoPath, { caption: `File *${title}.${ ext } ${res} SOFTSUB ${lang}* berhasil diunduh\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`, parse_mode: 'Markdown' })
                 .then(() => {
+                    if(query.message.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
                     deleteFiles(outputDir, id);
                 })
                 .catch(() => {
