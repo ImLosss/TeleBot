@@ -106,10 +106,7 @@ async function downloadVideoByMessageId(chat, messageId, destDir = 'database') {
 
     // Download ke buffer lalu simpan ke disk
     const buffer = await client.downloadFile(location, {
-        workers: 1,
-        progressCallback: (downloaded, total) => {
-            if (total) console.log(`Downloading: ${((downloaded / total) * 100).toFixed(1)}%`);
-        }
+        workers: 1
     });
 
     fs.writeFileSync(outPath, buffer);

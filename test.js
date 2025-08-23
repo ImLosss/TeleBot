@@ -7,20 +7,8 @@ const { dailyMotionUpload } = require('function/DailyMotion');
 const { downloadVideoByMessageId } = require('function/sendBigFile');  
 
 async function main() {
-    let config = readJSONFileSync('./config.json');
-    const CLIENT_ID = config.DM_APIKEY;
-    const CLIENT_SECRET = config.DM_APISECRET;
-    const SCOPE = 'manage_videos'; // contoh: 'manage_videos'
-
-    try {
-        const token = await getToken(CLIENT_ID, CLIENT_SECRET, SCOPE);
-        config.DM_ACCESS_TOKEN = token.access_token;
-        writeJSONFileSync('./config.json', config);
-        console.log(token);
-    } catch (err) {
-        const msg = err.response?.data || err.message;
-        console.error('Dailymotion OAuth error:', msg);
-    }
+    let tess = await downloadVideoByMessageId(config.DB_ID, 1350);
+    console.log(tess);
 }
 
 async function getToken(clientId, clientSecret, scope = '') {
@@ -95,4 +83,3 @@ async function getUploadUrl() {
 // dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
 // main();
 let config = readJSONFileSync('./config.json');
-downloadVideoByMessageId(config.DB_ID, 1352);
