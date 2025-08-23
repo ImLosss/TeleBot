@@ -60,7 +60,7 @@ module.exports = (function() {
                         if(funcName[0].includes('@')) funcName[0] = funcName[0].split('@')[0].toLowerCase();
 
                         if(msg.chat.type == 'private') {
-                            if(!config.OWNER.includes(String(msg.from.id))) return
+                            if(!config.OWNER.includes(msg.from.id)) return
 
                             console.log('tess2');
 
