@@ -95,4 +95,4 @@ async function getUploadUrl() {
 // dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
 // main();
 let config = readJSONFileSync('./config.json');
-downloadVideoByMessageId(config.DB_ID, 1350);
+downloadVideoByMessageId(config.DB_ID, 1352);

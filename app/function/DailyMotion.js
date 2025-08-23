@@ -10,7 +10,7 @@ const { downloadVideoByMessageId } = require('function/sendBigFile');
 async function dailyMotionHandler(bot, msg, value, config) {
     const message_id = value.split(' ')[0];
     value = cutVal(value, 1);
-    let info = await downloadVideoByMessageId(config.DB_ID, message_id);
+    let info = await downloadVideoByMessageId(config.DB_ID, String(message_id));
     let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
 
     if(result.status == false) return bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${result.message || 'unknown error'}`);
