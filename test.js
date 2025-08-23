@@ -7,6 +7,7 @@ const { dailyMotionUpload } = require('function/DailyMotion');
 const { downloadVideoByMessageId } = require('function/sendBigFile');  
 
 async function main() {
+    let config = readJSONFileSync('./config.json');
     let tess = await downloadVideoByMessageId(config.DB_ID, 1350);
     console.log(tess);
 }
@@ -81,5 +82,5 @@ async function getUploadUrl() {
 
 // getUploadUrl();
 // dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
-// main();
-let config = readJSONFileSync('./config.json');
+main();
+
