@@ -14,18 +14,9 @@ async function sendChannel(bot, msg, value, config) {
 
         const forwardChannel = value.split(' ')[0];
         value = cutVal(value, 1);
-        
-        let info = await downloadRepliedVideo(bot, msg);
-        let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
     
-        if(result.status == false) {
-            caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
-            bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${result.message || 'unknown error'}`);
-        } else {
-            bot.sendMessage(msg.chat.id, `Sukses upload ke Dailymotion: https://www.dailymotion.com/video/${result.id}`);
-            caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDailymotion:\nhttps://www.dailymotion.com/video/${result.id}\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
-            if(forwardChannel == "false") caption = `${ value }\n\nDailymotion:\nhttps://www.dailymotion.com/video/${result.id}\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
-        }
+        caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
+        if(forwardChannel == "false") caption = `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
 
         if(!value) return bot.sendMessage(chatId, 'Silakan kirim video dengan caption yang benar.\n\nContoh:\n/send <channel> <Judul Video>')
 

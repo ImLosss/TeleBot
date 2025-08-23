@@ -13,6 +13,8 @@ async function dailyMotionHandler(bot, msg, value, config) {
     let info = await downloadVideoByMessageId(config.DB_ID, Number(message_id));
     let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
 
+    fs.unlink(info.path, () => {});
+    
     if(result.status == false) return bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${result.message || 'unknown error'}`);
     bot.sendMessage(msg.chat.id, `Sukses upload ke Dailymotion: https://www.dailymotion.com/video/${result.id}`);
 }
