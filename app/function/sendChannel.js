@@ -1,8 +1,10 @@
 require('module-alias/register');
 const console = require('console');
 const { readJSONFileSync, cutVal } = require('function/utils');
+const {downloadRepliedVideo} = require('function/function');
+const { dailyMotionUpload } = require('function/DailyMotion');
 
-function sendChannel(bot, msg, value, config) {
+async function sendChannel(bot, msg, value, config) {
     const chatId = msg.chat.id;
 
     // Cek jika pesan mengandung video
@@ -11,10 +13,19 @@ function sendChannel(bot, msg, value, config) {
         const videoFileId = msg.video?.file_id || msg.reply_to_message.video.file_id; // Ambil file_id dari video
 
         const forwardChannel = value.split(' ')[0];
-        value = cutVal(value, 1); // Ambil judul video
-
-        caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
-        if(forwardChannel == "false") caption = `${ value }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
+        value = cutVal(value, 1);
+        
+        let info = await downloadRepliedVideo(bot, msg);
+        let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
+    
+        if(result.status == false) {
+            caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
+            bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${result.message || 'unknown error'}`);
+        } else {
+            bot.sendMessage(msg.chat.id, `Sukses upload ke Dailymotion: https://www.dailymotion.com/video/${result.id}`);
+            caption = `${ value }\n\nEpisode sebelumnya:\nt.me/${ forwardChannel }\n\nDailymotion:\nhttps://www.dailymotion.com/video/${result.id}\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe` ;
+            if(forwardChannel == "false") caption = `${ value }\n\nDailymotion:\nhttps://www.dailymotion.com/video/${result.id}\n\nDonasi buat ngopi:\nhttps://sociabuzz.com/dongworld/tribe`;
+        }
 
         if(!value) return bot.sendMessage(chatId, 'Silakan kirim video dengan caption yang benar.\n\nContoh:\n/send <channel> <Judul Video>')
 

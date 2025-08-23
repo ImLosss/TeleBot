@@ -15,6 +15,7 @@ const prefixFunctions = {
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
     'iq': withErrorHandling((bot, msg, value, config, fromId) => cmd.downloadIqiyi(bot, msg, value, config)),
     'jadwal': withErrorHandling((bot, msg, value, config, fromId) => cmd.jadwal(bot, msg, value, config)),
+    'dm': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler(bot, msg, value, config)),
 }
 
 const prefixFunctionsGroup = {
@@ -59,7 +60,9 @@ module.exports = (function() {
                         if(funcName[0].includes('@')) funcName[0] = funcName[0].split('@')[0].toLowerCase();
 
                         if(msg.chat.type == 'private') {
-                            if(!config.OWNER.includes(msg.from.id)) return
+                            if(!config.OWNER.includes(String(msg.from.id))) return
+
+                            console.log('tess2');
 
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);

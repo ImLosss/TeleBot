@@ -9,6 +9,7 @@ const downloadIqiyi = require('function/iqiyi');
 const bw = require('function/bw');
 const appleReq = require('function/appleReq');
 const jadwal = require('function/jadwal');
+const dailyMotionHandler = require('function/DailyMotion');
 
 module.exports = {
     ...sendChannel,
@@ -20,5 +21,6 @@ module.exports = {
     ...dla,
     ...downloadIqiyi,
     ...appleReq,
-    ...jadwal
+    ...jadwal,
+    ...dailyMotionHandler
 };
