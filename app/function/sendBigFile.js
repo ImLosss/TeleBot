@@ -77,6 +77,47 @@ async function sendBigFile(filePath) {
     }
 }
 
+async function downloadVideoByMessageId(chat, messageId, destDir = 'database') {
+    if (!client.connected) await client.connect();
+
+    // Resolve peer dan ambil message
+    const entity = await client.getEntity(chat);
+    const messages = await client.getMessages(entity, { ids: [messageId] });
+    const msg = Array.isArray(messages) ? messages[0] : messages;
+    if (!msg || !msg.media || !msg.media.document) {
+        throw new Error('Message tidak berisi video/document');
+    }
+
+    const doc = msg.media.document;
+    const filenameAttr = doc.attributes?.find(a => a instanceof Api.DocumentAttributeFilename);
+    const videoAttr = doc.attributes?.find(a => a instanceof Api.DocumentAttributeVideo);
+    const fileName = filenameAttr?.fileName || `video_${messageId}.mp4`;
+
+    if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
+    const outPath = path.join(destDir, fileName);
+
+    // Siapkan lokasi file untuk download
+    const location = new Api.InputDocumentFileLocation({
+        id: doc.id,
+        accessHash: doc.accessHash,
+        fileReference: doc.fileReference,
+        thumbSize: '' // full file
+    });
+
+    // Download ke buffer lalu simpan ke disk
+    const buffer = await client.downloadFile(location, {
+        dcId: doc.dcId,
+        fileSize: Number(doc.size || 0),
+        workers: 1,
+        progressCallback: (downloaded, total) => {
+            if (total) console.log(`Downloading: ${((downloaded / total) * 100).toFixed(1)}%`);
+        }
+    });
+
+    fs.writeFileSync(outPath, buffer);
+    return { path: outPath, duration: videoAttr?.duration, width: videoAttr?.w, height: videoAttr?.h };
+}
+
 function getVideoInfo(path) {
     return new Promise((resolve, reject) => {
         ffmpeg.ffprobe(path, (err, metadata) => {
@@ -118,5 +159,5 @@ function extractThumbnail(videoPath, outputPath, seek = 300) {
 }
 
 module.exports = {
-    sendBigFile
+    sendBigFile, downloadVideoByMessageId
 }

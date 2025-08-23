@@ -4,6 +4,8 @@ const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 const axios = require('axios');
 const { dailyMotionUpload } = require('function/DailyMotion');
 
+const { downloadVideoByMessageId } = require('function/sendBigFile');  
+
 async function main() {
     let config = readJSONFileSync('./config.json');
     const CLIENT_ID = config.DM_APIKEY;
@@ -90,5 +92,7 @@ async function getUploadUrl() {
 }
 
 // getUploadUrl();
-dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
+// dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
 // main();
+let config = readJSONFileSync('./config.json');
+downloadVideoByMessageId(config.DB_ID, 1350);
