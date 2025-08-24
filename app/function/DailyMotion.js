@@ -15,7 +15,7 @@ async function dailyMotionHandler(bot, msg, value, config) {
 
     fs.unlink(info.path, () => {});
     
-    if(result.status == false) return bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${result.message || 'unknown error'}`);
+    if(result.status == false) return bot.sendMessage(msg.chat.id, `Gagal upload ke Dailymotion: ${JSON.stringify(result.message) || 'unknown error'}`);
     bot.sendMessage(msg.chat.id, `Sukses upload ke Dailymotion: https://www.dailymotion.com/video/${result.id}`);
 }
 
