@@ -8,7 +8,7 @@ const { downloadVideoByMessageId } = require('function/sendBigFile');
 
 async function main() {
     let config = readJSONFileSync('./config.json');
-    let tess = await downloadVideoByMessageId(config.DB_ID, 1350);
+    let tess = await dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
     console.log(tess);
 }
 
@@ -81,6 +81,6 @@ async function getUploadUrl() {
 }
 
 // getUploadUrl();
-dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
-// main();
+// dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
+main();
 

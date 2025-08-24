@@ -63,7 +63,9 @@ async function dailyMotionUpload(opts) {
 
 async function getToken(clientId, clientSecret, scope = '') {
     let config = readJSONFileSync('./config.json');
-    return config.DM_ACCESS_TOKEN;
+    let token = await checkToken(config.DM_ACCESS_TOKEN, config);
+    if (token == true) return config.DM_ACCESS_TOKEN;
+
     const url = 'https://api.dailymotion.com/oauth/token';
     const body = new URLSearchParams({
         grant_type: 'password',
@@ -79,10 +81,22 @@ async function getToken(clientId, clientSecret, scope = '') {
         timeout: 15000
     });
 
-    // let config = readJSONFileSync('./config.json');
-    // config.DM_ACCESS_TOKEN = res.data.access_token;
-    // writeJSONFileSync('./config.json', config);
+    config.DM_ACCESS_TOKEN = res.data.access_token;
+    writeJSONFileSync('./config.json', config);
     return res.data.access_token; // { access_token, token_type, expires_in, scope, ... }
+}
+
+async function checkToken(accessToken, config) {
+    try {
+        const url = `https://api.dailymotion.com/user/${config.DM_UID}/videos`;
+        const res = await axios.get(url, {
+            headers: { Authorization: `Bearer ${accessToken}` },
+            timeout: 15000
+        });
+        return true;
+    } catch (err) {
+        if(err.status == '401') return false
+    }
 }
 
 async function getUploadUrl(access_token) {
