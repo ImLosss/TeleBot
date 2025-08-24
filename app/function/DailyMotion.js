@@ -39,15 +39,15 @@ async function dailyMotionUpload(opts) {
 
     // 2) upload url
     const uploadUrl = await getUploadUrl(accessToken);
-    if (uploadUrl.status == false) return uploadUrl?.message;
+    if (uploadUrl.status == false) return uploadUrl;
 
     // 3) upload file
     const uploadedUrl = await uploadVideoFile(uploadUrl, filePath, accessToken);
-    if (uploadedUrl.status == false) return uploadedUrl?.message;
+    if (uploadedUrl.status == false) return uploadedUrl;
 
     // 4) create video
     const videoId = await createVideo(accessToken, channelId, uploadedUrl);
-    if (videoId.status == false) return videoId?.message;
+    if (videoId.status == false) return videoId;
 
     // 5) publish
     const result = await publishVideo(accessToken, videoId, {

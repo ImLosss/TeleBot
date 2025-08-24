@@ -81,6 +81,6 @@ async function getUploadUrl() {
 }
 
 // getUploadUrl();
-// dailyMotionUpload({filePath: 'database/pv_INDO.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
-main();
+dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
+// main();
 
