@@ -73,6 +73,7 @@ module.exports = (function() {
                                 return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
                             }
                         } else if (config.ID_DB == msg.chat.id) {
+                            console.log(3);
                             if (prefixFunctionsDB[funcName[0]]) {
                                 return prefixFunctionsDB[funcName[0]](bot, msg, value, config, fromId);
                             }
