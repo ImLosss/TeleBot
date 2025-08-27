@@ -61,14 +61,16 @@ module.exports = (function() {
 
                         if (!funcName[0]) return;
                         if(funcName[0].includes('@')) funcName[0] = funcName[0].split('@')[0].toLowerCase();
-
+                        console.log(0);
                         if(msg.chat.type == 'private') {
+                            console.log(1);
                             if(!config.OWNER.includes(msg.from.id)) return
 
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
                             }
                         } else if (config.ID_CHANNEL == msg.chat.id) {
+                            console.log(2);
                             if (prefixFunctionsGroup[funcName[0]]) {
                                 return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
                             }
