@@ -10,8 +10,8 @@ const { downloadVideoByMessageId } = require('function/sendBigFile');
 async function dailyMotionHandler(bot, msg, value, config) {
     if(!msg.reply_to_message) return bot.sendMessage(msg.chat.id, 'Silakan reply pesan media yang ingin diupload');
     if(!msg.reply_to_message?.video?.file_id) return bot.sendMessage(msg.chat.id, 'Pesan yang direply tidak mengandung video');
-    if(!value) return bot.sendMessage(msg.chat.id, 'Silakan masukkan judul video, contoh: /dm <judul>');
-    bot.sendMessage(msg.chat.id, `Mengupload video dengan judul *${value}*...`);
+    if(!value) return bot.sendMessage(msg.chat.id, 'Silakan masukkan judul video, contoh: /dm <judul>'); 
+    bot.sendMessage(msg.chat.id, `Mengupload video dengan judul *${value}*...`, { parse_mode: 'Markdown' });
     const message_id = msg.reply_to_message.message_id;
     let info = await downloadVideoByMessageId(config.DB_ID, Number(message_id));
     let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
