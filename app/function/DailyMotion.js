@@ -8,8 +8,9 @@ const FormData = require('form-data');
 const { downloadVideoByMessageId } = require('function/sendBigFile');  
 
 async function dailyMotionHandler(bot, msg, value, config) {
-    const message_id = value.split(' ')[0];
-    value = cutVal(value, 1);
+    if(!msg.reply_to_message) return bot.sendMessage(msg.chat.id, 'Silakan reply pesan media yang ingin diupload');
+    if(!msg.reply_to_message?.video?.file_id) return bot.sendMessage(msg.chat.id, 'Pesan yang direply tidak mengandung video');
+    const message_id = msg.reply_to_message.message_id;
     let info = await downloadVideoByMessageId(config.DB_ID, Number(message_id));
     let result = await dailyMotionUpload({filePath: info.path, title: value, channelId: 'x3pz54o', isCreatedForKids: false});
 

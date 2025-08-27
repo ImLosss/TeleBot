@@ -15,7 +15,6 @@ const prefixFunctions = {
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
     'iq': withErrorHandling((bot, msg, value, config, fromId) => cmd.downloadIqiyi(bot, msg, value, config)),
     'jadwal': withErrorHandling((bot, msg, value, config, fromId) => cmd.jadwal(bot, msg, value, config)),
-    'dm': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler(bot, msg, value, config)),
 }
 
 const prefixFunctionsGroup = {
@@ -23,6 +22,10 @@ const prefixFunctionsGroup = {
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
     'jadwal': withErrorHandling((bot, msg, value, config, fromId) => cmd.jadwal(bot, msg, value, config)),
+}
+
+const prefixFunctionsDB = {
+    'dm': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler(bot, msg, value, config)),
 }
 
 module.exports = (function() {
@@ -62,16 +65,16 @@ module.exports = (function() {
                         if(msg.chat.type == 'private') {
                             if(!config.OWNER.includes(msg.from.id)) return
 
-                            console.log('tess2');
-
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
                             }
-                        } else {
-                            if(config.ID_CHANNEL != msg.chat.id) return
-
+                        } else if (config.ID_CHANNEL == msg.chat.id) {
                             if (prefixFunctionsGroup[funcName[0]]) {
                                 return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
+                            }
+                        } else if (config.ID_DB == msg.chat.id) {
+                            if (prefixFunctionsDB[funcName[0]]) {
+                                return prefixFunctionsDB[funcName[0]](bot, msg, value, config, fromId);
                             }
                         }
                         
