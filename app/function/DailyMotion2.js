@@ -84,7 +84,7 @@ async function getToken(clientId, clientSecret, scope = '') {
         timeout: 15000
     });
 
-    config.DM_ACCESS_TOKEN = res.data.access_token;
+    config.DM_ACCESS_TOKEN2 = res.data.access_token;
     writeJSONFileSync('./config.json', config);
     return res.data.access_token; // { access_token, token_type, expires_in, scope, ... }
 }
