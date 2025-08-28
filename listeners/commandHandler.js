@@ -26,6 +26,7 @@ const prefixFunctionsGroup = {
 
 const prefixFunctionsDB = {
     'dm': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler(bot, msg, value, config)),
+    'dm2': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler2(bot, msg, value, config)),
 }
 
 module.exports = (function() {

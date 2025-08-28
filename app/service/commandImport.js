@@ -10,6 +10,7 @@ const bw = require('function/bw');
 const appleReq = require('function/appleReq');
 const jadwal = require('function/jadwal');
 const dailyMotionHandler = require('function/DailyMotion');
+const dailyMotionHandler2 = require('function/DailyMotion2');
 
 module.exports = {
     ...sendChannel,
@@ -22,5 +23,6 @@ module.exports = {
     ...downloadIqiyi,
     ...appleReq,
     ...jadwal,
-    ...dailyMotionHandler
+    ...dailyMotionHandler,
+    ...dailyMotionHandler2
 };
