@@ -66,8 +66,8 @@ async function dailyMotionUpload(opts) {
 
 async function getToken(clientId, clientSecret, scope = '') {
     let config = readJSONFileSync('./config.json');
-    let token = await checkToken(config.DM_ACCESS_TOKEN, config);
-    if (token == true) return config.DM_ACCESS_TOKEN;
+    let token = await checkToken(config.DM_ACCESS_TOKEN2, config);
+    if (token == true) return config.DM_ACCESS_TOKEN2;
 
     const url = 'https://api.dailymotion.com/oauth/token';
     const body = new URLSearchParams({
