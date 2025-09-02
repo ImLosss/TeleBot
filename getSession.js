@@ -1,9 +1,12 @@
+require('module-alias/register');
 const { TelegramClient } = require("telegram");
 const { StringSession } = require("telegram/sessions");
 const input = require("input"); // untuk input terminal
+const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 
-const apiId = 22345648; // ganti
-const apiHash = "35b9687edeb4c4d2a825052100b9d069"; // ganti
+let config = readJSONFileSync('./config2.json');
+const apiId = config.API_ID; // ganti
+const apiHash = config.API_HASH; // ganti
 const stringSession = new StringSession(""); // kosong dulu
 
 (async () => {
