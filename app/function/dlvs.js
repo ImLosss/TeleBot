@@ -14,18 +14,16 @@ async function dlvs(bot, msg, value, config) {
 
     let url = value;
     let hardsub = false;
-    let fontSize, y, outline, wmSize;
+    let fontSize, y;
     if (value.startsWith('true')) {
         value = value.split(' ');
 
-        if (value.length < 6) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/dlvs true <url> <fontSize> <y> <outline> <wmSize>`');
+        if (value.length < 4) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/dlvs true <url> <fontSize> <y>`');
 
         url = value[1];
         hardsub = true;
         fontSize = value[2];
         y  = value[3];
-        outline = value[4];
-        wmSize = value[5];
     }
 
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
@@ -92,8 +90,6 @@ async function dlvs(bot, msg, value, config) {
                 if (hardsub) {
                     tempData[id][subid].fontSize = fontSize;
                     tempData[id][subid].y = y;
-                    tempData[id][subid].outline = outline;
-                    tempData[id][subid].wmSize = wmSize;
                 }
                 return {
                     text: `${fmt.ext} | ${fmt.resolution || fmt.format_note || ''}${sizeMB}`,
@@ -185,13 +181,11 @@ async function dlvs_downloadVideo(bot, query, data) {
     console.log(`${ext_lang}, ${lang}`);
 
     let hardsub = tempData[id][subid].hardsub;
-    let fontSize, y, outline, wmSize;
+    let fontSize, y;
     if( hardsub ) {
         fontSize = tempData[id][subid].fontSize;
         y = tempData[id][subid].y;
-        outline = tempData[id][subid].outline;
         ext = 'mp4';
-        wmSize = tempData[id][subid].wmSize;
     }
 
     tempData[id] = null;
@@ -208,8 +202,8 @@ async function dlvs_downloadVideo(bot, query, data) {
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     if (hardsub) {
-        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
-        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=1,MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
+        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=1,MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
@@ -238,7 +232,7 @@ async function dlvs_downloadVideo(bot, query, data) {
             let durationStr = getDuration(videoPath);
             const stats = fs.statSync(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
-                let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
+                let tempMsg = await bot.sendMessage(query.message.chat.id, 'Mengirim file...');
                 await sendBigFile(videoPath)
                 .then(() => {
                     bot.deleteMessage(query.message.chat.id, tempMsg.message_id)

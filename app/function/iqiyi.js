@@ -12,19 +12,19 @@ async function downloadIqiyi(bot, msg, value, config) {
 
     let url = value;
     let hardsub = false;
-    let fontSize, y, outline, wmSize;
+    let fontSize, y, outline;
     let format_id = value.split(' ')[1];
     let ext = 'mkv';
     if (value.startsWith('true')) {
         value = value.split(' ');
         ext = 'mp4';
-        if (value.length < 4) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/iq true <url> <fontSize> <y> <outline>`');
+        if (value.length < 4) return bot.sendMessage(msg.chat.id, 'Format input tidak valid. Gunakan: `/iq true <url> <fontSize> <y>`');
 
         url = value[1];
         hardsub = true;
         fontSize = value[2];
         y  = value[3];
-        outline = value[4];
+        outline = 1;
         format_id = '600';
     }
 
