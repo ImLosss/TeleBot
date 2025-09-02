@@ -40,7 +40,7 @@ async function downloadIqiyi(bot, msg, value, config) {
     const outputTemplate = path.join(outputDir, `${id}.%(ext)s`);
     cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
-    if (hardsub) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.id.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.id.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 480 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
+    if (hardsub) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs id --sub-format srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.id.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.id.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 480 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
 
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mulai mendownload...');
 
@@ -69,66 +69,16 @@ async function downloadIqiyi(bot, msg, value, config) {
             const stats = fs.statSync(videoPath);
             bot.deleteMessage(msg.chat.id, loadingMsg.message_id);
             if (stats.size > 50 * 1024 * 1024) {
-                let tempMsg = await bot.sendMessage(msg.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
-                uploadFile(videoPath, path.basename(videoPath))
-                    .then(async (fileId) => {
-                        if (!fileId) {
-                            bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive, fileId tidak ditemukan.');
-                            deleteFiles(outputDir, id);
-                            return;
-                        }
-                        const linkData = await generatePublicURL(fileId);
-                        if (linkData && linkData.webViewLink) {
-                            const screenshots = [
-                                { type: 'photo', media: 'downloads/ss1.png' },
-                                { type: 'photo', media: 'downloads/ss2.png' },
-                                { type: 'photo', media: 'downloads/ss3.png' }
-                            ];
+                let tempMsg = await bot.sendMessage(msg.chat.id, 'Mengirim file...');
+                await sendBigFile(videoPath)
+                .then(() => {
+                    bot.deleteMessage(msg.chat.id, tempMsg.message_id)
+                    deleteFiles(outputDir, id);
+                }).catch(() => {
+                    bot.deleteMessage(msg.chat.id, tempMsg.message_id)
+                    bot.sendMessage(msg.chat.id, 'Gagal mengirim file.');
+                });
 
-                            await bot.sendMediaGroup(msg.chat.id, screenshots);
-                            bot.sendMessage(msg.chat.id, `File berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan`, {
-                                parse_mode: 'Markdown',
-                                reply_markup: {
-                                    inline_keyboard: [
-                                        [
-                                            { text: 'Download', url: linkData.webViewLink }
-                                        ]
-                                    ]
-                                }
-                            })
-                            .then(async (msg) => {
-                                bot.deleteMessage(msg.chat.id, tempMsg.message_id)
-
-                                bot.sendDocument(msg.chat.id, `downloads/${id}.id.srt`);
-
-                                const message_id = await sendBigFile(videoPath);
-
-                                setTimeout(() => {
-                                    const fileId = readJSONFileSync('./database/temp_file_id.json');
-                                    if(fileId.message_id == message_id) {
-                                        bot.sendVideo(msg.chat.id, fileId.file_id);
-                                    }
-                                }, 1000);
-                                
-                                deleteFiles(outputDir, id);
-
-                                setTimeout(() => {
-                                    deleteFileDrive(fileId).then(() => { 
-                                        emptyTrash();
-                                        bot.deleteMessage(msg.chat.id, msg.message_id)
-                                    })
-                                }, 3600000);
-                            });
-                        } else {
-                            bot.sendMessage(msg.chat.id, 'Terjadi kesalahan saat mengupload file anda');
-                            deleteFiles(outputDir, id);
-                        }
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                        bot.sendMessage(msg.chat.id, 'Gagal upload ke Google Drive.');
-                        deleteFiles(outputDir, id);
-                    });
             }
             else {
                 bot.sendChatAction(msg.chat.id, 'upload_video');
