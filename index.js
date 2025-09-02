@@ -20,8 +20,6 @@ setTimeout(() => {
 // Buat instance bot
 const bot = new TelegramBot(config.API_TELEGRAM, { polling: false });
 
-require("function/webhook.js")(bot);
-
 if(!fs.existsSync('./app/logs/log.json')) writeJSONFileSync('./app/logs/log.json', []);
 
 if(!fs.existsSync('./app/logs/error.json')) writeJSONFileSync('./app/logs/error.json', []);
