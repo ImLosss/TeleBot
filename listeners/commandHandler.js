@@ -6,9 +6,6 @@ const cmd = require('service/commandImport')
 const { cekBw } = require('function/cekBw');
 
 const prefixFunctions = {
-    'send': withErrorHandling((bot, msg, value, config, fromId) => cmd.sendChannel(bot, msg, value, config)),
-    'updatebs': withErrorHandling((bot, msg, value, config, fromId) => cmd.updatebs(bot, msg, value, config)),
-    'changechannel': withErrorHandling((bot, msg, value, config, fromId) => cmd.changeChannel(bot, value, config, fromId)),
     'bw': withErrorHandling((bot, msg, value, config, fromId) => cmd.bw(bot, value, config, fromId)),
     'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
@@ -19,7 +16,7 @@ const prefixFunctions = {
 module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
-            console.log(msg);
+            return console.log(msg);
             
             let config = readJSONFileSync(`./config.json`);
             if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
