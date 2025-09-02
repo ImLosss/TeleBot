@@ -14,19 +14,6 @@ const prefixFunctions = {
     'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
     'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
     'iq': withErrorHandling((bot, msg, value, config, fromId) => cmd.downloadIqiyi(bot, msg, value, config)),
-    'jadwal': withErrorHandling((bot, msg, value, config, fromId) => cmd.jadwal(bot, msg, value, config)),
-}
-
-const prefixFunctionsGroup = {
-    'dl': withErrorHandling((bot, msg, value, config, fromId) => cmd.ytdlp(bot, msg, value, config)),
-    'dlvs': withErrorHandling((bot, msg, value, config, fromId) => cmd.dlvs(bot, msg, value, config)),
-    'dla': withErrorHandling((bot, msg, value, config, fromId) => cmd.dla(bot, msg, value)),
-    'jadwal': withErrorHandling((bot, msg, value, config, fromId) => cmd.jadwal(bot, msg, value, config)),
-}
-
-const prefixFunctionsDB = {
-    'dm': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler(bot, msg, value, config)),
-    'dm2': withErrorHandling((bot, msg, value, config, fromId) => cmd.dailyMotionHandler2(bot, msg, value, config)),
 }
 
 module.exports = (function() {
