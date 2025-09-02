@@ -208,8 +208,8 @@ async function dlvs_downloadVideo(bot, query, data) {
     if(acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --embed-subs -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox`;
 
     if (hardsub) {
-        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
-        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && node merged.js "downloads/${id}.${lang}.srt" && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=Arial,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1',drawtext=text='DongWorld':font=Verdana:fontsize=${wmSize}:fontcolor=white@0.5:x=15:y=15" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
+        cmd = `yt-dlp -f ${format_id}+bestaudio --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
+        if (acodec) cmd = `yt-dlp -f ${format_id} --remux-video ${ext} --write-sub --sub-langs ${lang} --sub-format ${ext_lang} --convert-subs srt -o "${outputTemplate}" "${url}" --no-warnings --no-call-home --no-check-certificate --ffmpeg-location /usr/bin/ffmpeg --cookies-from-browser firefox && ffmpeg -i "downloads/${id}.${ext}" -crf "27" -vf "subtitles=downloads/${id}.${lang}.srt:force_style='FontName=ITC Officina Sans,FontSize=${fontSize},PrimaryColour=&HFFFFFF&,Outline=${outline},MarginV=${y},Bold=1'" -c:a copy "downloads/${id}_hardsub.${ext}" && ffmpeg -y -ss 1 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss1.png" && ffmpeg -y -ss 300 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss2.png" && ffmpeg -y -ss 600 -i "downloads/${id}_hardsub.${ext}" -frames:v 1 -q:v 2 "downloads/ss3.png"`;
     }
 
     bot.answerCallbackQuery(query.id, { text: 'Sedang mengunduh video...' });
@@ -239,69 +239,14 @@ async function dlvs_downloadVideo(bot, query, data) {
             const stats = fs.statSync(videoPath);
             if (stats.size > 50 * 1024 * 1024) {
                 let tempMsg = await bot.sendMessage(query.message.chat.id, 'File lebih dari 50 MB, mengupload ke Google Drive...');
-                uploadFile(videoPath, path.basename(videoPath))
-                    .then(async (fileId) => {
-                        if (!fileId) {
-                            bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive, fileId tidak ditemukan.');
-                            deleteFiles(outputDir, id);
-                            return;
-                        }
-                        const linkData = await generatePublicURL(fileId);
-                        if (linkData && linkData.webViewLink) {
-                            if (hardsub) {
-                                const screenshots = [
-                                    { type: 'photo', media: 'downloads/ss1.png' },
-                                    { type: 'photo', media: 'downloads/ss2.png' },
-                                    { type: 'photo', media: 'downloads/ss3.png' }
-                                ];
-
-                                await bot.sendMediaGroup(query.message.chat.id, screenshots);
-                            }
-
-                            bot.sendPhoto(query.message.chat.id, url_thumbnail, {
-                                caption: `File *${title}.${ext} ${res} SOFTSUB ${lang}* berhasil diupload ke Google Drive\n\n*Durasi:* ${durationStr}\n*Filesize:* ${Math.floor(stats.size / 1048576)}mb\n\nFile akan dihapus dalam 1 jam kedepan\n\nBuka video menggunakan vlc atau pemutar media lainnya jika sub tidak muncul`,
-                                parse_mode: 'Markdown',
-                                reply_markup: {
-                                    inline_keyboard: [
-                                        [
-                                            { text: 'Download', url: linkData.webViewLink }
-                                        ]
-                                    ]
-                                }
-                            })
-                            .then(async (msg) => {
-                                bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
-
-                                if(query.message.chat.type == 'private') bot.sendDocument(query.message.chat.id, `downloads/${id}.${lang}.srt`);
-
-                                const message_id = await sendBigFile(videoPath);
-
-                                setTimeout(() => {
-                                    const fileId = readJSONFileSync('./database/temp_file_id.json');
-                                    if(fileId.message_id == message_id) {
-                                        bot.sendVideo(query.message.chat.id, fileId.file_id);
-                                    }
-                                }, 1000);
-
-                                deleteFiles(outputDir, id);
-
-                                setTimeout(() => {
-                                    deleteFileDrive(fileId).then(() => { 
-                                        emptyTrash();
-                                        bot.deleteMessage(query.message.chat.id, msg.message_id)
-                                    })
-                                }, 3600000);
-                            });
-                        } else {
-                            bot.sendMessage(query.message.chat.id, 'Terjadi kesalahan saat mengupload file anda');
-                            deleteFiles(outputDir, id);
-                        }
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                        bot.sendMessage(query.message.chat.id, 'Gagal upload ke Google Drive.');
-                        deleteFiles(outputDir, id);
-                    });
+                await sendBigFile(videoPath)
+                .then(() => {
+                    bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
+                    deleteFiles(outputDir, id);
+                }).catch(() => {
+                    bot.deleteMessage(query.message.chat.id, tempMsg.message_id)
+                    bot.sendMessage(query.message.chat.id, 'Gagal mengirim file.');
+                });
             }
             else {
                 bot.sendChatAction(query.message.chat.id, 'upload_video');
