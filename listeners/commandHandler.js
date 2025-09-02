@@ -16,7 +16,7 @@ const prefixFunctions = {
 module.exports = (function() {
     return function(bot) {
         bot.on('message', async (msg) => {
-            return console.log(msg);
+            console.log(msg);
             
             let config = readJSONFileSync(`./config.json`);
             if(!config.RECEIVE_MESSAGE) return console.log("Skip Message.");
@@ -46,22 +46,11 @@ module.exports = (function() {
 
                         if (!funcName[0]) return;
                         if(funcName[0].includes('@')) funcName[0] = funcName[0].split('@')[0].toLowerCase();
-                        if(msg.chat.type == 'private') {
-                            if(!config.OWNER.includes(msg.from.id)) return
-
+                        if (config.ID_CHANNEL == msg.chat.id) {
                             if (prefixFunctions[funcName[0]]) {
                                 return prefixFunctions[funcName[0]](bot, msg, value, config, fromId);
                             }
-                        } else if (config.ID_CHANNEL == msg.chat.id) {
-                            if (prefixFunctionsGroup[funcName[0]]) {
-                                return prefixFunctionsGroup[funcName[0]](bot, msg, value, config, fromId);
-                            }
-                        } else if (config.DB_ID == msg.chat.id) {
-                            if (prefixFunctionsDB[funcName[0]]) {
-                                return prefixFunctionsDB[funcName[0]](bot, msg, value, config, fromId);
-                            }
-                        }
-                        
+                        } 
                     }
                 }
             }
