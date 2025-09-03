@@ -49,5 +49,4 @@ startBot();
 // errorHandling
 bot.on('polling_error', (err) => {
     console.error(err);
-    setTimeout(() => { try { bot.startPolling(); } catch {} }, 5000);
 })
