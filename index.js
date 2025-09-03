@@ -11,7 +11,12 @@ config.RECEIVE_MESSAGE = false;
 writeJSONFileSync('./config.json', config);
 
 // Buat instance bot
-const bot = new TelegramBot(config.API_TELEGRAM, { polling: false });
+const bot = new TelegramBot(config.API_TELEGRAM, { polling: false, request: {
+    agentOptions: {
+        keepAlive: true,
+        family: 4
+    }
+}});
 
 setTimeout(() => {
     let config = readJSONFileSync('./config.json');

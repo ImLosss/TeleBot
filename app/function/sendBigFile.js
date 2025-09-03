@@ -140,7 +140,8 @@ function getDuration (videoPath) {
     }
 };
 
-function extractThumbnail(videoPath, outputPath, seek = 300) {
+function extractThumbnail(videoPath, outputPath) {
+    let seek = getDuration(videoPath) / 2;
     return new Promise((resolve, reject) => {
         ffmpeg(videoPath)
             .screenshots({

@@ -3,13 +3,14 @@ const fs = require("fs");
 const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 const axios = require('axios');
 const { dailyMotionUpload } = require('function/DailyMotion');
-
-const { downloadVideoByMessageId } = require('function/sendBigFile');  
+const { sendBigFile } = require('function/sendBigFile');  
 
 async function main() {
-    let config = readJSONFileSync('./config.json');
-    let tess = await dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
-    console.log(tess);
+    // let config = readJSONFileSync('./config.json');
+    // let tess = await dailyMotionUpload({filePath: 'database/file_0.mp4', title: 'Testasd', channelId: 'x3pz54o', isCreatedForKids: false});
+    // console.log(tess);
+
+    sendBigFile('downloads/zw0_hardsub.mp4')
 }
 
 async function getToken(clientId, clientSecret, scope = '') {
