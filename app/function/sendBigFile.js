@@ -73,6 +73,7 @@ async function sendBigFile(filePath) {
 
         return result.updates[0].id; 
     } catch (error) {
+        console.log(error.message);
         console.error('Error sending video:', error);
     }
 }
