@@ -49,7 +49,7 @@ async function sendBigFile(filePath) {
                     fileStats.size,
                     filePath
                 ),
-                workers: 1,
+                workers: 4,
                 }),
                 mimeType: "video/mp4",
                 thumb: thumbFile,
