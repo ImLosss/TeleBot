@@ -36,6 +36,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
         return res.status(400).json({ status: 'no_file' });
     }
 
+    console.log(req.file.path);
     sendBigFile(req.file.path);
 
     return res.json({
