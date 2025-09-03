@@ -10,15 +10,16 @@ let config = readJSONFileSync('./config.json');
 config.RECEIVE_MESSAGE = false;
 writeJSONFileSync('./config.json', config);
 
+// Buat instance bot
+const bot = new TelegramBot(config.API_TELEGRAM, { polling: false });
+
 setTimeout(() => {
     let config = readJSONFileSync('./config.json');
     config.RECEIVE_MESSAGE = true;
     writeJSONFileSync('./config.json', config);
     console.log("Bot aktif dan hanya menerima pesan baru.");
+    bot.sendMessage(config.DB_ID, "Bot telah diaktifkan.");
 }, 5000);
-
-// Buat instance bot
-const bot = new TelegramBot(config.API_TELEGRAM, { polling: false });
 
 if(!fs.existsSync('./app/logs/log.json')) writeJSONFileSync('./app/logs/log.json', []);
 
@@ -48,4 +49,5 @@ startBot();
 // errorHandling
 bot.on('polling_error', (err) => {
     console.error(err);
+    setTimeout(() => { try { bot.startPolling(); } catch {} }, 5000);
 })
