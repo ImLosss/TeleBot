@@ -1,8 +1,10 @@
-// server.js
+require('module-alias/register');
+const console = require('console');
 const express = require('express');
 const multer  = require('multer');
 const fs = require('fs');
 const path = require('path');
+const { sendBigFile } = require('function/sendBigFile');
 
 const app = express();
 const PORT = process.env.PORT || 2050;
@@ -22,25 +24,27 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.post('/upload', upload.single('file'), (req, res) => {
-  const headerToken = req.headers['sb-webhook-token'];
-  if (headerToken !== 'sbwhook-lwatbodiymchocuj2fdbt1qs') {
-    return res.status(401).json({ status: 'unauthorized' });
-  }
+    const headerToken = req.headers['sb-webhook-token'];
+    if (headerToken !== 'sbwhook-lwatbodiymchocuj2fdbt1qs') {
+        return res.status(401).json({ status: 'unauthorized' });
+    }
 
-  // metadata dari Laravel
-  const { name, mime, size, kind } = req.body;
+    // metadata dari Laravel
+    const { name, mime, size, kind } = req.body;
 
-  if (!req.file) {
-    return res.status(400).json({ status: 'no_file' });
-  }
+    if (!req.file) {
+        return res.status(400).json({ status: 'no_file' });
+    }
 
-  return res.json({
-    status: 'ok',
-    saved: true,
-    filename: req.file.filename,
-    path: req.file.path,
-    meta: { name, mime, size, kind }
-  });
+    sendBigFile(req.file.path);
+
+    return res.json({
+        status: 'ok',
+        saved: true,
+        filename: req.file.filename,
+        path: req.file.path,
+        meta: { name, mime, size, kind }
+    });
 });
 
 app.listen(PORT, () => {
