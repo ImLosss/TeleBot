@@ -4,7 +4,7 @@ const { StringSession } = require("telegram/sessions");
 const input = require("input"); // untuk input terminal
 const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 
-let config = readJSONFileSync('./config2.json');
+let config = readJSONFileSync('./config.json');
 const apiId = config.API_ID; // ganti
 const apiHash = config.API_HASH; // ganti
 const stringSession = new StringSession(""); // kosong dulu
