@@ -5,7 +5,7 @@ const { readJSONFileSync, writeJSONFileSync } = require("function/utils");
 const fs = require('fs');
 const { TelegramClient } = require("telegram");
 const { StringSession } = require("telegram/sessions");
-let config = readJSONFileSync('./config2.json');
+let config = readJSONFileSync('./config.json');
 
 const apiId = config.API_ID; // ganti
 const apiHash = config.API_HASH;
