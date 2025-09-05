@@ -136,6 +136,8 @@ async function dlvs_choose_sub(bot, query, data) {
 
         const list_subs = await get_subs(stdout);
 
+        console.log(stdout);
+        
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
         let buttonData = [];
