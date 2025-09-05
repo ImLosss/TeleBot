@@ -30,7 +30,7 @@ async function dlvs(bot, msg, value, config) {
     const loadingMsg = await bot.sendMessage(msg.chat.id, 'Mengambil daftar format, mohon tunggu...');
 
     // Tambahkan --no-warnings dan --no-call-home untuk meminimalisir output non-JSON
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${url}"`, { maxBuffer: 1024 * 1024 * 20 }, (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox -F "${url}"`, { maxBuffer: 1024 * 1024 * 100 }, (error, stdout, stderr) => {
         if (error) {
             console.log(stderr, 'stderr');
             console.log(error.message, 'Error');
@@ -127,7 +127,7 @@ async function dlvs_choose_sub(bot, query, data) {
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 20 }, async (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 100 }, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             // return bot.sendMessage(chat_id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
