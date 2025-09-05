@@ -124,7 +124,7 @@ async function dlvs_choose_sub(bot, query, data) {
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 20 }, async (error, stdout, stderr) => {
+    exec(`yt-dlp -q --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 200 }, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             // return bot.sendMessage(chat_id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
@@ -260,7 +260,7 @@ async function dlvs_downloadVideo(bot, query, data) {
 
 async function get_subs(stdout) {
     const lines = stdout.split('\n');
-    const startIdx = lines.findIndex(line => line.includes('Language Name') || line.includes('Language Format'));
+    const startIdx = lines.findIndex(line => line.includes('Language Name') || line.includes('Language Format') || line.includes('Language'));
     let subtitleLines = [];
     if (startIdx !== -1) {
         for (let i = startIdx + 1; i < lines.length; i++) {
@@ -276,8 +276,6 @@ async function get_subs(stdout) {
 
     const subtitleJson = subtitleLines.map(line => {
         const clean = line.replace(/^\d+:\s*/, '').trim();
-
-        console.log(clean);
 
         // Format: kode nama format1, format2, ...
         let match = clean.match(/^([a-z-]+)\s+(.+?)\s+([a-z0-9,\s-]+)$/i);
@@ -303,7 +301,7 @@ async function get_subs(stdout) {
 
         // Fallback
         return { lang: '', name: '', format: [] };
-    }).filter(obj => obj.format.length > 0); // hanya yang punya format yang diizinkan
+    }).filter(obj => obj.format.length > 0 && /^[a-z]{2,3}(-[a-z]{2,3})?$/i.test(obj.lang) && !obj.lang.includes('-')); // hanya yang punya format yang diizinkan
 
     return subtitleJson;
 }
