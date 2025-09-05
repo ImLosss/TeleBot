@@ -128,7 +128,7 @@ async function dlvs_choose_sub(bot, query, data) {
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 200 }, async (error, stdout, stderr) => {
+    exec(`yt-dlp -q --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 200 }, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             // return bot.sendMessage(chat_id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
@@ -137,7 +137,7 @@ async function dlvs_choose_sub(bot, query, data) {
         const list_subs = await get_subs(stdout);
 
         console.log(stdout);
-        
+
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
         let buttonData = [];
