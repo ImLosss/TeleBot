@@ -135,7 +135,7 @@ async function dlvs_choose_sub(bot, query, data) {
         }
 
         const list_subs = await get_subs(stdout);
-        
+
         // Ambil maksimal 8 format agar tombol tidak terlalu banyak
         const maxButtons = 40;
         let buttonData = [];
@@ -326,7 +326,6 @@ async function get_subs(stdout) {
     if (startIdx !== -1) {
         for (let i = startIdx + 1; i < lines.length; i++) {
             const line = lines[i].trim();
-            console.log(line);
             if (!line || line.startsWith('{')) break;
             subtitleLines.push(line);
         }
