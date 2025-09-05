@@ -338,8 +338,6 @@ async function get_subs(stdout) {
     const subtitleJson = subtitleLines.map(line => {
         const clean = line.replace(/^\d+:\s*/, '').trim();
 
-        console.log(clean);
-
         // Format: kode nama format1, format2, ...
         let match = clean.match(/^([a-z-]+)\s+(.+?)\s+([a-z0-9,\s-]+)$/i);
         if (match) {
