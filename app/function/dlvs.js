@@ -128,7 +128,7 @@ async function dlvs_choose_sub(bot, query, data) {
 
     if (!url) return bot.sendMessage(msg.chat.id, 'Url tidak ditemukan.');
 
-    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 500 }, async (error, stdout, stderr) => {
+    exec(`yt-dlp -J --no-warnings --no-call-home --no-check-certificate --cookies-from-browser firefox --list-subs --skip-download "${url}"`, { maxBuffer: 1024 * 1024 * 200 }, async (error, stdout, stderr) => {
         if (error) {
             console.log('stderr:', stderr);
             // return bot.sendMessage(chat_id, `Gagal mengambil subtitle atau subtitle tidak tersedia.`);
@@ -326,6 +326,7 @@ async function get_subs(stdout) {
     if (startIdx !== -1) {
         for (let i = startIdx + 1; i < lines.length; i++) {
             const line = lines[i].trim();
+            console.log(line);
             if (!line || line.startsWith('{')) break;
             subtitleLines.push(line);
         }
